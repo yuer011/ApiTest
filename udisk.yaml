@@ -1,0 +1,113 @@
+#https://www.shuzhiduo.com/A/MyJx3mWRzn/
+#https://www.cnblogs.com/lisa2016/p/11764808.html
+- config:
+      url: &config_url http://10.95.34.13:80/api/upload_client_conf.json?mid=517b9255227858c7810af8e6b3824286&ver=1.0
+#      yaml直接引用
+#      animal3: &animal3 fish
+#      test: *animal3
+#      python读取的数据
+#      {'animal3': 'fish', 'test': 'fish'}
+      name: &name 这是测试udisk的yaml文件
+#      num: &num1
+#          num_1: ${random.int(10,100)}   # 10到100内的随机数
+      variables:
+        Time: &time ${get_time}
+#      headers: &conf_headers
+#          # 这里是yaml的多条引用，&用来建立锚点（defaults），<<表示合并到当前数据，*用来引用锚点
+#          Accept: application/json, text/javascript, */*; q=0.01
+#          X-Requested-With: XMLHttpRequest
+##          User-Agent: Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/91.0.4472.77 Safari/537.36
+#          Accept-Encoding: gzip, deflate, sdch
+#          Accept-Language: zh-CN,zh;q=0.8
+
+
+
+
+
+- test:
+    name: U盘注册申请
+    request:
+        url: *config_url
+        method: POST
+        headers:
+            Content-Type: application/json
+#            <<*info
+        json:
+          code: 0
+          type: usb
+          usb_disk_reg:
+            device_id: ${get_time()}    #1dddddddddxxxxx41813234567890
+            datetime: '1625129463'
+            name: *name
+            type: 1
+            reg_type: 1
+            capacity: 29510
+            vendor_id: Kingston
+            pid: '1666'
+            vid: 0951
+            partition_system: vfat
+            username: '10'
+            tel: '10'
+            memo: '10'
+            tag_id: 1
+            safe_check_status: 1
+    validate:
+      - eq: ["status_code",300]
+      - eq: ['content.msg','faile']
+
+- test:
+    name: U盘注册申请2
+    request:
+        url: *config_url
+        method: GET
+        headers:
+          &conf_headers #这样取不到值，但是不会报错，读出来是 'headers': None,
+#          Content-Type: application/json
+
+        json:
+          code: 0
+          type: usb
+          usb_disk_reg:
+            device_id: 2dddddddddxxxxx41813234567890
+            datetime: *time
+            #'1625129463'
+            name: yamlU盘测试2
+            type: 1
+            reg_type: 1
+            capacity: 29510
+            vendor_id: Kingston
+            pid: '1666'
+            vid: 0951
+            partition_system: vfat
+            username: '10'
+            tel: '10'
+            memo: '10'
+            tag_id: 1
+            safe_check_status: 1
+    validators:
+#        - {"check": "status_code","expeted":300}
+#        - {"check": "content.errorMessage", "comparator": "eq", "expected": ""}
+#        - {"check": "content.data", "comparator": "ne", "expected": ""}
+        - eq: ["status_code", 201]
+        - eq: ['content.msg','fail']
+        - eq: ["$success", True]
+        - eq: ["abc$success", "abcTrue"]
+        - {"check": "status_code", "comparator": "eq", "expect": 201}
+        - {"check": "content.msg", "comparator": "eq", "expect": true}
+#       - assert_equal("status_code", 300)
+
+
+- test:
+    name: 单点策略拉取
+    request:
+        url: http://10.95.34.13/api/getconf.json?mid=517b9255227858c7810af8e6b3824286&ver=1.0
+        method: GET
+        headers:
+#          &conf_headers #这样取不到值，但是不会报错，读出来是 'headers': None,
+          Content-Type: application/json
+        json:
+          _type: 2
+
+    validators:
+        - eq: ["status_code", 201]
+        - sum_status_code: ["content.data", 3]

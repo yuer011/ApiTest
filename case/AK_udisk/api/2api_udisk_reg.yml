@@ -1,0 +1,69 @@
+name: getlistdata_api
+base_url: http://10.95.34.13:80
+config:
+    name:  ${get_time()}注册U盘
+variables:
+    code: 0
+    type: usb
+    usb_disk_reg: {"device_id": "1dddddddddxxxxx41813234567890","datetime": "1625129463","name": "普通U盘测试test418","type": 1,"reg_type": 1,"capacity": 29510,"vendor_id": "Kingston","pid": "1666","vid": "0951","partition_system": "vfat","username": "10","tel": "10","memo": "10","tag_id": 1,"safe_check_status":1}
+#        device_id: ${get_time()}    #1dddddddddxxxxx41813234567890
+#        datetime: '1625129463'
+#        name: 注册U盘1${get_time()}
+#        type: 1
+#        reg_type: 1
+#        capacity: 29510
+#        vendor_id: Kingston
+#        pid: '1666'
+#        vid: 0951
+#        partition_system: vfat
+#        username: '10'
+#        tel: '10'
+#        memo: '10'
+#        tag_id: 1
+#        safe_check_status: 1
+
+request:
+    url: /api/upload_client_conf.json?mid=68f21c6a90a55db4a3fef9235fb2a318&ver=1.0
+    method: POST
+    json:
+##        <<*conf_variables
+        code: 0
+        type: usb
+        usb_disk_reg:
+            device_id: ${get_time()}    #1dddddddddxxxxx41813234567890
+            datetime: '1625129463'
+            name: ${get_time()}注册U盘
+            type: 1
+            reg_type: 1
+            capacity: 29510
+            vendor_id: Kingston
+            pid: '1666'
+            vid: 0951
+            partition_system: vfat
+            username: '10'
+            tel: '10'
+            memo: '10'
+            tag_id: 1
+            safe_check_status: 1
+#    variables:
+#        code: $code
+#        type: $type
+#        usb_disk_reg: #$usb_disk_reg
+#            device_id: ${get_time()}    #1dddddddddxxxxx41813234567890
+#            datetime: '1625129463'
+#            name: 注册U盘1${get_time()}
+#            type: 1
+#            reg_type: 1
+#            capacity: 29510
+#            vendor_id: Kingston
+#            pid: '1666'
+#            vid: 0951
+#            partition_system: vfat
+#            username: '10'
+#            tel: '10'
+#            memo: '10'
+#            tag_id: 1
+#            safe_check_status: 1
+
+validate:
+    - eq: ["status_code", 200]

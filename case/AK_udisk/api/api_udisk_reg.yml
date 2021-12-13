@@ -1,0 +1,60 @@
+name: 注册U盘测试_api
+base_url: http://10.95.34.13:80
+config:
+    name:  注册U盘测试_api
+    variables:
+        code: 0
+        type: usb
+        usb_disk_reg: #&usb_disk_reg    #'{"device_id": "2dddddddddxxxxx41813234567890","datetime": "1625129463","name": "2普通U盘测试test418","type": 1,"reg_type": 1,"capacity": 29510,"vendor_id": "Kingston","pid": "1666","vid": "0951","partition_system": "vfat","username": "10","tel": "10","memo": "10","tag_id": 1,"safe_check_status":1}'
+            device_id: '2dddddddddxxxxx41813234567890'
+            datetime: '1625129463'
+            name: '9普通U盘测试test418'
+            type: 1
+            reg_type: 1
+            capacity: 29510
+            vendor_id: 'Kingston'
+            pid: '1666'
+            vid: 0951
+            partition_system: 'vfat'
+            username: '10'
+            tel: '10'
+            memo: '10'
+            tag_id: 1
+            safe_check_status: 1
+
+
+#output:
+#    - usb_disk_reg
+request:
+    url: /api/upload_client_conf.json?mid=68f21c6a90a55db4a3fef9235fb2a318&ver=1.0
+    method: POST
+#    headers:
+##        Content-Type: application/x-www-form-urlencoded
+##        Content-Type: application/json
+    json:
+        code: 0
+        type: usb
+        usb_disk_reg: $usb_disk_reg #*usb_disk_reg
+
+
+#        usb_disk_reg: #$usb_disk_reg #*usb_disk_reg
+#            device_id: ${get_time()}    #1dddddddddxxxxx41813234567890
+#            datetime: $datetime   #'1625129463'
+#            name: $name #json注册U盘${get_time()}
+#            type: $type
+#            reg_type: $reg_type
+#            capacity: $capacity
+#            vendor_id: $vendor_id
+#            pid: $pid
+#            vid: $vid
+#            partition_system: $partition_system
+#            username: $username
+#            tel: $tel
+#            memo: $memo
+#            tag_id: $tag_id
+#            safe_check_status: $safe_check_status
+
+
+
+validate:
+    - eq: ["status_code", 200]

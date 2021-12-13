@@ -1,0 +1,58 @@
+
+- test:
+    name: U盘注册测试udisk2_url
+    request:
+      method: POST
+      url: http://10.95.34.13:80/api/upload_client_conf.json?mid=${mid()}&ver=1.0
+      json:
+        code: 0
+        type: usb
+        usb_disk_reg:
+          device_id: ${get_time()}    #1dddddddddxxxxx41813234567890
+          datetime: '1625129463'
+          name: udisk2_url
+          type: 1
+          reg_type: 1
+          capacity: 29510
+          vendor_id: Kingston
+          pid: '1666'
+          vid: 0951
+          partition_system: vfat
+          username: '10'
+          tel: '10'
+          memo: '10'
+          tag_id: 1
+          safe_check_status: 1
+
+    validate:
+        - eq: ["content.msg", success1]
+
+
+
+- test:
+    name: U盘注册测试udisk2_url
+    request:
+      method: POST
+      url: http://10.95.34.13:80/api/upload_client_conf.json?mid=${mid()}&ver=1.0
+      json:
+        code: 0
+        type: usb
+        usb_disk_reg:
+          device_id: 1dddddddddxxxxx41813234567890
+          datetime: '1625129463'
+          name: 2udisk2_url
+          type: 1
+          reg_type: 1
+          capacity: 29510
+          vendor_id: Kingston
+          pid: '1666'
+          vid: 0951
+          partition_system: vfat
+          username: '10'
+          tel: '10'
+          memo: '10'
+          tag_id: 1
+          safe_check_status: 1
+
+    validate:
+        - eq: ["content.msg", success]

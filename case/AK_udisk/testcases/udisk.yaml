@@ -1,0 +1,87 @@
+#https://www.shuzhiduo.com/A/MyJx3mWRzn/
+#https://www.cnblogs.com/lisa2016/p/11764808.html
+#https://www.shuzhiduo.com/A/MyJx3mWRzn/
+#https://www.cnblogs.com/lisa2016/p/11764808.html
+- config:
+      url: &config_url http://10.95.34.13:80/api/upload_client_conf.json?mid=517b9255227858c7810af8e6b3824286&ver=1.0
+#      yaml直接引用
+#      animal3: &animal3 fish
+#      test: *animal3
+#      python读取的数据
+#      {'animal3': 'fish', 'test': 'fish'}
+      name: &name 这是测试udisk的yaml文件
+#      num: &num1
+#          num_1: ${random.int(10,100)}   # 10到100内的随机数
+      variables:
+        Time: ${get_time()}
+
+
+- test:
+    name: U盘注册申请
+    request:
+        url: *config_url
+        method: POST
+        headers:
+            Content-Type: application/json
+#            <<*info
+        json:
+          code: 0
+          type: usb
+          usb_disk_reg:
+            device_id: ${get_time()}    #1dddddddddxxxxx41813234567890
+            datetime: '1625129463'
+            name: *name
+            type: 1
+            reg_type: 1
+            capacity: 29510
+            vendor_id: Kingston
+            pid: '1666'
+            vid: 0951
+            partition_system: vfat
+            username: '10'
+            tel: '10'
+            memo: '10'
+            tag_id: 1
+            safe_check_status: 1
+    extract:
+      name: content.msg
+    validates:
+      - eq: ["status_code",200]
+      - eq: ['content.msg','success']
+
+- test:
+    name: U盘注册申请2
+    request:
+        url: *config_url
+        method: GET
+        headers:
+          &conf_headers #这样取不到值，但是不会报错，读出来是 'headers': None,
+#          Content-Type: application/json
+        json:
+          code: 0
+          type: usb
+          usb_disk_reg:
+            device_id: 2dddddddddxxxxx41813234567890
+            datetime: $Time
+            #'1625129463'
+            name: $name #yamlU盘测试2
+            type: 1
+            reg_type: 1
+            capacity: 29510
+            vendor_id: Kingston
+            pid: '1666'
+            vid: 0951
+            partition_system: vfat
+            username: '10'
+            tel: '10'
+            memo: '10'
+            tag_id: 1
+            safe_check_status: 1
+    validators:
+#        - {"check": "status_code","expeted":300}
+#        - {"check": "content.errorMessage", "comparator": "eq", "expected": ""}
+#        - {"check": "content.data", "comparator": "ne", "expected": ""}
+        - eq: ["status_code", 201]
+#       - assert_equal("status_code", 300)
+
+#

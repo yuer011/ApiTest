@@ -1,0 +1,34 @@
+一、目录定义：
+    api: 存储接口定义说明
+    testcase：存储接口测试点
+    testsuit：存储测试场景
+    common: 存储公共方法实现
+    data：数据驱动csv文件
+二、编写约定：
+    1. 项目目录名称：每个模块自己定义
+    2. 主干分支名称：ApiTest，调试用小分支，调试通过后合并至主干分支
+    3. 控制端接口目录按导航栏划分，终端接口目录按模块划分
+    4. 公共方法实现写在/ApiTest/common下面，包装方法入口写在debugtalk.py里面供用例调用；debugtalk里面定义接口时建议方法名前加"g_"
+    5. 奇测平台运行按文件夹目录进行配置
+
+三、细节参考：
+    1. api中只定义接口，添加最基础的检查点，用例检查点在用例中写
+
+    2. debugtalk.py：即辅助函数，存储公共函数
+
+    3. 根目录：ApiTest中根目录是指debugtalk所在目录为项目根目录，但奇测平台运行根目录是指main-runner.py 所在目录
+
+    4. 参数化：testcase中不支持参数化，参数化场景只能在testsuit中
+
+    5. 后期优化，从config.ini中提取url的ip地址比较好，暂未实现。
+
+    6. csv文件引用以main-runner.py 目录为根目录
+
+    7. debugtalk.py 文件里引用其他模块函数，根目录为ApiTest跟目录，比如：from tests.demo.common.getDay import get_day_of_day
+
+    8. 变量作用域：ApiTest中写的"若某变量在 config 和某 test 中都定义了，则该 test 中使用自己定义的变量值" .
+        测试结果是会使用config中定义的变量值，建议更换变量名或是使用setup_hooks来实现
+
+    9. setup_hooks、teardown_hooks中如果写多个公共方法时，执行顺序会随机调用，如果有顺序要求，建议封装成一个公共方法使用
+
+    10. 在testsuit里面用参数化方式执行testcase时，建议参数化的变量数与testcase中config中定义的一致或是与-test中变量定义的一致，否则可能会导致case参数化未完全生效

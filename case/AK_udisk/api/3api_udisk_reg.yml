@@ -1,0 +1,153 @@
+#name: getlistdata_api
+#base_url: http://10.95.34.13:80
+#config:
+#    name:  ${get_time()}注册U盘
+#    variables:
+#        code: 0
+#        type: usb
+#        usb_disk_reg: #{"device_id": "1dddddddddxxxxx41813234567890","datetime": "1625129463","name": "普通U盘测试test418","type": 1,"reg_type": 1,"capacity": 29510,"vendor_id": "Kingston","pid": "1666","vid": "0951","partition_system": "vfat","username": "10","tel": "10","memo": "10","tag_id": 1,"safe_check_status":1}
+#            device_id: ${get_time()}    #1dddddddddxxxxx41813234567890
+#            datetime: '1625129463'
+#            name: 注册U盘1${get_time()}
+#            type: 1
+#            reg_type: 1
+#            capacity: 29510
+#            vendor_id: Kingston
+#            pid: '1666'
+#            vid: 0951
+#            partition_system: vfat
+#            username: '10'
+#            tel: '10'
+#            memo: '10'
+#            tag_id: 1
+#            safe_check_status: 1
+#
+#request:
+#    url: /api/upload_client_conf.json?mid=517b9255227858c7810af8e6b3824286&ver=1.0
+#    method: POST
+#    json:
+###        <<*conf_variables
+##        code: 0
+##        type: usb
+##        usb_disk_reg:
+##            device_id: ${get_time()}    #1dddddddddxxxxx41813234567890
+##            datetime: '1625129463'
+##            name: 注册U盘${get_time()}
+##            type: 1
+##            reg_type: 1
+##            capacity: 29510
+##            vendor_id: Kingston
+##            pid: '1666'
+##            vid: 0951
+##            partition_system: vfat
+##            username: '10'
+##            tel: '10'
+##            memo: '10'
+##            tag_id: 1
+##            safe_check_status: 1
+##    variables:
+#        code: $code
+#        type: $type
+#        usb_disk_reg: #$usb_disk_reg
+#            device_id: $device_id #${get_time()}    #1dddddddddxxxxx41813234567890
+#            datetime: $datetime'
+#            name: $name
+#            type: 1
+#            reg_type: 1
+#            capacity: 29510
+#            vendor_id: $vendor_id
+#            pid: $pid
+#            vid: $vid
+#            partition_system: $partition_system
+#            username: $username
+#            tel: $tel
+#            memo: $memo
+#            tag_id: $tag_id
+#            safe_check_status: $safe_check_status
+#
+#
+#validate:
+#    - eq: ["status_code", 200]
+
+
+
+name: getlistdata_api
+base_url: http://10.95.34.13:80
+config:
+    name:  注册U盘测试
+variables:
+    code: 0
+    type: usb
+#    usb_disk_reg: '{"device_id": "3dddddddddxxxxx41813234567890","datetime": "1625129463","name": "22普通U盘测试test418","type": 1,"reg_type": 1,"capacity": 29510,"vendor_id": "Kingston","pid": "1666","vid": "0951","partition_system": "vfat","username": "10","tel": "10","memo": "10","tag_id": 1,"safe_check_status":1}'
+
+    usb_disk_reg: &usb_disk_reg #'{"device_id": "2dddddddddxxxxx41813234567890","datetime": "1625129463","name": "2普通U盘测试test418","type": 1,"reg_type": 1,"capacity": 29510,"vendor_id": "Kingston","pid": "1666","vid": "0951","partition_system": "vfat","username": "10","tel": "10","memo": "10","tag_id": 1,"safe_check_status":1}'
+        device_id: '2dddddddddxxxxx41813234567890'
+        datetime: '1625129463'
+        name: '10普通U盘测试test418'
+        type: 1
+        reg_type: 1
+        capacity: 29510
+        vendor_id: 'Kingston'
+        pid: '1666'
+        vid: 0951
+        partition_system: 'vfat'
+        username: '10'
+        tel: '10'
+        memo: '10'
+        tag_id: 1
+        safe_check_status: 1
+
+
+#
+#        code: 0
+#        type: usb
+#        usb_disk_reg: {
+#          #$usb_disk_reg
+#            "device_id": "1dddddddddxxxxx41813234567890",
+#            "datetime": "1625129463",
+#            "name": "普通U盘测试test418",
+#            "type": 1,
+#            "reg_type": 1,
+#            "capacity": 29510,
+#            "vendor_id": "Kingston",
+#            "pid": "1666",
+#            "vid": "0951",
+#            "partition_system": "vfat",
+#            "username": "10",
+#            "tel": "10",
+#            "memo": "10",
+#            "tag_id": 1,
+#            "safe_check_status":1
+#        }
+output:
+    - usb_disk_reg
+request:
+    url: /api/upload_client_conf.json?mid=68f21c6a90a55db4a3fef9235fb2a318&ver=1.0
+    method: POST
+    headers:
+#        Content-Type: application/x-www-form-urlencoded
+        Content-Type: application/json
+    json:
+        code: 0
+        type: usb
+        usb_disk_reg: *usb_disk_reg
+#            device_id: ${get_time()}    #1dddddddddxxxxx41813234567890
+#            datetime: '1625129463'
+#            name: json注册U盘${get_time()}
+#            type: 1
+#            reg_type: 1
+#            capacity: 29510
+#            vendor_id: Kingston
+#            pid: '1666'
+#            vid: 0951
+#            partition_system: vfat
+#            username: '10'
+#            tel: '10'
+#            memo: '10'
+#            tag_id: 1
+#            safe_check_status: 1
+
+
+
+validate:
+    - eq: ["status_code", 200]

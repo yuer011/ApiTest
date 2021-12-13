@@ -1,0 +1,982 @@
+<head>
+  <meta content="text/html; charset=utf-8" http-equiv="content-type" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title> - TestReport</title>
+  <style>
+    body {
+      background-color: #f2f2f2;
+      color: #333;
+      margin: 0 auto;
+      width: 960px;
+    }
+    #summary {
+      width: 960px;
+      margin-bottom: 20px;
+    }
+    #summary th {
+      background-color: skyblue;
+      padding: 5px 12px;
+    }
+    #summary td {
+      background-color: lightblue;
+      text-align: center;
+      padding: 4px 8px;
+    }
+    .details {
+      width: 960px;
+      margin-bottom: 20px;
+    }
+    .details th {
+      background-color: skyblue;
+      padding: 5px 12px;
+    }
+    .details tr .passed {
+      background-color: lightgreen;
+    }
+    .details tr .failed {
+      background-color: red;
+    }
+    .details tr .unchecked {
+      background-color: gray;
+    }
+    .details td {
+      background-color: lightblue;
+      padding: 5px 12px;
+    }
+    .details .detail {
+      background-color: lightgrey;
+      font-size: smaller;
+      padding: 5px 10px;
+      line-height: 20px;
+      text-align: left;
+    }
+    .details .success {
+      background-color: greenyellow;
+    }
+    .details .error {
+      background-color: red;
+    }
+    .details .failure {
+      background-color: salmon;
+    }
+    .details .skipped {
+      background-color: gray;
+    }
+
+    .button {
+      font-size: 1em;
+      padding: 6px;
+      width: 4em;
+      text-align: center;
+      background-color: #06d85f;
+      border-radius: 20px/50px;
+      cursor: pointer;
+      transition: all 0.3s ease-out;
+    }
+    a.button{
+      color: gray;
+      text-decoration: none;
+      display: inline-block;
+    }
+    .button:hover {
+      background: #2cffbd;
+    }
+
+    .overlay {
+      position: fixed;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      background: rgba(0, 0, 0, 0.7);
+      transition: opacity 500ms;
+      visibility: hidden;
+      opacity: 0;
+      line-height: 25px;
+    }
+    .overlay:target {
+      visibility: visible;
+      opacity: 1;
+    }
+
+    .popup {
+      margin: 70px auto;
+      padding: 20px;
+      background: #fff;
+      border-radius: 10px;
+      width: 50%;
+      position: relative;
+      transition: all 3s ease-in-out;
+    }
+
+    .popup h2 {
+      margin-top: 0;
+      color: #333;
+      font-family: Tahoma, Arial, sans-serif;
+    }
+    .popup .close {
+      position: absolute;
+      top: 20px;
+      right: 30px;
+      transition: all 200ms;
+      font-size: 30px;
+      font-weight: bold;
+      text-decoration: none;
+      color: #333;
+    }
+    .popup .close:hover {
+      color: #06d85f;
+    }
+    .popup .content {
+      max-height: 80%;
+      overflow: auto;
+      text-align: left;
+    }
+    .popup .separator {
+      color:royalblue
+    }
+
+    @media screen and (max-width: 700px) {
+      .box {
+        width: 70%;
+      }
+      .popup {
+        width: 70%;
+      }
+    }
+
+  </style>
+</head>
+
+<body>
+  <h1>Test Report: </h1>
+
+  <h2>Summary</h2>
+  <table id="summary">
+    <tr>
+      <th>START AT</th>
+      <td colspan="4">2021-12-06 18:42:29</td>
+    </tr>
+    <tr>
+      <th>DURATION</th>
+      <td colspan="4">0.174 seconds</td>
+    </tr>
+    <tr>
+      <th>PLATFORM</th>
+      <td>HttpRunner 2.0.5 </td>
+      <td>CPython 3.7.2 </td>
+      <td colspan="2">Windows-10-10.0.19041-SP0</td>
+    </tr>
+    <tr>
+      <th>STAT</th>
+      <th colspan="2">TESTCASES (success/fail)</th>
+      <th colspan="2">TESTSTEPS (success/fail/error/skip)</th>
+    </tr>
+    <tr>
+      <td>total (details) =></td>
+      <td colspan="2">1 (0/1)</td>
+      <td colspan="2">3 (2/1/0/0)</td>
+    </tr>
+  </table>
+
+  <h2>Details</h2>
+
+  
+  
+  <h3>这是测试udisk的yaml文件</h3>
+  <table id="suite_1" class="details">
+    <tr>
+      <td>TOTAL: 3</td>
+      <td>SUCCESS: 2</td>
+      <td>FAILED: 1</td>
+      <td>ERROR: 0</td>
+      <td>SKIPPED: 0</td>
+    </tr>
+    <tr>
+      <th>Status</th>
+      <th colspan="2">Name</th>
+      <th>Response Time</th>
+      <th>Detail</th>
+    </tr>
+
+    
+    
+    
+    <tr id="record_1_1">
+      <th class="failure" style="width:5em;">failure</th>
+      <td colspan="2">U盘注册申请</td>
+      <td style="text-align:center;width:6em;">15.94 ms</td>
+      <td class="detail">
+
+        
+        
+        <a class="button" href="#popup_log_1_1_1">log-1</a>
+        <div id="popup_log_1_1_1" class="overlay">
+          <div class="popup">
+            <h2>Request and Response data</h2>
+            <a class="close" href="#record_1_1_1">&times;</a>
+
+            <div class="content">
+              <h3>Name: U盘注册申请</h3>
+
+              
+
+              
+
+              <h3>Request:</h3>
+              <div style="overflow: auto">
+                <table>
+                  
+                    <tr>
+                      <th>url</th>
+                      <td>
+                        
+                          http://10.95.34.13:80/api/upload_client_conf.json?mid=517b9255227858c7810af8e6b3824286&ver=1.0
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>method</th>
+                      <td>
+                        
+                          POST
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>headers</th>
+                      <td>
+                        
+                          
+                          <div>
+                            <strong>User-Agent</strong>: python-requests/2.26.0
+                          </div>
+                          
+                          <div>
+                            <strong>Accept-Encoding</strong>: gzip, deflate
+                          </div>
+                          
+                          <div>
+                            <strong>Accept</strong>: */*
+                          </div>
+                          
+                          <div>
+                            <strong>Connection</strong>: keep-alive
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Type</strong>: application/json
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Length</strong>: 368
+                          </div>
+                          
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>body</th>
+                      <td>
+                        
+                          {&#34;code&#34;: 0, &#34;type&#34;: &#34;usb&#34;, &#34;usb_disk_reg&#34;: {&#34;device_id&#34;: 1638787349, &#34;datetime&#34;: &#34;1625129463&#34;, &#34;name&#34;: &#34;\u8fd9\u662f\u6d4b\u8bd5udisk\u7684yaml\u6587\u4ef6&#34;, &#34;type&#34;: 1, &#34;reg_type&#34;: 1, &#34;capacity&#34;: 29510, &#34;vendor_id&#34;: &#34;Kingston&#34;, &#34;pid&#34;: &#34;1666&#34;, &#34;vid&#34;: &#34;0951&#34;, &#34;partition_system&#34;: &#34;vfat&#34;, &#34;username&#34;: &#34;10&#34;, &#34;tel&#34;: &#34;10&#34;, &#34;memo&#34;: &#34;10&#34;, &#34;tag_id&#34;: 1, &#34;safe_check_status&#34;: 1}}
+                        
+                      </td>
+                    </tr>
+                  
+                </table>
+              </div>
+
+              <h3>Response:</h3>
+              <div style="overflow: auto">
+                <table>
+                    
+                      <tr>
+                        <th>ok</th>
+                        <td>
+                          
+                            True
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>url</th>
+                        <td>
+                          
+                            http://10.95.34.13:80/api/upload_client_conf.json?mid=517b9255227858c7810af8e6b3824286&ver=1.0
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>status_code</th>
+                        <td>
+                          
+                            200
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>reason</th>
+                        <td>
+                          
+                            OK
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>cookies</th>
+                        <td>
+                          
+                            {}
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>encoding</th>
+                        <td>
+                          
+                            ISO-8859-1
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>headers</th>
+                        <td>
+                          
+                            
+                            <div>
+                              <strong>Date</strong>: Mon, 06 Dec 2021 10:40:26 GMT
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Type</strong>: text/plain
+                            </div>
+                            
+                            <div>
+                              <strong>Transfer-Encoding</strong>: chunked
+                            </div>
+                            
+                            <div>
+                              <strong>Connection</strong>: keep-alive
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Encoding</strong>: gzip
+                            </div>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>content_type</th>
+                        <td>
+                          
+                            text/plain
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>json</th>
+                        <td>
+                          
+                              <pre>{&#39;msg&#39;: &#39;success&#39;, &#39;code&#39;: &#39;0&#39;, &#39;data&#39;: []}</pre>
+                          
+                        </td>
+                      </tr>
+                    
+                  </table>
+              </div>
+              
+
+              <h3>Validators:</h3>
+              <div style="overflow: auto">
+                  <table>
+                    <tr>
+                      <th>check</th>
+                      <th>comparator</th>
+                      <th>expect value</th>
+                      <th>actual value</th>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        status_code
+                      </td>
+                      <td>eq</td>
+                      <td>200</td>
+                      <td>200</td>
+                    </tr>
+                    
+                  </table>
+              </div>
+
+              <h3>Statistics:</h3>
+              <div style="overflow: auto">
+                <table>
+                  <tr>
+                      <th>content_size(bytes)</th>
+                      <td>39</td>
+                    </tr>
+                  <tr>
+                    <th>response_time(ms)</th>
+                    <td>15.94</td>
+                  </tr>
+                  <tr>
+                    <th>elapsed(ms)</th>
+                    <td>12.366</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+
+        
+          <a class="button" href="#popup_attachment_1_1">traceback</a>
+          <div id="popup_attachment_1_1" class="overlay">
+            <div class="popup">
+              <h2>Traceback Message</h2>
+              <a class="close" href="#record_1_1">&times;</a>
+              <div class="content"><pre>Traceback (most recent call last):
+  File &#34;C:\Users\lilingyun01\Desktop\test_yaml\yaml_practice\ApiTest\api.py&#34;, line 53, in test
+    test_runner.run_test(test_dict)
+ApiTest.exceptions.ExtractFailure: Failed to extract! =&gt; msg1
+response body: {&#39;msg&#39;: &#39;success&#39;, &#39;code&#39;: &#39;0&#39;, &#39;data&#39;: []}
+
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File &#34;C:\Users\lilingyun01\Desktop\test_yaml\yaml_practice\ApiTest\api.py&#34;, line 55, in test
+    self.fail(str(ex))
+AssertionError: Failed to extract! =&gt; msg1
+response body: {&#39;msg&#39;: &#39;success&#39;, &#39;code&#39;: &#39;0&#39;, &#39;data&#39;: []}
+
+</pre></div>
+            </div>
+          </div>
+        
+
+      </td>
+    </tr>
+  
+    
+    
+    <tr id="record_1_2">
+      <th class="success" style="width:5em;">success</th>
+      <td colspan="2">U盘注册申请2</td>
+      <td style="text-align:center;width:6em;">8.08 ms</td>
+      <td class="detail">
+
+        
+        
+        <a class="button" href="#popup_log_1_2_1">log-1</a>
+        <div id="popup_log_1_2_1" class="overlay">
+          <div class="popup">
+            <h2>Request and Response data</h2>
+            <a class="close" href="#record_1_2_1">&times;</a>
+
+            <div class="content">
+              <h3>Name: U盘注册申请2</h3>
+
+              
+
+              
+
+              <h3>Request:</h3>
+              <div style="overflow: auto">
+                <table>
+                  
+                    <tr>
+                      <th>url</th>
+                      <td>
+                        
+                          http://10.95.34.13:80/api/upload_client_conf.json?mid=517b9255227858c7810af8e6b3824286&ver=1.0
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>method</th>
+                      <td>
+                        
+                          GET
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>headers</th>
+                      <td>
+                        
+                          
+                          <div>
+                            <strong>User-Agent</strong>: python-requests/2.26.0
+                          </div>
+                          
+                          <div>
+                            <strong>Accept-Encoding</strong>: gzip, deflate
+                          </div>
+                          
+                          <div>
+                            <strong>Accept</strong>: */*
+                          </div>
+                          
+                          <div>
+                            <strong>Connection</strong>: keep-alive
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Length</strong>: 343
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Type</strong>: application/json
+                          </div>
+                          
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>body</th>
+                      <td>
+                        
+                          {&#34;code&#34;: 0, &#34;type&#34;: &#34;usb&#34;, &#34;usb_disk_reg&#34;: {&#34;device_id&#34;: &#34;2dddddddddxxxxx41813234567890&#34;, &#34;datetime&#34;: 1638787349, &#34;name&#34;: &#34;success&#34;, &#34;type&#34;: 1, &#34;reg_type&#34;: 1, &#34;capacity&#34;: 29510, &#34;vendor_id&#34;: &#34;Kingston&#34;, &#34;pid&#34;: &#34;1666&#34;, &#34;vid&#34;: &#34;0951&#34;, &#34;partition_system&#34;: &#34;vfat&#34;, &#34;username&#34;: &#34;10&#34;, &#34;tel&#34;: &#34;10&#34;, &#34;memo&#34;: &#34;10&#34;, &#34;tag_id&#34;: 1, &#34;safe_check_status&#34;: 1}}
+                        
+                      </td>
+                    </tr>
+                  
+                </table>
+              </div>
+
+              <h3>Response:</h3>
+              <div style="overflow: auto">
+                <table>
+                    
+                      <tr>
+                        <th>ok</th>
+                        <td>
+                          
+                            True
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>url</th>
+                        <td>
+                          
+                            http://10.95.34.13:80/api/upload_client_conf.json?mid=517b9255227858c7810af8e6b3824286&ver=1.0
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>status_code</th>
+                        <td>
+                          
+                            200
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>reason</th>
+                        <td>
+                          
+                            OK
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>cookies</th>
+                        <td>
+                          
+                            {}
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>encoding</th>
+                        <td>
+                          
+                            ISO-8859-1
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>headers</th>
+                        <td>
+                          
+                            
+                            <div>
+                              <strong>Date</strong>: Mon, 06 Dec 2021 10:40:26 GMT
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Type</strong>: text/plain
+                            </div>
+                            
+                            <div>
+                              <strong>Transfer-Encoding</strong>: chunked
+                            </div>
+                            
+                            <div>
+                              <strong>Connection</strong>: keep-alive
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Encoding</strong>: gzip
+                            </div>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>content_type</th>
+                        <td>
+                          
+                            text/plain
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>json</th>
+                        <td>
+                          
+                              <pre>{&#39;msg&#39;: &#39;success&#39;, &#39;code&#39;: &#39;0&#39;, &#39;data&#39;: []}</pre>
+                          
+                        </td>
+                      </tr>
+                    
+                  </table>
+              </div>
+              
+
+              <h3>Validators:</h3>
+              <div style="overflow: auto">
+                  <table>
+                    <tr>
+                      <th>check</th>
+                      <th>comparator</th>
+                      <th>expect value</th>
+                      <th>actual value</th>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        status_code
+                      </td>
+                      <td>eq</td>
+                      <td>200</td>
+                      <td>200</td>
+                    </tr>
+                    
+                  </table>
+              </div>
+
+              <h3>Statistics:</h3>
+              <div style="overflow: auto">
+                <table>
+                  <tr>
+                      <th>content_size(bytes)</th>
+                      <td>39</td>
+                    </tr>
+                  <tr>
+                    <th>response_time(ms)</th>
+                    <td>8.08</td>
+                  </tr>
+                  <tr>
+                    <th>elapsed(ms)</th>
+                    <td>7.204</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+
+        
+
+      </td>
+    </tr>
+  
+    
+    
+    <tr id="record_1_3">
+      <th class="success" style="width:5em;">success</th>
+      <td colspan="2">单点策略拉取</td>
+      <td style="text-align:center;width:6em;">98.18 ms</td>
+      <td class="detail">
+
+        
+        
+        <a class="button" href="#popup_log_1_3_1">log-1</a>
+        <div id="popup_log_1_3_1" class="overlay">
+          <div class="popup">
+            <h2>Request and Response data</h2>
+            <a class="close" href="#record_1_3_1">&times;</a>
+
+            <div class="content">
+              <h3>Name: 单点策略拉取</h3>
+
+              
+
+              
+
+              <h3>Request:</h3>
+              <div style="overflow: auto">
+                <table>
+                  
+                    <tr>
+                      <th>url</th>
+                      <td>
+                        
+                          http://10.95.34.13/api/getconf.json?mid=517b9255227858c7810af8e6b3824286&ver=1.0
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>method</th>
+                      <td>
+                        
+                          GET
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>headers</th>
+                      <td>
+                        
+                          
+                          <div>
+                            <strong>User-Agent</strong>: python-requests/2.26.0
+                          </div>
+                          
+                          <div>
+                            <strong>Accept-Encoding</strong>: gzip, deflate
+                          </div>
+                          
+                          <div>
+                            <strong>Accept</strong>: */*
+                          </div>
+                          
+                          <div>
+                            <strong>Connection</strong>: keep-alive
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Type</strong>: application/json
+                          </div>
+                          
+                          <div>
+                            <strong>Content-Length</strong>: 12
+                          </div>
+                          
+                        
+                      </td>
+                    </tr>
+                  
+                    <tr>
+                      <th>body</th>
+                      <td>
+                        
+                          {&#34;_type&#34;: 2}
+                        
+                      </td>
+                    </tr>
+                  
+                </table>
+              </div>
+
+              <h3>Response:</h3>
+              <div style="overflow: auto">
+                <table>
+                    
+                      <tr>
+                        <th>ok</th>
+                        <td>
+                          
+                            True
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>url</th>
+                        <td>
+                          
+                            http://10.95.34.13/api/getconf.json?mid=517b9255227858c7810af8e6b3824286&ver=1.0
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>status_code</th>
+                        <td>
+                          
+                            200
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>reason</th>
+                        <td>
+                          
+                            OK
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>cookies</th>
+                        <td>
+                          
+                            {}
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>encoding</th>
+                        <td>
+                          
+                            ISO-8859-1
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>headers</th>
+                        <td>
+                          
+                            
+                            <div>
+                              <strong>Date</strong>: Mon, 06 Dec 2021 10:40:26 GMT
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Type</strong>: text/plain
+                            </div>
+                            
+                            <div>
+                              <strong>Transfer-Encoding</strong>: chunked
+                            </div>
+                            
+                            <div>
+                              <strong>Connection</strong>: keep-alive
+                            </div>
+                            
+                            <div>
+                              <strong>Content-Encoding</strong>: gzip
+                            </div>
+                            
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>content_type</th>
+                        <td>
+                          
+                            text/plain
+                          
+                        </td>
+                      </tr>
+                    
+                      <tr>
+                        <th>json</th>
+                        <td>
+                          
+                              <pre>{&#39;msg&#39;: &#39;success&#39;, &#39;code&#39;: &#39;0&#39;, &#39;data&#39;: [{&#39;type&#39;: 2100, &#39;detail&#39;: {&#39;ui&#39;: {&#39;limit_username&#39;: &#39;&#39;, &#39;cliententry&#39;: {&#39;forbidden_trayclick&#39;: &#39;0&#39;, &#39;restorelnk&#39;: &#39;0&#39;, &#39;module_entry&#39;: {&#39;show_popup_block&#39;: &#39;1&#39;, &#39;show_setting&#39;: &#39;1&#39;, &#39;show_dlp_scan&#39;: &#39;1&#39;, &#39;show_dlp_login&#39;: &#39;1&#39;, &#39;show_exit&#39;: &#39;1&#39;, &#39;show_securitycheck&#39;: &#39;1&#39;, &#39;show_leakfix&#39;: &#39;1&#39;, &#39;show_shamuma&#39;: &#39;1&#39;, &#39;show_offlineconf&#39;: &#39;1&#39;, &#39;show_esmc_usb&#39;: &#39;1&#39;, &#39;show_realname_check&#39;: &#39;1&#39;, &#39;show_assetreg&#39;: &#39;1&#39;, &#39;show_security_check_base&#39;: &#39;1&#39;, &#39;show_notice&#39;: &#39;1&#39;, &#39;show_update&#39;: &#39;1&#39;, &#39;show_about&#39;: &#39;1&#39;, &#39;show_softmgr&#39;: &#39;1&#39;, &#39;show_localmacheninfo&#39;: &#39;1&#39;}, &#39;inherit&#39;: &#39;1&#39;, &#39;hidetray&#39;: &#39;0&#39;, &#39;hidelnk&#39;: &#39;0&#39;, &#39;forbidden_traymenu&#39;: &#39;0&#39;, &#39;available_module&#39;: {&#39;leakfix&#39;: {&#39;enabled&#39;: 1}, &#39;qaxav&#39;: {&#39;enabled&#39;: 1}, &#39;network_change&#39;: {&#39;enabled&#39;: 1}}, &#39;show_main_ui&#39;: &#39;1&#39;}, &#39;inherit&#39;: &#39;1&#39;, &#39;logo_macos&#39;: &#39;&#39;, &#39;exterior&#39;: {&#39;login_bgpic_macos&#39;: &#39;&#39;, &#39;default_title3&#39;: &#39;&#39;, &#39;default_tray_logo&#39;: &#39;/download/tray_logo/defaultlogo.png&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;default_tray_logo_macos&#39;: &#39;/download/macos_logo/trayicondeactive.png&#39;, &#39;default_logo&#39;: &#39;&#39;, &#39;logo_macos&#39;: &#39;&#39;, &#39;default_login_bgpic_macos&#39;: &#39;&#39;, &#39;default_title1&#39;: &#39;&#39;, &#39;default_bgpic&#39;: &#39;&#39;, &#39;tray_logo&#39;: &#39;&#39;, &#39;default_login_bgpic&#39;: &#39;&#39;, &#39;login_bgpic&#39;: &#39;&#39;, &#39;info_logo_macos&#39;: &#39;&#39;, &#39;default_info_logo_macos&#39;: &#39;/download/macos_logo/icon_tanchuang.png&#39;, &#39;tray_logo_macos&#39;: &#39;&#39;, &#39;bgpic&#39;: &#39;&#39;, &#39;default_title&#39;: &#39;&#39;, &#39;default_logo_macos&#39;: &#39;/download/macos_logo/icon.icns&#39;}, &#39;logo&#39;: &#39;&#39;, &#39;conf_ver&#39;: 2886174846, &#39;md&#39;: {&#39;inherit&#39;: &#39;1&#39;}, &#39;tpl_list&#39;: [{&#39;tpl_info&#39;: {&#39;uniq_id&#39;: &#39;d4f7d25ed1207bc66516142b10dd556d&#39;, &#39;md5&#39;: &#39;bafd4cd0e40fef4ed6eac1a657279755&#39;, &#39;name&#39;: &#39;é»\x98è®¤æ¨¡æ\x9d¿&#39;, &#39;id&#39;: &#39;4&#39;}, &#39;rule&#39;: {&#39;time_range&#39;: None, &#39;online&#39;: &#39;1&#39;, &#39;scene&#39;: None}, &#39;rule_info&#39;: {&#39;name&#39;: &#39;æ\x9cªæ\x8c\x87å®\x9a&#39;}, &#39;time_info&#39;: {&#39;name&#39;: &#39;å\x85¨é\x83¨æ\x97¶é\x97´&#39;}, &#39;priority&#39;: &#39;1&#39;, &#39;conf&#39;: []}], &#39;client_skin&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;default&#39;}, &#39;default_tpl&#39;: {&#39;uniq_id&#39;: &#39;d4f7d25ed1207bc66516142b10dd556d&#39;, &#39;md5&#39;: &#39;bafd4cd0e40fef4ed6eac1a657279755&#39;, &#39;name&#39;: &#39;é»\x98è®¤æ¨¡æ\x9d¿&#39;, &#39;id&#39;: &#39;4&#39;}, &#39;conf_ver_s&#39;: &#39;5f07d67712061623##&#39;, &#39;language&#39;: {&#39;value&#39;: &#39;0&#39;}, &#39;title&#39;: &#39;&#39;, &#39;home_title&#39;: &#39;&#39;, &#39;network_change&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;network_list&#39;: []}, &#39;administrator&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;email&#39;: &#39;&#39;, &#39;name&#39;: &#39;&#39;, &#39;phone&#39;: &#39;&#39;}, &#39;limit_user&#39;: &#39;&#39;, &#39;home_sub_title&#39;: &#39;&#39;}, &#39;custom_advtools&#39;: {&#39;conf_ver_s&#39;: &#39;789838be12061605##&#39;, &#39;tools&#39;: [], &#39;inherit&#39;: &#39;1&#39;, &#39;conf_ver&#39;: 2187460698}, &#39;neteye&#39;: {&#39;logupload_interval&#39;: &#39;600&#39;, &#39;proc_whitelist&#39;: [], &#39;conf_ver_s&#39;: &#39;b6b2fb3712061605##&#39;, &#39;logupload_server&#39;: &#39;127.0.0.1:80&#39;, &#39;logupload_enable&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;conf_ver&#39;: 74738982}, &#39;app_control_v2&#39;: {&#39;process_safe&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;popup_tips&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;rules&#39;: []}, &#39;conf_ver_s&#39;: &#39;4dd79eba12061605##&#39;, &#39;registry_safe&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;popup_tips&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;safe_list&#39;: []}, &#39;file_safe&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;popup_tips&#39;: &#39;0&#39;, &#39;safe_list&#39;: [], &#39;file_ext_protect&#39;: [{&#39;proc_rule_list&#39;: [], &#39;file_ext_list&#39;: []}], &#39;inherit&#39;: &#39;1&#39;}, &#39;conf_ver&#39;: 3710962122, &#39;app_boot&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;popup_tips&#39;: &#39;0&#39;, &#39;version&#39;: &#39;2.0&#39;, &#39;default_action&#39;: &#39;0&#39;, &#39;rules&#39;: [{&#39;rule_id&#39;: &#39;-2&#39;, &#39;behavior&#39;: &#39;1&#39;, &#39;rule&#39;: {&#39;s_include&#39;: [&#39;filepath&#39;, &#39;%windir%&#39;, &#39;1&#39;]}, &#39;report&#39;: &#39;1&#39;}, {&#39;rule_id&#39;: &#39;-1&#39;, &#39;behavior&#39;: &#39;1&#39;, &#39;rule&#39;: {&#39;==&#39;: [&#39;const_true&#39;, &#39;1&#39;]}, &#39;report&#39;: &#39;1&#39;}, {&#39;rule_id&#39;: &#39;-3&#39;, &#39;behavior&#39;: &#39;1&#39;, &#39;rule&#39;: {&#39;in_whitelist&#39;: [&#39;md5&#39;, &#39;local_whitemd5_list&#39;, &#39;1&#39;]}, &#39;report&#39;: &#39;1&#39;}], &#39;default_action_report&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;allow_default_rules&#39;: &#39;1&#39;}}, &#39;fim&#39;: {&#39;monitor_path&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;path_list&#39;: []}, &#39;conf_ver_s&#39;: &#39;7a3b35e812061605##&#39;, &#39;timer_scan&#39;: {&#39;timer_type&#39;: &#39;0&#39;, &#39;timer_setting&#39;: [], &#39;timer_month_index&#39;: {&#39;value&#39;: &#39;6&#39;}, &#39;timer_day_minute&#39;: {&#39;value&#39;: &#39;00&#39;}, &#39;timer_day_hour&#39;: {&#39;value&#39;: &#39;00&#39;}, &#39;enabled&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;timer_week_index&#39;: {&#39;value&#39;: &#39;3&#39;}}, &#39;conf_ver&#39;: 916654449}, &#39;tess&#39;: {&#39;limit_username&#39;: &#39;&#39;, &#39;tpl_list&#39;: [{&#39;tpl_info&#39;: {&#39;uniq_id&#39;: &#39;0c13bd09080b5290fd44991d2bdca5ff&#39;, &#39;md5&#39;: &#39;d6bdd37b64196781c0a2d944c1b6fa6c&#39;, &#39;name&#39;: &#39;é»\x98è®¤æ¨¡æ\x9d¿&#39;, &#39;id&#39;: &#39;24&#39;}, &#39;rule&#39;: {&#39;time_range&#39;: None, &#39;online&#39;: &#39;1&#39;, &#39;scene&#39;: None}, &#39;rule_info&#39;: {&#39;name&#39;: &#39;æ\x9cªæ\x8c\x87å®\x9a&#39;}, &#39;time_info&#39;: {&#39;name&#39;: &#39;å\x85¨é\x83¨æ\x97¶é\x97´&#39;}, &#39;priority&#39;: &#39;1&#39;, &#39;conf&#39;: []}], &#39;default_tpl&#39;: {&#39;uniq_id&#39;: &#39;0c13bd09080b5290fd44991d2bdca5ff&#39;, &#39;md5&#39;: &#39;d6bdd37b64196781c0a2d944c1b6fa6c&#39;, &#39;name&#39;: &#39;é»\x98è®¤æ¨¡æ\x9d¿&#39;, &#39;id&#39;: &#39;24&#39;}, &#39;inherit&#39;: &#39;1&#39;, &#39;conf_ver&#39;: 1488261441, &#39;rule_match_type&#39;: &#39;match_first&#39;, &#39;limit&#39;: &#39;0&#39;, &#39;conf_ver_s&#39;: &#39;caa956fb12061612##&#39;, &#39;baseSetting&#39;: {&#39;dangerCtrl&#39;: &#39;0&#39;, &#39;cycleUnit&#39;: &#39;0&#39;, &#39;specificTime&#39;: &#39;0&#39;, &#39;warningInfo&#39;: &#39;&#39;, &#39;runWay&#39;: &#39;1&#39;, &#39;longTime&#39;: &#39;2&#39;, &#39;notify&#39;: &#39;1&#39;, &#39;time&#39;: &#39;1&#39;, &#39;score&#39;: &#39;80&#39;, &#39;interval&#39;: &#39;0&#39;}, &#39;standardSafe&#39;: {&#39;items&#39;: [{&#39;enable&#39;: &#39;1&#39;, &#39;items&#39;: {&#39;redList&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;path&#39;: []}, &#39;blackList&#39;: {&#39;enable&#39;: &#39;1&#39;, &#39;path&#39;: []}, &#39;whiteList&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;path&#39;: []}}, &#39;id&#39;: &#39;software&#39;, &#39;trim&#39;: True, &#39;level&#39;: &#39;2&#39;, &#39;cat&#39;: &#39;è½¯ä»¶æ\x84\x9fç\x9f¥é\x85\x8dç½®é¡¹&#39;, &#39;score&#39;: &#39;30&#39;}, {&#39;enable&#39;: &#39;1&#39;, &#39;items&#39;: {&#39;redList&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;path&#39;: []}, &#39;blackList&#39;: {&#39;enable&#39;: &#39;1&#39;, &#39;path&#39;: []}, &#39;whiteList&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;path&#39;: []}}, &#39;id&#39;: &#39;service&#39;, &#39;level&#39;: &#39;2&#39;, &#39;cat&#39;: &#39;æ\x9c\x8då\x8a¡æ\x84\x9fç\x9f¥é\x85\x8dç½®é¡¹&#39;, &#39;score&#39;: &#39;30&#39;}, {&#39;enable&#39;: &#39;1&#39;, &#39;registry&#39;: True, &#39;id&#39;: &#39;highRiskPort&#39;, &#39;unique&#39;: True, &#39;items&#39;: {&#39;blackList&#39;: {&#39;enable&#39;: &#39;1&#39;, &#39;path&#39;: []}, &#39;redList&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;path&#39;: []}}, &#39;score&#39;: &#39;30&#39;, &#39;level&#39;: &#39;2&#39;, &#39;cat&#39;: &#39;é«\x98å\x8d±ç«¯å\x8f£æ\x84\x9fç\x9f¥é\x85\x8dç½®é¡¹&#39;, &#39;check&#39;: &#39;&#39;}, {&#39;enable&#39;: &#39;1&#39;, &#39;items&#39;: [{&#39;enable&#39;: &#39;1&#39;, &#39;id&#39;: &#39;internetConnection&#39;, &#39;effect&#39;: &#39;æ\x84\x9fç\x9f¥å½\x93å\x89\x8dç»\x88ç«¯æ\x98¯å\x90¦å\x8f¯ä»¥è¿\x9eæ\x8e¥äº\x92è\x81\x94ç½\x91ç½\x91ç»\x9cã\x80\x82è\x8b¥å\x8f¯ä»¥è¿\x9eæ\x8e¥äº\x92è\x81\x94ç½\x91ï¼\x8cå\x88\x99å\x8f¯è\x83½å\x87ºç\x8e°æ\x95°æ\x8d®æ³\x84é\x9c²ï¼\x8cå\xad\x98å\x9c¨ä¸\x80å®\x9aå®\x89å\x85¨é\x9a\x90æ\x82£ã\x80\x82\nè\x8b¥å\x8f¯ä»¥è¿\x9eæ\x8e¥äº\x92è\x81\x94ç½\x91å\x88\x99è®¤ä¸ºé£\x8eé\x99©ã\x80\x82&#39;, &#39;level&#39;: &#39;2&#39;, &#39;cat&#39;: &#39;äº\x92è\x81\x94ç½\x91è¿\x9eæ\x8e¥æ\x84\x9fç\x9f¥&#39;, &#39;score&#39;: &#39;30&#39;}, {&#39;enable&#39;: &#39;1&#39;, &#39;id&#39;: &#39;diskDirectory&#39;, &#39;effect&#39;: &#39;æ\x84\x9fç\x9f¥å½\x93å\x89\x8dç³»ç»\x9fä¸\x8aæ\x98¯å\x90¦å\xad\x98å\x9c¨å\x85±äº«ç\x9b®å½\x95ï¼\x8cè\x8b¥ç³»ç»\x9få\xad\x98å\x9c¨å\x85±äº«ç\x9b®å½\x95ï¼\x8cå\x88\x99å\x8f¯è\x83½è¢«ç½\x91ç»\x9cä¸\x8aå\x85¶ä»\x96è®¡ç®\x97æ\x9cºè¿\x9eæ\x8e¥ï¼\x8cå\xad\x98å\x9c¨æ\x95°æ\x8d®æ³\x84é\x9c²ä»¥å\x8f\x8aå®\x89å\x85¨é£\x8eé\x99©ã\x80\x82é\x85\x8dç½®ä¸ºä¸\x8då\x85\x81è®¸å\x90\x8eï¼\x8cå\x85¶ä»\x96è®¡ç®\x97æ\x9cºå°\x86æ\x97\xa0æ³\x95é\x80\x9aè¿\x87è¿\x9cç¨\x8bå\x85±äº«ç\x9b®å½\x95è®¿é\x97®æ\xad¤ç»\x88ç«¯æ\x95°æ\x8d®æ\x88\x96æ\x8a\x95æ\x94¾ç\x97\x85æ¯\x92ã\x80\x82\næ³¨ï¼\x9aç³»ç»\x9fé»\x98è®¤ç\x9a\x84å\x85±äº«ä¸\x8dæ£\x80æµ\x8bï¼\x8cå¦\x82IPC$ã\x80\x81ADMIN$ã\x80\x81print$ã\x80\x81C$ã\x80\x82&#39;, &#39;level&#39;: &#39;1&#39;, &#39;cat&#39;: &#39;ç£\x81ç\x9b\x98ç\x9b®å½\x95å\x85±äº«æ\x84\x9fç\x9f¥&#39;, &#39;score&#39;: &#39;10&#39;}], &#39;title&#39;: &#39;ç½\x91ç»\x9cè¿\x9eæ\x8e¥æ\x84\x9fç\x9f¥é\x85\x8dç½®é¡¹&#39;, &#39;id&#39;: &#39;netConnection&#39;, &#39;isItem&#39;: True}], &#39;globalSwitch&#39;: &#39;0&#39;}, &#39;systemSafe&#39;: {&#39;items&#39;: [{&#39;enable&#39;: &#39;1&#39;, &#39;list&#39;: [{&#39;enable&#39;: &#39;1&#39;, &#39;id&#39;: &#39;1033&#39;, &#39;win10&#39;: &#39;1&#39;, &#39;value&#39;: &#39;5&#39;, &#39;effect&#39;: &#39;é\x98²æ\xad¢å¯\x86ç\xa0\x81ç\x8c\x9cæµ\x8bæ\x94»å\x87»ï¼\x8cé\x94\x81å®\x9aç\x9a\x84å¸\x90æ\x88·æ\x97\xa0æ³\x95ç»§ç»\xadç\x8c\x9cæµ\x8bå¸\x90æ\x88·ç\x9a\x84å\x8f£ä»¤ã\x80\x82&#39;, &#39;score&#39;: &#39;1&#39;, &#39;max&#39;: &#39;999&#39;, &#39;win7&#39;: &#39;1&#39;, &#39;unit&#39;: &#39;æ¬¡&#39;, &#39;xp&#39;: &#39;1&#39;, &#39;min&#39;: &#39;0&#39;, &#39;vista&#39;: &#39;1&#39;, &#39;path&#39;: &#39;æ\x9c¬å\x9c°å®\x89å\x85¨è®¾ç½®\\å¸\x90æ\x88·ç\xad\x96ç\x95¥\\å¸\x90æ\x88·é\x94\x81å®\x9aç\xad\x96ç\x95¥&#39;, &#39;inputType&#39;: &#39;&#39;, &#39;auto_fix&#39;: &#39;0&#39;, &#39;affect&#39;: &#39;æ\xad¤å®\x89å\x85¨è®¾ç½®ç¡®å®\x9aå¯¼è\x87´ç\x94¨æ\x88·å¸\x90æ\x88·è¢«é\x94\x81å®\x9aç\x9a\x84ç\x99»å½\x95å°\x9dè¯\x95å¤±è´¥ç\x9a\x84æ¬¡æ\x95°ã\x80\x82å\x9c¨ç®¡ç\x90\x86å\x91\x98é\x87\x8dç½®é\x94\x81å®\x9aå¸\x90æ\x88·æ\x88\x96å¸\x90æ\x88·é\x94\x81å®\x9aæ\x97¶é\x97´æ\x9c\x9fæ»¡ä¹\x8bå\x89\x8dï¼\x8cæ\x97\xa0æ³\x95ä½¿ç\x94¨è¯¥é\x94\x81å®\x9aå¸\x90æ\x88·ã\x80\x82å\x8f¯ä»¥å°\x86ç\x99»å½\x95å°\x9dè¯\x95å¤±è´¥æ¬¡æ\x95°è®¾ç½®ä¸ºä»\x8bäº\x8e 0 å\x92\x8c 999 ä¹\x8bé\x97´ç\x9a\x84å\x80¼ã\x80\x82å¦\x82æ\x9e\x9cå°\x86å\x80¼è®¾ç½®ä¸º 0ï¼\x8cå\x88\x99æ°¸è¿\x9cä¸\x8dä¼\x9aé\x94\x81å®\x9aå¸\x90æ\x88·ã\x80\x82å\x9c¨ä½¿ç\x94¨ Ctrl+Alt+Del æ\x88\x96å¯\x86ç\xa0\x81ä¿\x9dæ\x8a¤ç\x9a\x84å±\x8få¹\x95ä¿\x9dæ\x8a¤ç¨\x8båº\x8fé\x94\x81å®\x9aç\x9a\x84å·¥ä½\x9cç«\x99æ\x88\x96æ\x88\x90å\x91\x98æ\x9c\x8då\x8a¡å\x99¨ä¸\x8aç\x9a\x84å¯\x86ç\xa0\x81å°\x9dè¯\x95å¤±è´¥å°\x86è®¡ä½\x9cç\x99»å½\x95å°\x9dè¯\x95å¤±è´¥ã\x80\x82&#39;, &#39;level&#39;: &#39;0&#39;, &#39;name&#39;: &#39;è´¦æ\x88·é\x94\x81å®\x9aç\xad\x96ç\x95¥ï¼\x9aè´¦æ\x88·é\x94\x81å®\x9aé\x98\x88å\x80¼&#39;, &#39;win8&#39;: &#39;1&#39;}, {&#39;enable&#39;: &#39;1&#39;, &#39;id&#39;: &#39;1034&#39;, &#39;win10&#39;: &#39;1&#39;, &#39;value&#39;: &#39;15&#39;, &#39;effect&#39;: &#39;é\x98²æ\xad¢å¯\x86ç\xa0\x81ç\x8c\x9cæµ\x8bæ\x94»å\x87»ï¼\x8cé\x94\x81å®\x9aç\x9a\x84å¸\x90æ\x88·æ\x97\xa0æ³\x95ç»§ç»\xadç\x8c\x9cæµ\x8bå¸\x90æ\x88·ç\x9a\x84å\x8f£ä»¤ã\x80\x82&#39;, &#39;score&#39;: &#39;1&#39;, &#39;level&#39;: &#39;0&#39;, &#39;win7&#39;: &#39;1&#39;, &#39;unit&#39;: &#39;å\x88\x86é\x92\x9f&#39;, &#39;note&#39;: &#39;æ³¨æ\x84\x8fï¼\x9aè´¦æ\x88·é\x94\x81å®\x9aæ\x97¶é\x97´å¿\x85é¡»å¤§äº\x8eæ\x88\x96ç\xad\x89äº\x8eé\x87\x8dç½®æ\x97¶é\x97´ï¼\x8cæ\x89\x8då\x8f¯ä»¥ä¿®å¤\x8dæ\x88\x90å\x8a\x9fã\x80\x82&#39;, &#39;xp&#39;: &#39;1&#39;, &#39;min&#39;: &#39;0&#39;, &#39;vista&#39;: &#39;1&#39;, &#39;path&#39;: &#39;æ\x9c¬å\x9c°å®\x89å\x85¨è®¾ç½®\\å¸\x90æ\x88·ç\xad\x96ç\x95¥\\å¸\x90æ\x88·é\x94\x81å®\x9aç\xad\x96ç\x95¥&#39;, &#39;inputType&#39;: &#39;&#39;, &#39;auto_fix&#39;: &#39;0&#39;, &#39;affect&#39;: &#39;æ\xad¤å®\x89å\x85¨è®¾ç½®ç¡®å®\x9aé\x94\x81å®\x9aå¸\x90æ\x88·å\x9c¨è\x87ªå\x8a¨è§£é\x94\x81ä¹\x8bå\x89\x8dä¿\x9dæ\x8c\x81é\x94\x81å®\x9aç\x9a\x84å\x88\x86é\x92\x9fæ\x95°ã\x80\x82å\x8f¯ç\x94¨è\x8c\x83å\x9b´ä»\x8e 0 å\x88° 99,999 å\x88\x86é\x92\x9fã\x80\x82å¦\x82æ\x9e\x9cå°\x86å¸\x90æ\x88·é\x94\x81å®\x9aæ\x97¶é\x97´è®¾ç½®ä¸º 0ï¼\x8cå¸\x90æ\x88·å°\x86ä¸\x80ç\x9b´è¢«é\x94\x81å®\x9aç\x9b´å\x88°ç®¡ç\x90\x86å\x91\x98æ\x98\x8eç¡®è§£é\x99¤å¯¹å®\x83ç\x9a\x84é\x94\x81å®\x9aã\x80\x82å¦\x82æ\x9e\x9cå®\x9aä¹\x89äº\x86å¸\x90æ\x88·é\x94\x81å®\x9aé\x98\x88å\x80¼ï¼\x8cå\x88\x99å¸\x90æ\x88·é\x94\x81å®\x9aæ\x97¶é\x97´å¿\x85é¡»å¤§äº\x8eæ\x88\x96ç\xad\x89äº\x8eé\x87\x8dç½®æ\x97¶é\x97´ã\x80\x82&#39;, &#39;max&#39;: &#39;99999&#39;, &#39;effectNote&#39;: &#39;ã\x80\x8eå\x8fªæ\x9c\x89å\x9c¨è®¾å®\x9aâ\x80\x9cè´¦æ\x88·é\x94\x81å®\x9aé\x98\x88å\x80¼â\x80\x9då\x90\x8eç\x94\x9fæ\x95\x88ã\x80\x8f&#39;, &#39;name&#39;: &#39;è´¦æ\x88·é\x94\x81å®\x9aç\xad\x96ç\x95¥ï¼\x9aè´¦æ\x88·é\x94\x81å®\x9aæ\x97¶é\x97´&#39;, &#39;win8&#39;: &#39;1&#39;}], &#39;name&#39;: &#39;ç\x99»å½\x95å¤±è´¥é\x99\x90å\x88¶&#39;, &#39;ids&#39;: [&#39;1033&#39;, &#39;1034&#39;]}, {&#39;enable&#39;: &#39;1&#39;, &#39;list&#39;: [{&#39;enable&#39;: &#39;1&#39;, &#39;id&#39;: &#39;1054&#39;, &#39;win10&#39;: &#39;1&#39;, &#39;value&#39;: &#39;8&#39;, &#39;effect&#39;: &#39;å¯\x86ç\xa0\x81é\x95¿åº¦æ\x9c\x80å°\x8få\x80¼è¶\x8aå¤§ï¼\x8cæ\x9a´å\x8a\x9bç\xa0´è§£ç\x9a\x84é\x9a¾åº¦è¶\x8aé«\x98ã\x80\x82&#39;, &#39;score&#39;: &#39;1&#39;, &#39;max&#39;: &#39;14&#39;, &#39;win7&#39;: &#39;1&#39;, &#39;unit&#39;: &#39;å\xad\x97ç¬¦&#39;, &#39;xp&#39;: &#39;1&#39;, &#39;min&#39;: &#39;0&#39;, &#39;vista&#39;: &#39;1&#39;, &#39;path&#39;: &#39;æ\x9c¬å\x9c°å®\x89å\x85¨è®¾ç½®\\å¸\x90æ\x88·ç\xad\x96ç\x95¥\\å¯\x86ç\xa0\x81ç\xad\x96ç\x95¥\\å¯\x86ç\xa0\x81é\x95¿åº¦æ\x9c\x80å°\x8få\x80¼&#39;, &#39;inputType&#39;: &#39;&#39;, &#39;auto_fix&#39;: &#39;0&#39;, &#39;affect&#39;: &#39;æ\x9c\x80ç\x9f\xadå¯\x86ç\xa0\x81é\x95¿åº¦æ\xad¤å®\x89å\x85¨è®¾ç½®ç¡®å®\x9aç\x94¨æ\x88·å¸\x90æ\x88·å¯\x86ç\xa0\x81å\x8c\x85å\x90«ç\x9a\x84æ\x9c\x80å°\x91å\xad\x97ç¬¦æ\x95°ã\x80\x82å\x8f¯ä»¥å°\x86å\x80¼è®¾ç½®ä¸ºä»\x8bäº\x8e 1 å\x92\x8c 14 ä¸ªå\xad\x97ç¬¦ä¹\x8bé\x97´ï¼\x8cæ\x88\x96è\x80\x85å°\x86å\xad\x97ç¬¦æ\x95°è®¾ç½®ä¸º 0 ä»¥ç¡®å®\x9aä¸\x8dé\x9c\x80è¦\x81å¯\x86ç\xa0\x81ã\x80\x82é»\x98è®¤å\x80¼:å\x9c¨å\x9f\x9fæ\x8e§å\x88¶å\x99¨ä¸\x8aä¸º 7ã\x80\x82å\x9c¨ç\x8b¬ç«\x8bæ\x9c\x8då\x8a¡å\x99¨ä¸\x8aä¸º 0ã\x80\x82æ³¨æ\x84\x8f: å\x9c¨é»\x98è®¤æ\x83\x85å\x86µä¸\x8bï¼\x8cæ\x88\x90å\x91\x98è®¡ç®\x97æ\x9cºæ²¿ç\x94¨å\x90\x84è\x87ªå\x9f\x9fæ\x8e§å\x88¶å\x99¨ç\x9a\x84é\x85\x8dç½®ã\x80\x82&#39;, &#39;level&#39;: &#39;0&#39;, &#39;name&#39;: &#39;å¯\x86ç\xa0\x81ç\xad\x96ç\x95¥ï¼\x9aå¯\x86ç\xa0\x81é\x95¿åº¦æ\x9c\x80å°\x8få\x80¼&#39;, &#39;win8&#39;: &#39;1&#39;}, {&#39;enable&#39;: &#39;1&#39;, &#39;id&#39;: &#39;1027&#39;, &#39;win10&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;, &#39;effect&#39;: &#39;é\x99\x8dä½\x8eè®¡ç®\x97æ\x9cºç\x94¨æ\x88·é\x87\x8då¤\x8dä½¿æ\x97§å¯\x86ç\xa0\x81ç\x9a\x84å\x8f¯è\x83½æ\x80§ï¼\x8cä»\x8eè\x80\x8cé\x99\x8dä½\x8eç»\x88ç«¯å¸\x90æ\x88·å\x8f£ä»¤è¢«æ\x94»ç\xa0´ç\x9a\x84å\x8f¯è\x83½æ\x80§ã\x80\x82å¢\x9eå\x8a\xa0æ\x9a´å\x8a\x9bç\xa0´è§£ç\x9a\x84é\x9a¾åº¦ã\x80\x82&#39;, &#39;score&#39;: &#39;1&#39;, &#39;max&#39;: &#39;998&#39;, &#39;win7&#39;: &#39;1&#39;, &#39;unit&#39;: &#39;å¤©&#39;, &#39;xp&#39;: &#39;1&#39;, &#39;min&#39;: &#39;0&#39;, &#39;vista&#39;: &#39;1&#39;, &#39;path&#39;: &#39;æ\x9c¬å\x9c°å®\x89å\x85¨ç\xad\x96ç\x95¥\\å¸\x90æ\x88·ç\xad\x96ç\x95¥\\å¯\x86ç\xa0\x81ç\xad\x96ç\x95¥\\å¯\x86ç\xa0\x81æ\x9c\x80ç\x9f\xadä½¿ç\x94¨æ\x9c\x9fé\x99\x90&#39;, &#39;inputType&#39;: &#39;&#39;, &#39;auto_fix&#39;: &#39;0&#39;, &#39;affect&#39;: &#39;å¯\x86ç\xa0\x81æ\x9c\x80ç\x9f\xadä½¿ç\x94¨æ\x9c\x9fé\x99\x90æ\xad¤å®\x89å\x85¨è®¾ç½®ç¡®å®\x9aå\x9c¨ç\x94¨æ\x88·æ\x9b´æ\x94¹æ\x9f\x90ä¸ªå¯\x86ç\xa0\x81ä¹\x8bå\x89\x8då¿\x85é¡»ä½¿ç\x94¨è¯¥å¯\x86ç\xa0\x81ä¸\x80æ®µæ\x97¶é\x97´(ä»¥å¤©ä¸ºå\x8d\x95ä½\x8d)ã\x80\x82å\x8f¯ä»¥è®¾ç½®ä¸\x80ä¸ªä»\x8bäº\x8e 1 å\x92\x8c 998 å¤©ä¹\x8bé\x97´ç\x9a\x84å\x80¼ï¼\x8cæ\x88\x96è\x80\x85å°\x86å¤©æ\x95°è®¾ç½®ä¸º 0ï¼\x8cå\x85\x81è®¸ç«\x8bå\x8d³æ\x9b´æ\x94¹å¯\x86ç\xa0\x81ã\x80\x82å¯\x86ç\xa0\x81æ\x9c\x80ç\x9f\xadä½¿ç\x94¨æ\x9c\x9fé\x99\x90å¿\x85é¡»å°\x8fäº\x8eå¯\x86ç\xa0\x81æ\x9c\x80é\x95¿ä½¿ç\x94¨æ\x9c\x9fé\x99\x90ï¼\x8cé\x99¤é\x9d\x9eå°\x86å¯\x86ç\xa0\x81æ\x9c\x80é\x95¿ä½¿ç\x94¨æ\x9c\x9fé\x99\x90è®¾ç½®ä¸º 0ï¼\x8cæ\x8c\x87æ\x98\x8eå¯\x86ç\xa0\x81æ°¸ä¸\x8dè¿\x87æ\x9c\x9fã\x80\x82å¦\x82æ\x9e\x9cå°\x86å¯\x86ç\xa0\x81æ\x9c\x80é\x95¿ä½¿ç\x94¨æ\x9c\x9fé\x99\x90è®¾ç½®ä¸º 0ï¼\x8cå\x88\x99å\x8f¯ä»¥å°\x86å¯\x86ç\xa0\x81æ\x9c\x80ç\x9f\xadä½¿ç\x94¨æ\x9c\x9fé\x99\x90è®¾ç½®ä¸ºä»\x8bäº\x8e 0 å\x92\x8c 998 ä¹\x8bé\x97´ç\x9a\x84ä»»ä½\x95å\x80¼ã\x80\x82å¦\x82æ\x9e\x9cå¸\x8cæ\x9c\x9bâ\x80\x9cå¼ºå\x88¶å¯\x86ç\xa0\x81å\x8e\x86å\x8f²â\x80\x9dæ\x9c\x89æ\x95\x88ï¼\x8cå\x88\x99é\x9c\x80è¦\x81å°\x86å¯\x86ç\xa0\x81æ\x9c\x80ç\x9f\xadä½¿ç\x94¨æ\x9c\x9fé\x99\x90è®¾ç½®ä¸ºå¤§äº\x8e 0 ç\x9a\x84å\x80¼ã\x80\x82å¦\x82æ\x9e\x9cæ²¡æ\x9c\x89è®¾ç½®å¯\x86ç\xa0\x81æ\x9c\x80ç\x9f\xadä½¿ç\x94¨æ\x9c\x9fé\x99\x90ï¼\x8cç\x94¨æ\x88·å\x88\x99å\x8f¯ä»¥å¾ªç\x8e¯é\x80\x89æ\x8b©å¯\x86ç\xa0\x81ï¼\x8cç\x9b´å\x88°è\x8e·å¾\x97æ\x9c\x9fæ\x9c\x9bç\x9a\x84æ\x97§å¯\x86ç\xa0\x81ã\x80\x82é»\x98è®¤è®¾ç½®æ²¡æ\x9c\x89é\x81µä»\x8eæ\xad¤å»ºè®®ï¼\x8cä»¥ä¾¿ç®¡ç\x90\x86å\x91\x98è\x83½å¤\x9fä¸ºç\x94¨æ\x88·æ\x8c\x87å®\x9aå¯\x86ç\xa0\x81ï¼\x8cç\x84¶å\x90\x8eè¦\x81æ±\x82ç\x94¨æ\x88·å\x9c¨ç\x99»å½\x95æ\x97¶æ\x9b´æ\x94¹ç®¡ç\x90\x86å\x91\x98å®\x9aä¹\x89ç\x9a\x84å¯\x86ç\xa0\x81ã\x80\x82å¦\x82æ\x9e\x9cå°\x86å¯\x86ç\xa0\x81å\x8e\x86å\x8f²è®¾ç½®ä¸º 0ï¼\x8cç\x94¨æ\x88·å°\x86ä¸\x8då¿\x85é\x80\x89æ\x8b©æ\x96°å¯\x86ç\xa0\x81ã\x80\x82å\x9b\xa0æ\xad¤ï¼\x8cé»\x98è®¤æ\x83\x85å\x86µä¸\x8bå°\x86â\x80\x9cå¼ºå\x88¶å¯\x86ç\xa0\x81å\x8e\x86å\x8f²â\x80\x9dè®¾ç½®ä¸º 1ã\x80\x82&#39;, &#39;level&#39;: &#39;0&#39;, &#39;name&#39;: &#39;å¯\x86ç\xa0\x81ç\xad\x96ç\x95¥ï¼\x9aå¯\x86ç\xa0\x81æ\x9c\x80ç\x9f\xadä½¿ç\x94¨æ\x9c\x9fé\x99\x90&#39;, &#39;win8&#39;: &#39;1&#39;}, {&#39;enable&#39;: &#39;1&#39;, &#39;id&#39;: &#39;1028&#39;, &#39;win10&#39;: &#39;1&#39;, &#39;value&#39;: &#39;90&#39;, &#39;effect&#39;: &#39;é\x99\x8dä½\x8eè®¡ç®\x97æ\x9cºç\x94¨æ\x88·é\x87\x8då¤\x8dä½¿æ\x97§å¯\x86ç\xa0\x81ç\x9a\x84å\x8f¯è\x83½æ\x80§ï¼\x8cä»\x8eè\x80\x8cé\x99\x8dä½\x8eç»\x88ç«¯å¸\x90æ\x88·å\x8f£ä»¤è¢«æ\x94»ç\xa0´ç\x9a\x84å\x8f¯è\x83½æ\x80§ã\x80\x82å¢\x9eå\x8a\xa0æ\x9a´å\x8a\x9bç\xa0´è§£ç\x9a\x84é\x9a¾åº¦ã\x80\x82&#39;, &#39;score&#39;: &#39;1&#39;, &#39;max&#39;: &#39;999&#39;, &#39;win7&#39;: &#39;1&#39;, &#39;unit&#39;: &#39;å¤©&#39;, &#39;xp&#39;: &#39;1&#39;, &#39;min&#39;: &#39;0&#39;, &#39;vista&#39;: &#39;1&#39;, &#39;path&#39;: &#39;æ\x9c¬å\x9c°å®\x89å\x85¨ç\xad\x96ç\x95¥\\å¸\x90æ\x88·ç\xad\x96ç\x95¥\\å¯\x86ç\xa0\x81ç\xad\x96ç\x95¥\\å¯\x86ç\xa0\x81æ\x9c\x80é\x95¿ä½¿ç\x94¨æ\x9c\x9fé\x99\x90&#39;, &#39;inputType&#39;: &#39;&#39;, &#39;auto_fix&#39;: &#39;0&#39;, &#39;affect&#39;: &#39;å¯\x86ç\xa0\x81æ\x9c\x80é\x95¿ä½¿ç\x94¨æ\x9c\x9fé\x99\x90æ\xad¤å®\x89å\x85¨è®¾ç½®ç¡®å®\x9aå\x9c¨ç³»ç»\x9fè¦\x81æ±\x82ç\x94¨æ\x88·æ\x9b´æ\x94¹æ\x9f\x90ä¸ªå¯\x86ç\xa0\x81ä¹\x8bå\x89\x8då\x8f¯ä»¥ä½¿ç\x94¨è¯¥å¯\x86ç\xa0\x81ç\x9a\x84æ\x9c\x9fé\x97´(ä»¥å¤©ä¸ºå\x8d\x95ä½\x8d)ã\x80\x82å\x8f¯ä»¥å°\x86å¯\x86ç\xa0\x81è®¾ç½®ä¸ºå\x9c¨æ\x9f\x90äº\x9bå¤©æ\x95°(ä»\x8bäº\x8e 1 å\x88° 999 ä¹\x8bé\x97´)å\x90\x8eå\x88°æ\x9c\x9fï¼\x8cæ\x88\x96è\x80\x85å°\x86å¤©æ\x95°è®¾ç½®ä¸º 0ï¼\x8cæ\x8c\x87å®\x9aå¯\x86ç\xa0\x81æ°¸ä¸\x8dè¿\x87æ\x9c\x9fã\x80\x82å¦\x82æ\x9e\x9cå¯\x86ç\xa0\x81æ\x9c\x80é\x95¿ä½¿ç\x94¨æ\x9c\x9fé\x99\x90ä»\x8bäº\x8e 1 å\x92\x8c 999 å¤©ä¹\x8bé\x97´ï¼\x8cå¯\x86ç\xa0\x81æ\x9c\x80ç\x9f\xadä½¿ç\x94¨æ\x9c\x9fé\x99\x90å¿\x85é¡»å°\x8fäº\x8eå¯\x86ç\xa0\x81æ\x9c\x80é\x95¿ä½¿ç\x94¨æ\x9c\x9fé\x99\x90ã\x80\x82å¦\x82æ\x9e\x9cå°\x86å¯\x86ç\xa0\x81æ\x9c\x80é\x95¿ä½¿ç\x94¨æ\x9c\x9fé\x99\x90è®¾ç½®ä¸º 0ï¼\x8cå\x88\x99å\x8f¯ä»¥å°\x86å¯\x86ç\xa0\x81æ\x9c\x80ç\x9f\xadä½¿ç\x94¨æ\x9c\x9fé\x99\x90è®¾ç½®ä¸ºä»\x8bäº\x8e 0 å\x92\x8c 998 å¤©ä¹\x8bé\x97´ç\x9a\x84ä»»ä½\x95å\x80¼ã\x80\x82æ³¨æ\x84\x8f: å®\x89å\x85¨æ\x9c\x80ä½³æ\x93\x8dä½\x9cæ\x98¯å°\x86å¯\x86ç\xa0\x81è®¾ç½®ä¸º 30 å\x88° 90 å¤©å\x90\x8eè¿\x87æ\x9c\x9fï¼\x8cå\x85·ä½\x93å\x8f\x96å\x86³äº\x8eæ\x82¨ç\x9a\x84ç\x8e¯å¢\x83ã\x80\x82è¿\x99æ\xa0·ï¼\x8cæ\x94»å\x87»è\x80\x85ç\x94¨æ\x9d¥ç\xa0´è§£ç\x94¨æ\x88·å¯\x86ç\xa0\x81ä»¥å\x8f\x8aè®¿é\x97®ç½\x91ç»\x9cèµ\x84æº\x90ç\x9a\x84æ\x97¶é\x97´å°\x86å\x8f\x97å\x88°é\x99\x90å\x88¶ã\x80\x82&#39;, &#39;level&#39;: &#39;0&#39;, &#39;name&#39;: &#39;å¯\x86ç\xa0\x81ç\xad\x96ç\x95¥ï¼\x9aå¯\x86ç\xa0\x81æ\x9c\x80é\x95¿ä½¿ç\x94¨æ\x9c\x9fé\x99\x90&#39;, &#39;win8&#39;: &#39;1&#39;}, {&#39;enable&#39;: &#39;1&#39;, &#39;id&#39;: &#39;1030&#39;, &#39;win10&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;, &#39;effect&#39;: &#39;å¦\x82æ\x9e\x9cå\x90¯ç\x94¨æ\xad¤ç\xad\x96ç\x95¥ï¼\x8cå¯\x86ç\xa0\x81å¿\x85é¡»ç¬¦å\x90\x88ä¸\x8bå\x88\x97æ\x9c\x80ä½\x8eè¦\x81æ±\x82:\r\r1. ä¸\x8dè\x83½å\x8c\x85å\x90«ç\x94¨æ\x88·ç\x9a\x84å¸\x90æ\x88·å\x90\x8dï¼\x8cä¸\x8dè\x83½å\x8c\x85å\x90«ç\x94¨æ\x88·å§\x93å\x90\x8dä¸\xadè¶\x85è¿\x87ä¸¤ä¸ªè¿\x9eç»\xadå\xad\x97ç¬¦ç\x9a\x84é\x83¨å\x88\x86ã\x80\x82\r2. è\x87³å°\x91æ\x9c\x89å\x85\xadä¸ªå\xad\x97ç¬¦é\x95¿ã\x80\x82\r3. å\x8c\x85å\x90«ä»¥ä¸\x8bå\x9b\x9bç±»å\xad\x97ç¬¦ä¸\xadç\x9a\x84ä¸\x89ç±»å\xad\x97ç¬¦:\râ\x80\x83â\x80\x83è\x8b±æ\x96\x87å¤§å\x86\x99å\xad\x97æ¯\x8d(A å\x88° Z)\râ\x80\x83â\x80\x83è\x8b±æ\x96\x87å°\x8få\x86\x99å\xad\x97æ¯\x8d(a å\x88° z)\râ\x80\x83â\x80\x8310ä¸ªå\x9fºæ\x9c¬æ\x95°å\xad\x97(0 å\x88° 9)\râ\x80\x83â\x80\x83é\x9d\x9eå\xad\x97æ¯\x8då\xad\x97ç¬¦(ä¾\x8bå¦\x82 !ã\x80\x81$ã\x80\x81#ã\x80\x81%)\r\rå\x9c¨æ\x9b´æ\x94¹æ\x88\x96å\x88\x9bå»ºå¯\x86ç\xa0\x81æ\x97¶æ\x89§è¡\x8cå¤\x8dæ\x9d\x82æ\x80§è¦\x81æ±\x82ã\x80\x82&#39;, &#39;score&#39;: &#39;1&#39;, &#39;level&#39;: &#39;0&#39;, &#39;win7&#39;: &#39;1&#39;, &#39;unit&#39;: &#39;&#39;, &#39;xp&#39;: &#39;1&#39;, &#39;vista&#39;: &#39;1&#39;, &#39;path&#39;: &#39;æ\x9c¬å\x9c°å®\x89å\x85¨ç\xad\x96ç\x95¥\\å¸\x90æ\x88·ç\xad\x96ç\x95¥\\å¯\x86ç\xa0\x81ç\xad\x96ç\x95¥-å¼ºå\x88¶å¯\x86ç\xa0\x81å\x8e\x86å\x8f²&#39;, &#39;inputType&#39;: &#39;type1&#39;, &#39;auto_fix&#39;: &#39;0&#39;, &#39;affect&#39;: &#39;å¯\x86ç\xa0\x81å¤\x8dæ\x9d\x82åº¦è®¾ç½®ã\x80\x82æ\xad¤å®\x89å\x85¨è®¾ç½®ç¡®å®\x9aå¯\x86ç\xa0\x81æ\x98¯å\x90¦å¿\x85é¡»ç¬¦å\x90\x88å¤\x8dæ\x9d\x82æ\x80§è¦\x81æ±\x82ã\x80\x82å¦\x82æ\x9e\x9cå\x90¯ç\x94¨æ\xad¤ç\xad\x96ç\x95¥ï¼\x8cå¯\x86ç\xa0\x81å¿\x85é¡»ç¬¦å\x90\x88ä¸\x8bå\x88\x97æ\x9c\x80ä½\x8eè¦\x81æ±\x82:ä¸\x8dè\x83½å\x8c\x85å\x90«ç\x94¨æ\x88·ç\x9a\x84å¸\x90æ\x88·å\x90\x8dï¼\x8cä¸\x8dè\x83½å\x8c\x85å\x90«ç\x94¨æ\x88·å§\x93å\x90\x8dä¸\xadè¶\x85è¿\x87ä¸¤ä¸ªè¿\x9eç»\xadå\xad\x97ç¬¦ç\x9a\x84é\x83¨å\x88\x86è\x87³å°\x91æ\x9c\x89å\x85\xadä¸ªå\xad\x97ç¬¦é\x95¿å\x8c\x85å\x90«ä»¥ä¸\x8bå\x9b\x9bç±»å\xad\x97ç¬¦ä¸\xadç\x9a\x84ä¸\x89ç±»å\xad\x97ç¬¦:è\x8b±æ\x96\x87å¤§å\x86\x99å\xad\x97æ¯\x8d(A å\x88° Z)è\x8b±æ\x96\x87å°\x8få\x86\x99å\xad\x97æ¯\x8d(a å\x88° z)10 ä¸ªå\x9fºæ\x9c¬æ\x95°å\xad\x97(0 å\x88° 9)é\x9d\x9eå\xad\x97æ¯\x8då\xad\x97ç¬¦(ä¾\x8bå¦\x82 !ã\x80\x81$ã\x80\x81#ã\x80\x81%)å\x9c¨æ\x9b´æ\x94¹æ\x88\x96å\x88\x9bå»ºå¯\x86ç\xa0\x81æ\x97¶æ\x89§è¡\x8cå¤\x8dæ\x9d\x82æ\x80§è¦\x81æ±\x82ã\x80\x82é»\x98è®¤å\x80¼:å\x9c¨å\x9f\x9fæ\x8e§å\x88¶å\x99¨ä¸\x8aå\x90¯ç\x94¨ã\x80\x82å\x9c¨ç\x8b¬ç«\x8bæ\x9c\x8då\x8a¡å\x99¨ä¸\x8aç¦\x81ç\x94¨ã\x80\x82æ³¨æ\x84\x8f: å\x9c¨é»\x98è®¤æ\x83\x85å\x86µä¸\x8bï¼\x8cæ\x88\x90å\x91\x98è®¡ç®\x97æ\x9cºæ²¿ç\x94¨å\x90\x84è\x87ªå\x9f\x9fæ\x8e§å\x88¶å\x99¨ç\x9a\x84é\x85\x8dç½®ã\x80\x82&#39;, &#39;name&#39;: &#39;å¯\x86ç\xa0\x81ç\xad\x96ç\x95¥ï¼\x9aå¯\x86ç\xa0\x81å¤\x8dæ\x9d\x82åº¦è®¾ç½®&#39;, &#39;win8&#39;: &#39;1&#39;}], &#39;name&#39;: &#39;å¯\x86ç\xa0\x81ç»´æ\x8a¤è¦\x81æ±\x82&#39;, &#39;ids&#39;: [&#39;1054&#39;, &#39;1027&#39;, &#39;1028&#39;, &#39;1030&#39;]}, {&#39;enable&#39;: &#39;1&#39;, &#39;list&#39;: [{&#39;enable&#39;: &#39;1&#39;, &#39;id&#39;: &#39;20000&#39;, &#39;win10&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;, &#39;effect&#39;: &#39;ä½¿ç\x94¨ä¸\x8då\x8f¯è¿\x98å\x8e\x9fç\x9a\x84å\x93\x88å¸\x8cç®\x97æ³\x95ï¼\x8cæ¯\x94ä½¿ç\x94¨å\x8f¯è¿\x98å\x8e\x9fç\x9a\x84å\x8a\xa0å¯\x86ç®\x97æ³\x95å\xad\x98å\x82¨å¯\x86ç\xa0\x81æ\x9b´å®\x89å\x85¨ã\x80\x82&#39;, &#39;score&#39;: &#39;1&#39;, &#39;level&#39;: &#39;0&#39;, &#39;win7&#39;: &#39;1&#39;, &#39;unit&#39;: &#39;&#39;, &#39;xp&#39;: &#39;1&#39;, &#39;vista&#39;: &#39;1&#39;, &#39;path&#39;: &#39;æ\x9c¬å\x9c°å®\x89å\x85¨ç\xad\x96ç\x95¥\\å¸\x90æ\x88·ç\xad\x96ç\x95¥\\å¯\x86ç\xa0\x81ç\xad\x96ç\x95¥-ä½¿ç\x94¨å\x8f¯è¿\x98å\x8e\x9fç\x9a\x84å\x8a\xa0å¯\x86æ\x9d¥å\xad\x98å\x82¨å¯\x86ç\xa0\x81&#39;, &#39;inputType&#39;: &#39;type14&#39;, &#39;auto_fix&#39;: &#39;0&#39;, &#39;affect&#39;: &#39;ç\x94¨å\x8f¯è¿\x98å\x8e\x9fç\x9a\x84å\x8a\xa0å¯\x86æ\x9d¥å\x82¨å\xad\x98å¯\x86ç\xa0\x81æ\xad¤å®\x89å\x85¨è®¾ç½®ç¡®å®\x9aæ\x93\x8dä½\x9cç³»ç»\x9fæ\x98¯å\x90¦ä½¿ç\x94¨å\x8f¯è¿\x98å\x8e\x9fç\x9a\x84å\x8a\xa0å¯\x86æ\x9d¥å\x82¨å\xad\x98å¯\x86ç\xa0\x81ã\x80\x82æ\xad¤ç\xad\x96ç\x95¥ä¸ºæ\x9f\x90äº\x9båº\x94ç\x94¨ç¨\x8båº\x8fæ\x8f\x90ä¾\x9bæ\x94¯æ\x8c\x81ï¼\x8cè¿\x99äº\x9båº\x94ç\x94¨ç¨\x8båº\x8fä½¿ç\x94¨ç\x9a\x84å\x8d\x8fè®®é\x9c\x80è¦\x81ç\x94¨æ\x88·å¯\x86ç\xa0\x81æ\x9d¥è¿\x9bè¡\x8cèº«ä»½éª\x8cè¯\x81ã\x80\x82ä½¿ç\x94¨å\x8f¯è¿\x98å\x8e\x9fç\x9a\x84å\x8a\xa0å¯\x86å\x82¨å\xad\x98å¯\x86ç\xa0\x81ä¸\x8eå\x82¨å\xad\x98çº¯æ\x96\x87æ\x9c¬å¯\x86ç\xa0\x81å\x9c¨æ\x9c¬è´¨ä¸\x8aæ\x98¯ç\x9b¸å\x90\x8cç\x9a\x84ã\x80\x82å\x9b\xa0æ\xad¤ï¼\x8cé\x99¤é\x9d\x9eåº\x94ç\x94¨ç¨\x8båº\x8fé\x9c\x80æ±\x82æ¯\x94ä¿\x9dæ\x8a¤å¯\x86ç\xa0\x81ä¿¡æ\x81¯æ\x9b´é\x87\x8dè¦\x81ï¼\x8cå\x90¦å\x88\x99ç»\x9dä¸\x8dè¦\x81å\x90¯ç\x94¨æ\xad¤ç\xad\x96ç\x95¥ã\x80\x82é\x80\x9aè¿\x87è¿\x9cç¨\x8bè®¿é\x97®æ\x88\x96 Internet èº«ä»½éª\x8cè¯\x81æ\x9c\x8då\x8a¡(IAS)ä½¿ç\x94¨è´¨è¯¢æ\x8f¡æ\x89\x8bèº«ä»½éª\x8cè¯\x81å\x8d\x8fè®®(CHAP)éª\x8cè¯\x81æ\x97¶é\x9c\x80è¦\x81è®¾ç½®æ\xad¤ç\xad\x96ç\x95¥ã\x80\x82å\x9c¨ Internet ä¿¡æ\x81¯æ\x9c\x8då\x8a¡(IIS)ä¸\xadä½¿ç\x94¨æ\x91\x98è¦\x81å¼\x8fèº«ä»½éª\x8cè¯\x81æ\x97¶ä¹\x9fé\x9c\x80è¦\x81è®¾ç½®æ\xad¤ç\xad\x96ç\x95¥ã\x80\x82&#39;, &#39;name&#39;: &#39;å\x85\x81è®¸é\x80\x9aè¿\x87sshè¿\x9cç¨\x8bç\x99»å½\x95&#39;, &#39;win8&#39;: &#39;1&#39;}], &#39;name&#39;: &#39;è¿\x9cç¨\x8bç\x99»å½\x95æ\x8e§å\x88¶&#39;, &#39;ids&#39;: [&#39;20000&#39;]}], &#39;globalSwitch&#39;: &#39;1&#39;}, &#39;limit_user&#39;: &#39;&#39;, &#39;baseSafe&#39;: {&#39;items&#39;: [{&#39;enable&#39;: &#39;1&#39;, &#39;supportedSoftware&#39;: [&#39;ç»\x88ç«¯å®\x89å\x85¨ç®¡ç\x90\x86ç³»ç»\x9f&#39;, &#39;æ\x9d\x80æ¯\x92å\x85¬å®\x89ä¸\x93ç\x89\x88&#39;], &#39;id&#39;: &#39;apt&#39;, &#39;effect&#39;: &#39;é\x80\x9aè¿\x87æ\x9c¬å\x9c°é\x98²ç\x97\x85æ¯\x92è½¯ä»¶ï¼\x8cæ\x84\x9fç\x9f¥ç»\x88ç«¯ä¸\x8aæ\x98¯å\x90¦å\xad\x98å\x9c¨ç\x97\x85æ¯\x92ã\x80\x82&#39;, &#39;level&#39;: &#39;1&#39;, &#39;name&#39;: &#39;ç\x97\x85æ¯\x92ç\x8e¯å¢\x83æ\x84\x9fç\x9f¥&#39;, &#39;score&#39;: &#39;10&#39;}, {&#39;enable&#39;: &#39;1&#39;, &#39;supportedSoftware&#39;: [&#39;ç»\x88ç«¯å®\x89å\x85¨ç®¡ç\x90\x86ç³»ç»\x9f&#39;, &#39;æ\x9d\x80æ¯\x92å\x85¬å®\x89ä¸\x93ç\x89\x88&#39;], &#39;effect&#39;: &#39;æ\x84\x9fç\x9f¥æ\x9c¬å\x9c°é\x98²ç\x97\x85æ¯\x92è½¯ä»¶ç\x9a\x84ç\x97\x85æ¯\x92åº\x93æ\x98¯å\x90¦å\x8f\x8aæ\x97¶æ\x9b´æ\x96°ã\x80\x82å\x8f¯ä»¥å°\x86å\x80¼è®¾ç½®ä¸ºä»\x8bäº\x8e1-180å¤©ä¹\x8bé\x97´ï¼\x8cå½\x93å\x89\x8dç\x97\x85æ¯\x92åº\x93ç\x9a\x84æ\x97¶é\x97´å\x92\x8cç»\x88ç«¯ç³»ç»\x9fæ\x97¶é\x97´è¶\x85è¿\x87è®¾å®\x9aç\x9a\x84é\x98\x88å\x80¼å°\x86è¢«è®¤ä¸ºæ\x9c\x89é£\x8eé\x99©ã\x80\x82é»\x98è®¤å\x80¼ï¼\x9a7å¤©&#39;, &#39;id&#39;: &#39;aptUpdate&#39;, &#39;day&#39;: &#39;7&#39;, &#39;level&#39;: &#39;1&#39;, &#39;name&#39;: &#39;ç\x97\x85æ¯\x92åº\x93æ\x9cªæ\x9b´æ\x96°å¤©æ\x95°è¶\x85è¿\x87&#39;, &#39;score&#39;: &#39;10&#39;}], &#39;globalSwitch&#39;: &#39;1&#39;}}, &#39;xp_fix&#39;: {&#39;key_app_switch&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;hide_sub_page&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;show_boot_logo&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;app_switch&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;268435471&#39;}, &#39;conf_ver_s&#39;: &#39;b71fa8b912061605##&#39;, &#39;sys_switch&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;268558271&#39;}, &#39;hothook_switch&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;conf_ver&#39;: 1953689558, &#39;use_lower_privilege&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}}, &#39;safelogin&#39;: {&#39;limit_username&#39;: &#39;&#39;, &#39;logout_cache&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;30&#39;}, &#39;key_password_length&#39;: {&#39;type&#39;: &#39;2&#39;, &#39;time&#39;: &#39;7&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;8&#39;}, &#39;limit&#39;: &#39;0&#39;, &#39;conf_ver&#39;: 2011786250, &#39;temp_password&#39;: {&#39;pam_etime&#39;: &#39;5&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;pam_ttime&#39;: &#39;7&#39;}, &#39;open_safelogin&#39;: {&#39;enable&#39;: &#39;1&#39;, &#39;ssh_enable&#39;: &#39;0&#39;, &#39;su_enable&#39;: &#39;0&#39;, &#39;sudo_enable&#39;: &#39;0&#39;}, &#39;key_locking&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;5&#39;}, &#39;tpl_list&#39;: [{&#39;tpl_info&#39;: {&#39;uniq_id&#39;: &#39;147036da73885c696133bda602cea7a5&#39;, &#39;md5&#39;: &#39;6fc3b7033b6d1e080f8f8f9a637585d8&#39;, &#39;name&#39;: &#39;é»\x98è®¤æ¨¡æ\x9d¿&#39;, &#39;id&#39;: &#39;17&#39;}, &#39;rule&#39;: {&#39;time_range&#39;: None, &#39;online&#39;: &#39;1&#39;, &#39;scene&#39;: None}, &#39;rule_info&#39;: {&#39;name&#39;: &#39;æ\x9cªæ\x8c\x87å®\x9a&#39;}, &#39;time_info&#39;: {&#39;name&#39;: &#39;å\x85¨é\x83¨æ\x97¶é\x97´&#39;}, &#39;priority&#39;: &#39;1&#39;, &#39;conf&#39;: []}], &#39;default_tpl&#39;: {&#39;uniq_id&#39;: &#39;147036da73885c696133bda602cea7a5&#39;, &#39;md5&#39;: &#39;6fc3b7033b6d1e080f8f8f9a637585d8&#39;, &#39;name&#39;: &#39;é»\x98è®¤æ¨¡æ\x9d¿&#39;, &#39;id&#39;: &#39;17&#39;}, &#39;login_verify&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;conf_ver_s&#39;: &#39;8f6b8f7912061612##&#39;, &#39;session_timeout&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;15&#39;}, &#39;lock_cache&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;3&#39;}, &#39;issue_id&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;&#39;}, &#39;limit_user&#39;: &#39;&#39;, &#39;rule_match_type&#39;: &#39;match_first&#39;, &#39;restart_cache&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;30&#39;}, &#39;key_response&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;inherit&#39;: &#39;1&#39;}, &#39;dsec_usbstatus_global&#39;: {&#39;conf_ver_s&#39;: &#39;1c3f8cae12061615##&#39;, &#39;usb_status&#39;: [], &#39;conf_ver&#39;: 3961050336}, &#39;file_storage_server&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;conf_ver_s&#39;: &#39;cc257c5e12061605##&#39;, &#39;conf_ver&#39;: 1515080998, &#39;s3_server&#39;: {&#39;speed_limit&#39;: &#39;100&#39;, &#39;bucket&#39;: &#39;&#39;, &#39;ip&#39;: &#39;&#39;, &#39;server_id&#39;: &#39;&#39;, &#39;is_speed&#39;: &#39;0&#39;, &#39;secret_key&#39;: &#39;&#39;, &#39;access_key&#39;: &#39;&#39;, &#39;port&#39;: &#39;&#39;}, &#39;inherit&#39;: &#39;1&#39;, &#39;screen_server&#39;: {&#39;speed_limit&#39;: &#39;100&#39;, &#39;bucket&#39;: &#39;&#39;, &#39;ip&#39;: &#39;&#39;, &#39;server_id&#39;: &#39;&#39;, &#39;is_speed&#39;: &#39;0&#39;, &#39;secret_key&#39;: &#39;&#39;, &#39;access_key&#39;: &#39;&#39;, &#39;port&#39;: &#39;&#39;}}, &#39;ws&#39;: {&#39;base_setting&#39;: {&#39;startup_setting&#39;: {&#39;autorun_safecenter&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}}, &#39;url_cloud_safe_plan&#39;: {&#39;join_url_cloud_safe&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}}, &#39;cloud_safe_plan&#39;: {&#39;join_cloud_safe&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}}, &#39;user_experience_plan&#39;: {&#39;join_user_experience&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}}, &#39;right_click_menu&#39;: {&#39;delete_force&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;cloud_killing&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;relieve_occupy&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}}, &#39;update_setting&#39;: {&#39;http_download_server&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;data_url&#39;: &#39;&#39;}, &#39;not_update_on_gaming&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;check_update_by_using&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;use_p2p_p2s_speedup&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;multi_update&#39;: {&#39;console_as_default&#39;: &#39;1&#39;, &#39;list&#39;: [], &#39;rule&#39;: &#39;order&#39;}, &#39;proxysetting&#39;: {&#39;customproxy&#39;: {&#39;enable&#39;: &#39;1&#39;, &#39;value_v6&#39;: &#39;0&#39;, &#39;serverip_v6&#39;: &#39;&#39;, &#39;domain_v6&#39;: &#39;&#39;, &#39;authtype_v6&#39;: &#39;1&#39;, &#39;password_v6&#39;: &#39;&#39;, &#39;username_v6&#39;: &#39;&#39;, &#39;value&#39;: &#39;0&#39;, &#39;password&#39;: &#39;&#39;, &#39;port_v6&#39;: &#39;&#39;, &#39;port&#39;: &#39;&#39;, &#39;authtype&#39;: &#39;1&#39;, &#39;domain&#39;: &#39;&#39;, &#39;username&#39;: &#39;&#39;, &#39;enable_v6&#39;: &#39;0&#39;, &#39;serverip&#39;: &#39;&#39;}, &#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;auto_update&#39;: {&#39;not_update&#39;: {&#39;update_leak_lib&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;update_software_lib&#39;: {&#39;value&#39;: &#39;0&#39;, &#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;channelid&#39;: &#39;software.update&#39;}, &#39;update_popupblock_lib&#39;: {&#39;value&#39;: &#39;0&#39;, &#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;channelid&#39;: &#39;popupblock.update&#39;}, &#39;update_trojan_lib&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}}, &#39;cycle_update&#39;: {&#39;cycle_type&#39;: &#39;week&#39;, &#39;time&#39;: &#39;01:00&#39;, &#39;week&#39;: &#39;3&#39;}, &#39;value&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;lock&#39;: &#39;0&#39;}, &#39;update_source_set&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;not_update_on_use3g&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}}}, &#39;leak_repair&#39;: {&#39;restrict&#39;: {&#39;prevent_period&#39;: [], &#39;period_enable&#39;: {&#39;value&#39;: &#39;0&#39;}, &#39;period_type&#39;: &#39;0&#39;, &#39;prevent_fix&#39;: {&#39;value&#39;: &#39;0&#39;}, &#39;prevent_ignore&#39;: {&#39;value&#39;: &#39;0&#39;}, &#39;inherit&#39;: &#39;1&#39;, &#39;prevent_level&#39;: [&#39;2&#39;, &#39;3&#39;]}, &#39;auto_fix&#39;: {&#39;enable&#39;: &#39;1&#39;, &#39;period_type&#39;: &#39;0&#39;, &#39;fix_period_ex&#39;: [], &#39;tp_new&#39;: [&#39;1&#39;], &#39;third_party&#39;: [&#39;adobe&#39;, &#39;firefox&#39;, &#39;java&#39;], &#39;inherit&#39;: &#39;1&#39;, &#39;os_new&#39;: [&#39;win10&#39;, &#39;win10_sz&#39;, &#39;blue&#39;, &#39;win8&#39;, &#39;win7sp1&#39;, &#39;win7&#39;, &#39;vistasp2&#39;, &#39;vistasp1&#39;, &#39;vista&#39;, &#39;winxpsp3&#39;, &#39;winxpsp2&#39;, &#39;winxpsp1&#39;, &#39;winxp&#39;], &#39;fix_period&#39;: {&#39;week_end&#39;: &#39;4&#39;, &#39;type&#39;: &#39;day&#39;, &#39;time_end&#39;: &#39;03:00&#39;, &#39;time_start&#39;: &#39;17:00&#39;, &#39;week_start&#39;: &#39;4&#39;}, &#39;office&#39;: [&#39;office2019&#39;, &#39;office2016&#39;, &#39;office2013&#39;, &#39;office2010&#39;, &#39;office2007&#39;, &#39;office2003&#39;, &#39;other&#39;], &#39;os&#39;: [&#39;6.3.0&#39;, &#39;6.2.0&#39;, &#39;6.1.0&#39;, &#39;6.0.0&#39;, &#39;5.1.0&#39;, &#39;5.0.1&#39;, &#39;6.3.1&#39;, &#39;5.2.1&#39;, &#39;6.1.1&#39;, &#39;6.0.1&#39;, &#39;6.2.1&#39;], &#39;fix_time&#39;: {&#39;type&#39;: &#39;day&#39;, &#39;time&#39;: &#39;00:00&#39;, &#39;week&#39;: &#39;1&#39;}, &#39;type&#39;: [&#39;0&#39;], &#39;value&#39;: &#39;1&#39;, &#39;level&#39;: [&#39;1&#39;], &#39;type_with_tp&#39;: [&#39;0&#39;, &#39;1&#39;]}, &#39;patch_download_and_install_order&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;after_install_os_patch&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;auto_restart_specified_time&#39;: &#39;0&#39;, &#39;auto_restart_start_time&#39;: &#39;20:00&#39;, &#39;auto_restart&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;auto_restart_end_time&#39;: &#39;03:00&#39;, &#39;value&#39;: &#39;1&#39;, &#39;remind_time&#39;: &#39;30&#39;, &#39;remind&#39;: &#39;0&#39;, &#39;auto_restart_count_down_by_minutes&#39;: &#39;10&#39;}, &#39;other_setting&#39;: {&#39;close_windows_update&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;patch_file_save_path&#39;: {&#39;path&#39;: &#39;&#39;, &#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;patch_file_retention_time&#39;: {&#39;days&#39;: &#39;30&#39;, &#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;use_bluescreen_repair&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;report_log&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;intelligent_ignore&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;popwnd_on_affect_office&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}}}, &#39;limit_username&#39;: &#39;&#39;, &#39;default_tpl&#39;: {&#39;uniq_id&#39;: &#39;d4f7d25ed1207bc66516142b10dd556d&#39;, &#39;md5&#39;: &#39;bafd4cd0e40fef4ed6eac1a657279755&#39;, &#39;name&#39;: &#39;é»\x98è®¤æ¨¡æ\x9d¿&#39;, &#39;id&#39;: &#39;4&#39;}, &#39;inherit&#39;: &#39;1&#39;, &#39;conf_ver&#39;: 1414793866, &#39;rule_match_type&#39;: &#39;match_first&#39;, &#39;limit&#39;: &#39;0&#39;, &#39;conf_ver_s&#39;: &#39;7cbd4cfb12061623##&#39;, &#39;popwnd_setting&#39;: {&#39;popwnd_im&#39;: {&#39;popwnd_received_file_be_safe&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;popwnd_received_zipfile_be_safe&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;popwnd_received_file_not_pe&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;popwnd_received_file_be_unknown&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;popwnd_scaning_received_file&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}}, &#39;popwnd_download&#39;: {&#39;popwnd_downloaded_file_not_pe&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;popwnd_downloaded_file_be_safe&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;popwnd_downloaded_file_be_unknown&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;popwnd_downloaded_zipfile_be_safe&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;popwnd_scaning_downloaded_file&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}}, &#39;popwnd_online_shopping&#39;: {&#39;popwnd_entering_website&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;popwnd_exit_pay_guard&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;popwnd_online_trading&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}}, &#39;popwnd_download_clearupbox&#39;: {&#39;popwnd_clearup&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}}, &#39;popwnd_leak_repair&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;soft_autorun&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;hardware_dirver&#39;: {&#39;popwnd_hardware_dirver&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}}, &#39;popwnd_mode1&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;popwnd_mode&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;popwnd_email&#39;: {&#39;popwnd_find_risk_urllink&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;popwnd_entering_email&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}}}, &#39;tpl_list&#39;: [{&#39;tpl_info&#39;: {&#39;uniq_id&#39;: &#39;d4f7d25ed1207bc66516142b10dd556d&#39;, &#39;md5&#39;: &#39;bafd4cd0e40fef4ed6eac1a657279755&#39;, &#39;name&#39;: &#39;é»\x98è®¤æ¨¡æ\x9d¿&#39;, &#39;id&#39;: &#39;4&#39;}, &#39;rule&#39;: {&#39;time_range&#39;: None, &#39;online&#39;: &#39;1&#39;, &#39;scene&#39;: None}, &#39;rule_info&#39;: {&#39;name&#39;: &#39;æ\x9cªæ\x8c\x87å®\x9a&#39;}, &#39;time_info&#39;: {&#39;name&#39;: &#39;å\x85¨é\x83¨æ\x97¶é\x97´&#39;}, &#39;priority&#39;: &#39;1&#39;, &#39;conf&#39;: []}], &#39;safe_protect&#39;: {&#39;guard_level&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;guard_spy_files&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;wd_safe&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;file_monitor&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;webpage_safe&#39;: {&#39;base_setting&#39;: {&#39;auto_block_cheat&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;trojan_invasion_website_block&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;auto_upload_risk_code&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;use_webpage_safemode&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;use_url_query&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}}, &#39;ie_strengthen_setting&#39;: {&#39;show_website_card&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;add_icon_and_menu&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;intelligence_error_page&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}}}, &#39;guard_handle_type&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;disable_protection_blocking&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;anti_mining_service&#39;: {&#39;open_anti_mining_service&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}}, &#39;hvm_safe&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;guard_local_area_network_virus&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;search_safe&#39;: {&#39;forbid_track&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}}, &#39;download_safe&#39;: {&#39;monitor_udisk_file_to_sys&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;monitor_sharedfile&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}}, &#39;im_safe&#39;: {&#39;monitor_url_safe&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;monitor_on_add_chat_number&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;monitor_transfer_file&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;remove_rename_suffix&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}}, &#39;guard_file_style&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;camera_safe&#39;: {&#39;popwnd_mode&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;open_floating_window&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}}, &#39;remote_login_protect&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;zhudongfangyu_server&#39;: {&#39;open_zhudongfangyu&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;kill_all_trojan_file&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}}, &#39;report_protection_log&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;selft_protect&#39;: {&#39;open_selft_protect&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}}, &#39;application_safe&#39;: {&#39;desktop_icon&#39;: {&#39;popwnd_on_modify_desktop_icon&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}}, &#39;install_safe&#39;: {&#39;open_software_clean&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}}, &#39;input_safe&#39;: {&#39;block_trojan_input&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;block_autorun_trojan&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}}, &#39;browser_safe&#39;: {&#39;lock_default_browser&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;popwnd_on_default_browser_change&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}}}, &#39;sbx_unknow_safe&#39;: {&#39;run_risk_program_in_sandbox&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}}, &#39;safe_setting&#39;: {&#39;im&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;appmon&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;netsafe&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;homepage&#39;: {&#39;info&#39;: &#39;about:blank&#39;, &#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;keylogger&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;sbxunknow&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;vuln&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;defaultbrowser&#39;: {&#39;info&#39;: &#39;æ\x9e\x81é\x80\x9fæµ\x8fè§\x88å\x99¨&#39;, &#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;dns&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;sbx&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;mail&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;arp&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;hacker&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;download&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;search&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;camera&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;udisk&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;regmon&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;defaultsearch&#39;: {&#39;info&#39;: &#39;è°·æ\xad\x8c&#39;, &#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;filemon&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;payguard&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;drvmon&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;webpage&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}}, &#39;network_safe&#39;: {&#39;auto_analyze_and_block&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}}, &#39;udisk_safe&#39;: {&#39;scan_method&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;show_desktop_icon&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;scan_mode&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;show_taskbar_icon&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;show_floating_window&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}}}, &#39;limit_user&#39;: &#39;&#39;, &#39;startup_assistant&#39;: {&#39;startup_assistant_group&#39;: {&#39;show_festival_skin&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;show_weather&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;join_startup_time_survey&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;show_hotnews&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;show_recommend&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;startup_time_tips&#39;: {&#39;show_style&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;record_startup_time&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}}}}, &#39;nac_linkage&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;default_tpl&#39;: {&#39;uniq_id&#39;: &#39;548cd7cc82c89322476ba965d48d4c33&#39;, &#39;md5&#39;: &#39;4900a75a85574abcdcfbebe40e6d92b4&#39;, &#39;name&#39;: &#39;é»\x98è®¤æ¨¡æ\x9d¿&#39;, &#39;id&#39;: &#39;9&#39;}, &#39;limit_username&#39;: &#39;&#39;, &#39;waterfinger&#39;: &#39;0&#39;, &#39;conf_ver&#39;: 2399141845, &#39;takeSecResult&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;configfor8021xlogon&#39;: {&#39;network_security_type&#39;: &#39;WPA-AES&#39;, &#39;logonmode&#39;: 0, &#39;isconfigon&#39;: 0, &#39;authentication_type&#39;: [0], &#39;wireless_options&#39;: [], &#39;serverkey&#39;: &#39;893A6DD8-07D0-766E-B9DB-34D3D06E8E52&#39;, &#39;network_security_type_enable&#39;: 0, &#39;wireless_logon_mode&#39;: 0, &#39;show_password_edit&#39;: &#39;0&#39;, &#39;autoauth&#39;: 0, &#39;privatelabel&#39;: &#39;0&#39;}, &#39;rule_match_type&#39;: &#39;match_first&#39;, &#39;limit&#39;: &#39;0&#39;, &#39;conf_ver_s&#39;: &#39;4edb97b112061623##&#39;, &#39;tpl_list&#39;: [{&#39;tpl_info&#39;: {&#39;uniq_id&#39;: &#39;548cd7cc82c89322476ba965d48d4c33&#39;, &#39;md5&#39;: &#39;4900a75a85574abcdcfbebe40e6d92b4&#39;, &#39;name&#39;: &#39;é»\x98è®¤æ¨¡æ\x9d¿&#39;, &#39;id&#39;: &#39;9&#39;}, &#39;rule&#39;: {&#39;time_range&#39;: None, &#39;online&#39;: &#39;1&#39;, &#39;scene&#39;: None}, &#39;rule_info&#39;: {&#39;name&#39;: &#39;æ\x9cªæ\x8c\x87å®\x9a&#39;}, &#39;time_info&#39;: {&#39;name&#39;: &#39;å\x85¨é\x83¨æ\x97¶é\x97´&#39;}, &#39;priority&#39;: &#39;1&#39;, &#39;conf&#39;: []}], &#39;device_extend&#39;: &#39;&#39;, &#39;device&#39;: &#39;&#39;, &#39;limit_user&#39;: &#39;&#39;, &#39;interval&#39;: &#39;5&#39;}, &#39;client_attribute&#39;: {&#39;is_virtual&#39;: 0, &#39;cvm&#39;: &#39;&#39;}, &#39;compatibility_setting&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;conf_ver_s&#39;: &#39;58fa920c12061605##&#39;, &#39;addr&#39;: [], &#39;conf_ver&#39;: 1445070723, &#39;inherit&#39;: &#39;1&#39;}, &#39;app_control&#39;: {&#39;process_safe&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;popup_tips&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;rules&#39;: []}, &#39;conf_ver_s&#39;: &#39;4dd79eba12061605##&#39;, &#39;registry_safe&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;popup_tips&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;safe_list&#39;: []}, &#39;file_safe&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;popup_tips&#39;: &#39;0&#39;, &#39;safe_list&#39;: [], &#39;file_ext_protect&#39;: [{&#39;proc_rule_list&#39;: [], &#39;file_ext_list&#39;: []}], &#39;inherit&#39;: &#39;1&#39;}, &#39;conf_ver&#39;: 3710962122, &#39;app_boot&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;popup_tips&#39;: &#39;0&#39;, &#39;version&#39;: &#39;2.0&#39;, &#39;default_action&#39;: &#39;0&#39;, &#39;rules&#39;: [{&#39;rule_id&#39;: &#39;-2&#39;, &#39;behavior&#39;: &#39;1&#39;, &#39;rule&#39;: {&#39;s_include&#39;: [&#39;filepath&#39;, &#39;%windir%&#39;, &#39;1&#39;]}, &#39;report&#39;: &#39;1&#39;}, {&#39;rule_id&#39;: &#39;-1&#39;, &#39;behavior&#39;: &#39;1&#39;, &#39;rule&#39;: {&#39;==&#39;: [&#39;const_true&#39;, &#39;1&#39;]}, &#39;report&#39;: &#39;1&#39;}, {&#39;rule_id&#39;: &#39;-3&#39;, &#39;behavior&#39;: &#39;1&#39;, &#39;rule&#39;: {&#39;in_whitelist&#39;: [&#39;md5&#39;, &#39;local_whitemd5_list&#39;, &#39;1&#39;]}, &#39;report&#39;: &#39;1&#39;}], &#39;default_action_report&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;allow_default_rules&#39;: &#39;1&#39;}}, &#39;log_cache&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;conf_ver_s&#39;: &#39;be328e5a12061605##&#39;, &#39;data_item&#39;: {&#39;audit_software&#39;: {&#39;target_service&#39;: {&#39;type&#39;: &#39;1&#39;}}, &#39;print_n&#39;: {&#39;target_service&#39;: {&#39;type&#39;: &#39;1&#39;}}, &#39;Safedisk&#39;: {&#39;target_service&#39;: {&#39;type&#39;: &#39;1&#39;}}, &#39;process_hips&#39;: {&#39;target_service&#39;: {&#39;type&#39;: &#39;1&#39;}}, &#39;file_rp&#39;: {&#39;target_service&#39;: {&#39;type&#39;: &#39;1&#39;}}, &#39;edr_skyeye_ip&#39;: {&#39;target_service&#39;: {&#39;type&#39;: &#39;1&#39;}}, &#39;file_usb&#39;: {&#39;target_service&#39;: {&#39;type&#39;: &#39;1&#39;}}, &#39;audit_power&#39;: {&#39;target_service&#39;: {&#39;type&#39;: &#39;1&#39;}}, &#39;file_browser&#39;: {&#39;target_service&#39;: {&#39;type&#39;: &#39;1&#39;}}, &#39;network_dns&#39;: {&#39;target_service&#39;: {&#39;type&#39;: &#39;1&#39;}}, &#39;audit&#39;: {&#39;target_service&#39;: {&#39;type&#39;: &#39;1&#39;}}, &#39;network_socket&#39;: {&#39;target_service&#39;: {&#39;type&#39;: &#39;1&#39;}}, &#39;audit_web&#39;: {&#39;target_service&#39;: {&#39;type&#39;: &#39;1&#39;}}, &#39;edr_skyeye_dns&#39;: {&#39;target_service&#39;: {&#39;type&#39;: &#39;1&#39;}}, &#39;audit_device&#39;: {&#39;target_service&#39;: {&#39;type&#39;: &#39;1&#39;}}, &#39;account_hips&#39;: {&#39;target_service&#39;: {&#39;type&#39;: &#39;1&#39;}}, &#39;alarm_hips&#39;: {&#39;target_service&#39;: {&#39;type&#39;: &#39;1&#39;}}, &#39;mail_n&#39;: {&#39;target_service&#39;: {&#39;type&#39;: &#39;1&#39;}}, &#39;file_im&#39;: {&#39;target_service&#39;: {&#39;type&#39;: &#39;1&#39;}}, &#39;csi_inspectscope&#39;: {&#39;target_service&#39;: {&#39;type&#39;: &#39;1&#39;}}, &#39;csi_value&#39;: {&#39;target_service&#39;: {&#39;type&#39;: &#39;1&#39;}}, &#39;file_downloader&#39;: {&#39;target_service&#39;: {&#39;type&#39;: &#39;1&#39;}}, &#39;file_hips&#39;: {&#39;target_service&#39;: {&#39;type&#39;: &#39;1&#39;}}, &#39;injection_hips&#39;: {&#39;target_service&#39;: {&#39;type&#39;: &#39;1&#39;}}, &#39;csi_baseline&#39;: {&#39;target_service&#39;: {&#39;type&#39;: &#39;1&#39;}}, &#39;registry_hips&#39;: {&#39;target_service&#39;: {&#39;type&#39;: &#39;1&#39;}}}, &#39;conf_ver&#39;: 3890492230, &#39;cache_server&#39;: {&#39;ip&#39;: &#39;&#39;, &#39;port&#39;: &#39;3950&#39;}, &#39;inherit&#39;: &#39;1&#39;}, &#39;p2p_setting&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;pass_by_server&#39;: {&#39;ip&#39;: &#39;&#39;}, &#39;agent_hijacking&#39;: &#39;0&#39;, &#39;tracker_server&#39;: {&#39;ip&#39;: &#39;&#39;, &#39;port&#39;: &#39;80&#39;}, &#39;inherit&#39;: &#39;1&#39;, &#39;conf_ver_s&#39;: &#39;75d8f89b12061605##&#39;, &#39;transmit_restrict&#39;: {&#39;seed_restrict&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;time&#39;: &#39;120&#39;, &#39;ratio&#39;: &#39;3&#39;}, &#39;terminal_restrict&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;cpu_core&#39;: &#39;1&#39;, &#39;cpu_speed&#39;: &#39;1&#39;, &#39;min_memory&#39;: &#39;512&#39;, &#39;disk_available&#39;: &#39;1&#39;}, &#39;speed_up&#39;: &#39;200&#39;, &#39;speed_down&#39;: &#39;2000&#39;, &#39;connetion&#39;: &#39;5&#39;}, &#39;p2p_enhance&#39;: {&#39;enable&#39;: &#39;&#39;, &#39;enhance_server&#39;: {&#39;ip&#39;: &#39;&#39;, &#39;port&#39;: &#39;&#39;}, &#39;value&#39;: &#39;0&#39;}, &#39;conf_ver&#39;: 3191599046, &#39;server_type&#39;: &#39;0&#39;}, &#39;dsec_device&#39;: {&#39;limit_username&#39;: &#39;&#39;, &#39;tpl_list&#39;: [{&#39;tpl_info&#39;: {&#39;uniq_id&#39;: &#39;4e0160e43f83019d31621970c729a905&#39;, &#39;md5&#39;: &#39;72e36a9c0be2271e441b881148ae3b57&#39;, &#39;name&#39;: &#39;é»\x98è®¤æ¨¡æ\x9d¿&#39;, &#39;id&#39;: &#39;10&#39;}, &#39;rule&#39;: {&#39;time_range&#39;: None, &#39;online&#39;: &#39;1&#39;, &#39;scene&#39;: None}, &#39;rule_info&#39;: {&#39;name&#39;: &#39;æ\x9cªæ\x8c\x87å®\x9a&#39;}, &#39;time_info&#39;: {&#39;name&#39;: &#39;å\x85¨é\x83¨æ\x97¶é\x97´&#39;}, &#39;priority&#39;: &#39;1&#39;, &#39;conf&#39;: []}], &#39;default_tpl&#39;: {&#39;uniq_id&#39;: &#39;4e0160e43f83019d31621970c729a905&#39;, &#39;md5&#39;: &#39;72e36a9c0be2271e441b881148ae3b57&#39;, &#39;name&#39;: &#39;é»\x98è®¤æ¨¡æ\x9d¿&#39;, &#39;id&#39;: &#39;10&#39;}, &#39;inherit&#39;: &#39;1&#39;, &#39;rule_match_type&#39;: &#39;match_first&#39;, &#39;limit&#39;: &#39;0&#39;, &#39;conf_ver_s&#39;: &#39;93c2abdb12061612##&#39;, &#39;conf_ver&#39;: 2263322086, &#39;desktop_reinforce&#39;: {&#39;param&#39;: {&#39;passwd_limit&#39;: &#39;180&#39;, &#39;active&#39;: &#39;0&#39;, &#39;screen_lock&#39;: &#39;15&#39;, &#39;screen_protect_setting&#39;: &#39;0&#39;, &#39;passwd_min_length&#39;: &#39;8&#39;, &#39;login_fail_count&#39;: &#39;5&#39;, &#39;passwd_complexity&#39;: &#39;2&#39;, &#39;login_fail_lock&#39;: &#39;30&#39;}}, &#39;limit_user&#39;: &#39;&#39;, &#39;param&#39;: {&#39;irda&#39;: &#39;1&#39;, &#39;active&#39;: &#39;0&#39;, &#39;serialport&#39;: &#39;1&#39;, &#39;osnf&#39;: &#39;1&#39;, &#39;printer&#39;: &#39;1&#39;, &#39;usbdrive&#39;: &#39;3&#39;, &#39;mouse&#39;: &#39;1&#39;, &#39;floppy_disk&#39;: &#39;1&#39;, &#39;parallel_port&#39;: &#39;1&#39;, &#39;mobile&#39;: &#39;1&#39;, &#39;scanner&#39;: &#39;1&#39;, &#39;uflash&#39;: &#39;3&#39;, &#39;black_list&#39;: [], &#39;nonusbstorage&#39;: &#39;1&#39;, &#39;extradisk&#39;: &#39;1&#39;, &#39;mobile_hard_disk&#39;: &#39;3&#39;, &#39;except_list&#39;: [], &#39;udisk&#39;: &#39;3&#39;, &#39;storage_card&#39;: &#39;1&#39;, &#39;tape&#39;: &#39;1&#39;, &#39;pcmcia&#39;: &#39;1&#39;, &#39;opticaldrive&#39;: &#39;3&#39;, &#39;usbport&#39;: &#39;1&#39;, &#39;camera&#39;: &#39;1&#39;, &#39;keyboard&#39;: &#39;1&#39;, &#39;bluetooth&#39;: &#39;1&#39;, &#39;usbstorage&#39;: &#39;1&#39;}}, &#39;data_linkage&#39;: {&#39;conf_ver_s&#39;: &#39;51f2fa5912061605##&#39;, &#39;plugin_list&#39;: [{&#39;company&#39;: &#39;netentsec&#39;, &#39;open&#39;: &#39;0&#39;, &#39;server&#39;: &#39;&#39;, &#39;name&#39;: &#39;NscAuth.dll&#39;, &#39;port&#39;: &#39;&#39;}, {&#39;company&#39;: &#39;ngfw&#39;, &#39;server&#39;: &#39;&#39;, &#39;open&#39;: &#39;0&#39;, &#39;name&#39;: &#39;TQLinkNG.dll&#39;, &#39;port&#39;: &#39;6543&#39;}], &#39;inherit&#39;: &#39;1&#39;, &#39;conf_ver&#39;: 3325132808}, &#39;leak_manage&#39;: {&#39;limit_username&#39;: &#39;&#39;, &#39;tpl_list&#39;: [{&#39;tpl_info&#39;: {&#39;uniq_id&#39;: &#39;b5d4794301b3b5445241fca77e50301f&#39;, &#39;md5&#39;: &#39;ec828bb99808d0b37c8f939b01bf83bf&#39;, &#39;name&#39;: &#39;é»\x98è®¤æ¨¡æ\x9d¿&#39;, &#39;id&#39;: &#39;13&#39;}, &#39;rule&#39;: {&#39;time_range&#39;: None, &#39;online&#39;: &#39;1&#39;, &#39;scene&#39;: None}, &#39;rule_info&#39;: {&#39;name&#39;: &#39;æ\x9cªæ\x8c\x87å®\x9a&#39;}, &#39;time_info&#39;: {&#39;name&#39;: &#39;å\x85¨é\x83¨æ\x97¶é\x97´&#39;}, &#39;priority&#39;: &#39;1&#39;, &#39;conf&#39;: []}], &#39;default_tpl&#39;: {&#39;uniq_id&#39;: &#39;b5d4794301b3b5445241fca77e50301f&#39;, &#39;md5&#39;: &#39;ec828bb99808d0b37c8f939b01bf83bf&#39;, &#39;name&#39;: &#39;é»\x98è®¤æ¨¡æ\x9d¿&#39;, &#39;id&#39;: &#39;13&#39;}, &#39;inherit&#39;: &#39;1&#39;, &#39;rule_match_type&#39;: &#39;match_first&#39;, &#39;limit&#39;: &#39;0&#39;, &#39;conf_ver_s&#39;: &#39;3e67350712061612##&#39;, &#39;conf_ver&#39;: 1193669526, &#39;limit_user&#39;: &#39;&#39;, &#39;leak_repair&#39;: {&#39;patch_download_and_install_order&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;auto_fix&#39;: {&#39;period_type&#39;: &#39;0&#39;, &#39;tp_new&#39;: [&#39;1&#39;], &#39;fix_period_ex&#39;: [{&#39;time_end&#39;: &#39;02:00&#39;, &#39;week_end&#39;: &#39;1&#39;, &#39;time_start&#39;: &#39;01:00&#39;, &#39;week_start&#39;: &#39;1&#39;}], &#39;os_new&#39;: [&#39;yhkylinV10&#39;], &#39;hot_patch&#39;: &#39;1&#39;, &#39;fix_time&#39;: {&#39;type&#39;: &#39;day&#39;, &#39;time&#39;: &#39;00:00&#39;, &#39;week&#39;: &#39;3&#39;}, &#39;inherit&#39;: &#39;1&#39;, &#39;time_end&#39;: &#39;02:00&#39;, &#39;time_start&#39;: &#39;01:00&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;other_setting&#39;: {&#39;intelligent_ignore&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;patch_file_save_path&#39;: {&#39;path&#39;: &#39;/var/qaxleakfix&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}}}}, &#39;shen_hua&#39;: {&#39;sec_status&#39;: &#39;0&#39;, &#39;conf_ver_s&#39;: &#39;9b3d689f12061605##&#39;, &#39;preview&#39;: {&#39;url&#39;: &#39;&#39;, &#39;exec_mode&#39;: &#39;0&#39;, &#39;exec_time&#39;: &#39;00|00|*|*|*&#39;, &#39;window_size&#39;: &#39;0&#39;}, &#39;conf_ver&#39;: 2570280148, &#39;inherit&#39;: &#39;1&#39;}, &#39;softmgr_v2&#39;: {&#39;report_interval&#39;: {&#39;softchange_detect_interval&#39;: &#39;5&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;soft_activity&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;local&#39;: {&#39;enable&#39;: &#39;1&#39;}}, &#39;inherit&#39;: &#39;1&#39;, &#39;auto_uninstall&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;rule&#39;: [], &#39;inherit&#39;: &#39;1&#39;}, &#39;softcontrol_update&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;upgrade&#39;: &#39;1&#39;, &#39;way&#39;: [&#39;1&#39;], &#39;soft_list&#39;: [], &#39;inherit&#39;: &#39;0&#39;, &#39;look&#39;: &#39;0&#39;}, &#39;base&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;proxy_mode&#39;: &#39;2&#39;, &#39;real_port&#39;: &#39;&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;name_local&#39;: &#39;æ\x9c¬å\x9c°è½¯ä»¶&#39;, &#39;show_local_catalog&#39;: &#39;1&#39;, &#39;server_ip&#39;: &#39;&#39;, &#39;show_game_center&#39;: &#39;0&#39;, &#39;softchange_detect_interval&#39;: &#39;5&#39;, &#39;box_port&#39;: &#39;8080&#39;, &#39;show_cloud_catalog&#39;: &#39;1&#39;, &#39;show_cloud_cache&#39;: &#39;0&#39;, &#39;real_ip&#39;: &#39;&#39;, &#39;checked_update&#39;: &#39;600&#39;, &#39;softmgr_logo&#39;: &#39;default&#39;, &#39;server_port&#39;: &#39;&#39;, &#39;name_cloud&#39;: &#39;è½¯ä»¶äº\x91ä¸\xadå¿\x83&#39;, &#39;name_prefix&#39;: &#39;ä¼\x81ä¸\x9a&#39;, &#39;show_mobile_assistant&#39;: &#39;0&#39;, &#39;name_entity&#39;: &#39;è½¯ä»¶ç®¡å®¶&#39;}, &#39;conf_ver&#39;: 1916039596, &#39;shortcut&#39;: {&#39;show_update_number&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;show_desktop_lnk&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;restore_lnk&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}}, &#39;other&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;download_exit_mode&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;clear_temp_mode&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;inherit&#39;: &#39;1&#39;, &#39;look&#39;: &#39;0&#39;}, &#39;softcontrol_uninstall&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;soft_list&#39;: [], &#39;inherit&#39;: &#39;0&#39;, &#39;look&#39;: &#39;0&#39;}, &#39;disable_uninstall&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;unknow&#39;: [], &#39;local&#39;: [], &#39;cloud&#39;: [], &#39;look&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;forbit_uninstall&#39;: &#39;1&#39;}, &#39;softmgr_switch&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;enable&#39;: &#39;1&#39;}, &#39;conf_ver_s&#39;: &#39;2b2cd40a12061623##&#39;, &#39;disable_upgrade&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;cloud&#39;: [], &#39;local&#39;: [], &#39;inherit&#39;: &#39;1&#39;, &#39;look&#39;: &#39;0&#39;}, &#39;uninstall&#39;: {&#39;onkey_uninstall&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;show_right_menu_lnk&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;show_control_panel_lnk&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;power_sweep&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;show_start_menu_lnk&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}}, &#39;install_and_update&#39;: {&#39;pure_install_and_update&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;install_to_this_dir_after&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;install_after_download&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;intelligent_update_notify&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;onekey_install_dir&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;&#39;}, &#39;onekey_install_and_update&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}}, &#39;execute_flag&#39;: &#39;1&#39;, &#39;download&#39;: {&#39;tips_before_download&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;download_path&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;&#39;}}}, &#39;sd&#39;: {&#39;tg_settings_xp&#39;: {&#39;pop_mode_xp&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;2&#39;}, &#39;pop_level_xp&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;tg_switch_xp&#39;: {&#39;tg_r_eng&#39;: &#39;1&#39;, &#39;lock&#39;: &#39;0&#39;, &#39;value&#39;: &#39;0&#39;, &#39;tg_d_eng&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;tg_b_eng&#39;: &#39;1&#39;}}, &#39;tpl_list&#39;: [{&#39;tpl_info&#39;: {&#39;uniq_id&#39;: &#39;6680b85e6998679f05eb9173285050a1&#39;, &#39;md5&#39;: &#39;925db0f3355926bccc8ca957adf9c6e2&#39;, &#39;name&#39;: &#39;é»\x98è®¤æ¨¡æ\x9d¿&#39;, &#39;id&#39;: &#39;19&#39;}, &#39;rule&#39;: {&#39;time_range&#39;: None, &#39;online&#39;: &#39;1&#39;, &#39;scene&#39;: None}, &#39;rule_info&#39;: {&#39;name&#39;: &#39;æ\x9cªæ\x8c\x87å®\x9a&#39;}, &#39;time_info&#39;: {&#39;name&#39;: &#39;å\x85¨é\x83¨æ\x97¶é\x97´&#39;}, &#39;priority&#39;: &#39;1&#39;, &#39;conf&#39;: []}], &#39;tg_settings&#39;: {&#39;pop_mode_xp&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;2&#39;}, &#39;tg_switch&#39;: {&#39;tg_r_eng&#39;: &#39;1&#39;, &#39;lock&#39;: &#39;0&#39;, &#39;value&#39;: &#39;0&#39;, &#39;tg_d_eng&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;tg_b_eng&#39;: &#39;1&#39;}, &#39;pop_mode&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;2&#39;}, &#39;pop_level&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;tg_switch_xp&#39;: {&#39;tg_r_eng&#39;: &#39;1&#39;, &#39;lock&#39;: &#39;0&#39;, &#39;global&#39;: &#39;0&#39;, &#39;value&#39;: &#39;0&#39;, &#39;tg_d_eng&#39;: &#39;1&#39;, &#39;tg_b_eng&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;sync_global&#39;: &#39;0&#39;}}, &#39;default_tpl&#39;: {&#39;uniq_id&#39;: &#39;6680b85e6998679f05eb9173285050a1&#39;, &#39;md5&#39;: &#39;925db0f3355926bccc8ca957adf9c6e2&#39;, &#39;name&#39;: &#39;é»\x98è®¤æ¨¡æ\x9d¿&#39;, &#39;id&#39;: &#39;19&#39;}, &#39;inherit&#39;: &#39;1&#39;, &#39;rp_settings&#39;: {&#39;szUsbMonitor&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;revoke_time&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;monitor_filter_ext&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: []}, &#39;file_monitor&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;self_protect&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;cloud__mode&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}}, &#39;rule_match_type&#39;: &#39;match_first&#39;, &#39;limit&#39;: &#39;0&#39;, &#39;sd_settings&#39;: {&#39;engine_owl_hips&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;cloud_proxy_server&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: {&#39;ip&#39;: &#39;&#39;, &#39;port&#39;: &#39;8088&#39;}}, &#39;engine_avira_scan&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;macro_immune&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;skip_net_driver_low_right&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;scan_archive_list&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: [&#39;Arj&#39;, &#39;bzip2&#39;, &#39;Cpio&#39;, &#39;CramFS&#39;, &#39;Deb&#39;, &#39;Dmg&#39;, &#39;gzip&#39;, &#39;Lzh&#39;, &#39;lzma&#39;, &#39;lzma86&#39;, &#39;MsLZ&#39;, &#39;NTFS&#39;, &#39;Ppmd&#39;, &#39;Rpm&#39;, &#39;Split&#39;, &#39;SquashFS&#39;, &#39;Xar&#39;, &#39;xz&#39;, &#39;Z&#39;, &#39;7z&#39;, &#39;ar&#39;, &#39;Rar&#39;, &#39;Cab&#39;, &#39;Iso&#39;, &#39;Nsis&#39;, &#39;tar&#39;, &#39;zip&#39;, &#39;wim&#39;, &#39;Compound&#39;, &#39;HFS&#39;, &#39;Udf&#39;, &#39;Ace&#39;, &#39;Uue&#39;, &#39;rar5&#39;]}, &#39;auto_anti_infection_mode&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;operating&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;max_package_size_switch&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;trust_process&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;path&#39;: []}}, &#39;skip_unc_path&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;engine_owl_monitor&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;cloud__mode_value&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;2&#39;}, &#39;sys_file_scan&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;max_package_level_switch&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;isolated_area&#39;: {&#39;global&#39;: &#39;0&#39;, &#39;value&#39;: {&#39;size&#39;: &#39;500&#39;, &#39;enabled&#39;: &#39;0&#39;}, &#39;enabled&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;sync_global&#39;: &#39;0&#39;}, &#39;max_package_level&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;3&#39;}, &#39;timer_day_hour&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;00&#39;}, &#39;cloud_engine_scan&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;scan_rootkit&#39;: {&#39;lock&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;package_scan_list&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: [&#39;Arj&#39;, &#39;bzip2&#39;, &#39;Cpio&#39;, &#39;CramFS&#39;, &#39;Deb&#39;, &#39;Dmg&#39;, &#39;gzip&#39;, &#39;Lzh&#39;, &#39;lzma&#39;, &#39;lzma86&#39;, &#39;MsLZ&#39;, &#39;NTFS&#39;, &#39;Ppmd&#39;, &#39;Rpm&#39;, &#39;Split&#39;, &#39;SquashFS&#39;, &#39;Xar&#39;, &#39;xz&#39;, &#39;Z&#39;, &#39;7z&#39;, &#39;ar&#39;, &#39;Rar&#39;, &#39;Cab&#39;, &#39;Iso&#39;, &#39;Nsis&#39;, &#39;tar&#39;, &#39;zip&#39;, &#39;wim&#39;, &#39;Compound&#39;, &#39;HFS&#39;, &#39;Udf&#39;, &#39;Ace&#39;, &#39;Uue&#39;, &#39;rar5&#39;]}, &#39;engine_qre_scan&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;sysfix_proxy_server&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: {&#39;ip&#39;: &#39;&#39;, &#39;port&#39;: &#39;&#39;}}, &#39;timer_type&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;2&#39;}, &#39;private_cloud_server&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: {&#39;ip&#39;: &#39;&#39;, &#39;port&#39;: &#39;80&#39;}}, &#39;is_scan_archive_level&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;cloud__mode_on&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;cloud_engine_protect&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;engine_bd_scan&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;cloud_engine_hips&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;initiative_protect&#39;: {&#39;process_protect&#39;: {&#39;enable&#39;: &#39;0&#39;}}, &#39;U_protect&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;mode&#39;: &#39;1&#39;}, &#39;virus_source&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;stop_scan&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;guard_spy_files&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;gray_file_monitor&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;bd_moniter&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;scan_virus_ext&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: []}, &#39;advanced_threat_protect&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;compensate&#39;: {&#39;inherit&#39;: &#39;0&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;file_monitor&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;timer_scan_type&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;upload_file_server&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: {&#39;ip&#39;: &#39;&#39;, &#39;port&#39;: &#39;7080&#39;}}, &#39;guard_local_area_network_virus&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;anti_ransom&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;CPU_limit&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;is_scan_big_file_size&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;engine_avira_moniter&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;timer_day_minute&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;00&#39;}, &#39;smart_mode&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;scan_big_file_size&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;400&#39;}, &#39;upload_proxy_server&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: {&#39;ip&#39;: &#39;&#39;, &#39;port&#39;: &#39;&#39;}}, &#39;guard_file_style&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;use_private_cloud&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;trust_path&#39;: {&#39;white_list&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;md5_list&#39;: []}, &#39;ext_name&#39;: {&#39;disabled&#39;: 0, &#39;inherit&#39;: &#39;1&#39;, &#39;ext_name_list&#39;: []}, &#39;folder&#39;: {&#39;disabled&#39;: 0, &#39;folder_list&#39;: [], &#39;inherit&#39;: &#39;1&#39;}}, &#39;allow_user_stop_scan&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;multi_engine&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;lock&#39;: &#39;0&#39;}, &#39;scan_archive_size&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;50&#39;}, &#39;timer_month_index&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;6&#39;}, &#39;upload_file_mode&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;4&#39;}, &#39;scan_use_speedup&#39;: {&#39;lock&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;engine_qre_monitor&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;scan_archive_level&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;3&#39;}, &#39;owl_monitor&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;guard_level&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;owl_scan&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;sysfix_server&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: {&#39;ip&#39;: &#39;&#39;, &#39;port&#39;: &#39;7080&#39;}}, &#39;engine_owl_scan&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;engine_bd_moniter&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;is_scan_archive_size&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;guard_handle_type&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;_query&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;16&#39;}, &#39;timer_week_index&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;3&#39;}, &#39;cloud_query&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;2&#39;}, &#39;file_monitor_delay&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;180&#39;}, &#39;share_parse_file&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;path&#39;: [], &#39;type&#39;: &#39;0&#39;}}, &#39;package_scan_policy_switch&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;cmdline_scan_setting&#39;: {&#39;cmdline_scan_result_path&#39;: {&#39;value&#39;: &#39;&#39;}, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;engine_qre_hips&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;skip_encrypted_package&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;file_style&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;bd_scan&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;sysfix&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;2&#39;}, &#39;scan_disk_sector&#39;: {&#39;lock&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;qde_query&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;4&#39;}, &#39;skip_net_driver&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;timer_antivirus_setting&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: {&#39;scanDataTimeOpenLocked&#39;: &#39;0&#39;, &#39;checked&#39;: &#39;1&#39;, &#39;data&#39;: [], &#39;scanDataTimeOpen&#39;: &#39;0&#39;}}, &#39;timer_open&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;file_monitor_delay_enable&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;dll_immune&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;heartbeat_server&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: {&#39;ip&#39;: &#39;&#39;, &#39;port&#39;: &#39;&#39;}}, &#39;smart_order&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1,3&#39;}, &#39;max_package_size&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;50&#39;}, &#39;archive&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;engine_bd_cloud&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;timer_scan_path&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;&#39;}}, &#39;conf_ver_s&#39;: &#39;66c56aef12061623##&#39;, &#39;conf_ver&#39;: 3926421601, &#39;limit_user&#39;: &#39;&#39;, &#39;limit_username&#39;: &#39;&#39;}, &#39;schedule_config&#39;: {&#39;conf_ver_s&#39;: &#39;3258932912061605##&#39;, &#39;task&#39;: {&#39;notice&#39;: {&#39;exec_mode&#39;: &#39;0&#39;, &#39;is_exec&#39;: &#39;0&#39;, &#39;type&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;exec_time&#39;: &#39;00|00|*|*|*&#39;, &#39;conf&#39;: {&#39;wnd_title&#39;: &#39;&#39;, &#39;title&#39;: &#39;&#39;, &#39;pop_window_positon&#39;: &#39;0&#39;, &#39;message&#39;: &#39;&#39;, &#39;author&#39;: &#39;&#39;}}}, &#39;conf_ver&#39;: 1360512671}, &#39;summary_group&#39;: {&#39;conf_ver&#39;: 194452717, &#39;device_use_list&#39;: [{&#39;name&#39;: &#39;æ\x97¥å¸¸å\x8a\x9eå\x85¬&#39;, &#39;id&#39;: 1000}], &#39;conf_ver_s&#39;: &#39;1638787202#1#1&#39;, &#39;group&#39;: {&#39;filter&#39;: 0, &#39;file_md5&#39;: &#39;d6ef358b62aab2fb663d89bc91bd3233&#39;, &#39;id&#39;: 1, &#39;file_url&#39;: &#39;http://127.0.1.1:80/download/group.json&#39;, &#39;name&#39;: &#39;é»\x98è®¤å\x88\x86ç»\x84&#39;}}, &#39;nac_sec_check&#39;: {&#39;active&#39;: &#39;0&#39;, &#39;limit_username&#39;: &#39;&#39;, &#39;conf_ver_s&#39;: &#39;c093e6bb12061612##&#39;, &#39;check_delay_interval&#39;: &#39;0&#39;, &#39;redirect_url&#39;: &#39;&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;key_item&#39;: &#39;0&#39;, &#39;non_key_memo&#39;: &#39;æ\x82¨å\x8f¯ä»¥æ\xad£å¸¸ä½¿ç\x94¨ç½\x91ç»\x9cï¼\x8cä½\x86å\xad\x98å\x9c¨å®\x89å\x85¨é\x9a\x90æ\x82£ï¼\x8cå\x85¶ä¸\xadå\xad\x98å\x9c¨é\x97®é¢\x98{count}é¡¹ï¼\x8cè¯·å\x8f\x8aæ\x97¶ä¿®å¤\x8d&#39;, &#39;limit&#39;: &#39;0&#39;, &#39;firewall_policy&#39;: [], &#39;key_inspection_items&#39;: &#39;0&#39;, &#39;repair_area_id&#39;: &#39;0&#39;, &#39;check_list&#39;: [{&#39;enable&#39;: &#39;0&#39;, &#39;isrun_nokey&#39;: &#39;0&#39;, &#39;info&#39;: {&#39;version&#39;: &#39;&#39;, &#39;url&#39;: &#39;&#39;, &#39;days&#39;: &#39;90&#39;, &#39;name&#39;: &#39;å¥\x87å®\x89ä¿¡&#39;, &#39;update_url&#39;: &#39;&#39;}, &#39;id&#39;: &#39;1011&#39;, &#39;key_item&#39;: &#39;0&#39;, &#39;update_check&#39;: &#39;1&#39;, &#39;ischeck_nokey&#39;: &#39;0&#39;, &#39;isrun&#39;: &#39;0&#39;, &#39;repair_memo&#39;: &#39;æ\x82¨ç\x9a\x84å\x90\x88è§\x84æ£\x80æ\x9f¥é¡¹ä¸\x8dç¬¦å\x90\x88è¦\x81æ±\x82ï¼\x8cè¯·å\x8f\x8aæ\x97¶è¿\x9bè¡\x8cä¿®å¤\x8dï¼\x8cå¦\x82æ\x9c\x89é\x97®é¢\x98è¯·è\x81\x94ç³»ç®¡ç\x90\x86å\x91\x98ï¼\x81&#39;, &#39;update_check_nokey&#39;: &#39;0&#39;, &#39;name&#39;: &#39;antivirus_check&#39;, &#39;ischeck&#39;: &#39;1&#39;}, {&#39;enable&#39;: &#39;0&#39;, &#39;id&#39;: &#39;1012&#39;, &#39;repair_memo&#39;: &#39;æ\x82¨ç\x9a\x84å\x90\x88è§\x84æ£\x80æ\x9f¥é¡¹ä¸\x8dç¬¦å\x90\x88è¦\x81æ±\x82ï¼\x8cè¯·å\x8f\x8aæ\x97¶è¿\x9bè¡\x8cä¿®å¤\x8dï¼\x8cå¦\x82æ\x9c\x89é\x97®é¢\x98è¯·è\x81\x94ç³»ç®¡ç\x90\x86å\x91\x98ï¼\x81&#39;, &#39;link_url&#39;: [], &#39;name&#39;: &#39;internet_link_check&#39;, &#39;key_item&#39;: &#39;0&#39;}], &#39;conf_ver&#39;: 2167962511, &#39;check_hour&#39;: &#39;0&#39;, &#39;chk_item&#39;: &#39;0&#39;, &#39;tpl_list&#39;: [{&#39;tpl_info&#39;: {&#39;uniq_id&#39;: &#39;e635b665d13c32a8ebde4a0aa9ba7106&#39;, &#39;md5&#39;: &#39;ee33112a267b484900c354353529aede&#39;, &#39;name&#39;: &#39;é»\x98è®¤æ¨¡æ\x9d¿&#39;, &#39;id&#39;: &#39;15&#39;}, &#39;rule&#39;: {&#39;time_range&#39;: None, &#39;online&#39;: &#39;1&#39;, &#39;scene&#39;: None}, &#39;rule_info&#39;: {&#39;name&#39;: &#39;æ\x9cªæ\x8c\x87å®\x9a&#39;}, &#39;time_info&#39;: {&#39;name&#39;: &#39;å\x85¨é\x83¨æ\x97¶é\x97´&#39;}, &#39;priority&#39;: &#39;1&#39;, &#39;conf&#39;: []}], &#39;cycle_time&#39;: &#39;60&#39;, &#39;check_start&#39;: &#39;0&#39;, &#39;nac_policy_id&#39;: &#39;0&#39;, &#39;default_tpl&#39;: {&#39;uniq_id&#39;: &#39;e635b665d13c32a8ebde4a0aa9ba7106&#39;, &#39;md5&#39;: &#39;ee33112a267b484900c354353529aede&#39;, &#39;name&#39;: &#39;é»\x98è®¤æ¨¡æ\x9d¿&#39;, &#39;id&#39;: &#39;15&#39;}, &#39;memo&#39;: &#39;æ\x82¨æ\x9c\x89å\x85³é\x94®æ£\x80æ\x9f¥é¡¹ä¸\x8dé\x80\x9aè¿\x87,ç½\x91ç»\x9cè®¿é\x97®å°\x86å\x8f\x97é\x99\x90!è¯·å\x8f\x8aæ\x97¶ä¿®å¤\x8d,ä¿®å¤\x8dæ\x88\x90å\x8a\x9få\x90\x8eç\x82¹å\x87»é\x87\x8dæ\x96°æ£\x80æ\x9f¥,å\x8d³å\x8f¯å\x85¥ç½\x91.&#39;, &#39;cycle_flag&#39;: &#39;0&#39;, &#39;rule_match_type&#39;: &#39;match_first&#39;, &#39;hint_page&#39;: &#39;0&#39;, &#39;check_timing&#39;: &#39;0&#39;, &#39;check_minute&#39;: &#39;0&#39;, &#39;pop_type&#39;: &#39;0&#39;, &#39;check_date&#39;: &#39;0&#39;, &#39;limit_user&#39;: &#39;&#39;, &#39;repair_for_check&#39;: &#39;0&#39;}, &#39;audit&#39;: {&#39;softwarechanged&#39;: {&#39;level&#39;: &#39;100&#39;, &#39;Content&#39;: {&#39;Software&#39;: []}, &#39;name&#39;: &#39;ä¸»å®¡&#39;, &#39;ID&#39;: &#39;4&#39;, &#39;type&#39;: &#39;softwarechanged&#39;, &#39;disable&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;publ&#39;: &#39;å®\x89å\x85¨ä¿\x9då¯\x86ç®¡ç\x90\x86å\x91\x98&#39;}, &#39;logon&#39;: {&#39;level&#39;: &#39;100&#39;, &#39;Content&#39;: {&#39;Logon&#39;: {&#39;Logon&#39;: {&#39;logout&#39;: &#39;1&#39;, &#39;boot&#39;: &#39;1&#39;, &#39;shutdown&#39;: &#39;1&#39;, &#39;login&#39;: &#39;1&#39;}}}, &#39;name&#39;: &#39;ä¸»å®¡&#39;, &#39;ID&#39;: &#39;3&#39;, &#39;type&#39;: &#39;logon&#39;, &#39;disable&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;publ&#39;: &#39;å®\x89å\x85¨ä¿\x9då¯\x86ç®¡ç\x90\x86å\x91\x98&#39;}, &#39;limit&#39;: &#39;0&#39;, &#39;portscan&#39;: {&#39;level&#39;: &#39;100&#39;, &#39;Content&#39;: {&#39;Portscan&#39;: {&#39;times&#39;: &#39;5&#39;, &#39;period&#39;: &#39;10&#39;}}, &#39;name&#39;: &#39;ä¸»å®¡&#39;, &#39;ID&#39;: &#39;9&#39;, &#39;type&#39;: &#39;portscan&#39;, &#39;disable&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;publ&#39;: &#39;å®\x89å\x85¨ä¿\x9då¯\x86ç®¡ç\x90\x86å\x91\x98&#39;}, &#39;http&#39;: {&#39;level&#39;: &#39;100&#39;, &#39;Content&#39;: {&#39;Http&#39;: {&#39;Untrust&#39;: {&#39;URL&#39;: [], &#39;UntrustDrop&#39;: &#39;1&#39;}, &#39;Trust&#39;: {&#39;URL&#39;: []}, &#39;IsTrust&#39;: &#39;1&#39;}}, &#39;name&#39;: &#39;ä¸»å®¡&#39;, &#39;ID&#39;: &#39;18&#39;, &#39;type&#39;: &#39;http&#39;, &#39;disable&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;publ&#39;: &#39;å®\x89å\x85¨ä¿\x9då¯\x86ç®¡ç\x90\x86å\x91\x98&#39;}, &#39;conf_ver&#39;: 160832326, &#39;brasero&#39;: {&#39;level&#39;: &#39;100&#39;, &#39;Content&#39;: {&#39;Brasero&#39;: []}, &#39;name&#39;: &#39;ä¸»å®¡&#39;, &#39;ID&#39;: &#39;4&#39;, &#39;type&#39;: &#39;brasero&#39;, &#39;disable&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;publ&#39;: &#39;å®\x89å\x85¨ä¿\x9då¯\x86ç®¡ç\x90\x86å\x91\x98&#39;}, &#39;hardwarechanged&#39;: {&#39;level&#39;: &#39;100&#39;, &#39;Content&#39;: {&#39;Hardware&#39;: []}, &#39;name&#39;: &#39;ä¸»å®¡&#39;, &#39;ID&#39;: &#39;20&#39;, &#39;type&#39;: &#39;hardwarechanged&#39;, &#39;disable&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;publ&#39;: &#39;å®\x89å\x85¨ä¿\x9då¯\x86ç®¡ç\x90\x86å\x91\x98&#39;}, &#39;flowmonitor&#39;: {&#39;level&#39;: &#39;100&#39;, &#39;Content&#39;: {&#39;Flowmonitor&#39;: {&#39;Statistics&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;timeinterval&#39;: &#39;&#39;}, &#39;Abnormal&#39;: {&#39;action&#39;: &#39;1&#39;, &#39;Up&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;flowthreshold&#39;: &#39;&#39;, &#39;timeinterval&#39;: &#39;&#39;}, &#39;Down&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;flowthreshold&#39;: &#39;&#39;, &#39;timeinterval&#39;: &#39;&#39;}}}}, &#39;name&#39;: &#39;ä¸»å®¡&#39;, &#39;ID&#39;: &#39;39&#39;, &#39;type&#39;: &#39;flowmonitor&#39;, &#39;disable&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;publ&#39;: &#39;å®\x89å\x85¨ä¿\x9då¯\x86ç®¡ç\x90\x86å\x91\x98&#39;}, &#39;share&#39;: {&#39;level&#39;: &#39;100&#39;, &#39;Content&#39;: {&#39;Share&#39;: []}, &#39;name&#39;: &#39;ä¸»å®¡&#39;, &#39;ID&#39;: &#39;20&#39;, &#39;type&#39;: &#39;share&#39;, &#39;disable&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;publ&#39;: &#39;å®\x89å\x85¨ä¿\x9då¯\x86ç®¡ç\x90\x86å\x91\x98&#39;}, &#39;docmonitor&#39;: {&#39;level&#39;: &#39;100&#39;, &#39;Content&#39;: {&#39;DocMonitor&#39;: {&#39;Type&#39;: &#39;&#39;}}, &#39;name&#39;: &#39;ä¸»å®¡&#39;, &#39;ID&#39;: &#39;1&#39;, &#39;type&#39;: &#39;docmonitor&#39;, &#39;disable&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;publ&#39;: &#39;å®\x89å\x85¨ä¿\x9då¯\x86ç®¡ç\x90\x86å\x91\x98&#39;}, &#39;rule_match_type&#39;: &#39;match_first&#39;, &#39;conf_ver_s&#39;: &#39;b1c7028012061623##&#39;, &#39;limit_user&#39;: &#39;&#39;, &#39;proflow&#39;: {&#39;level&#39;: &#39;100&#39;, &#39;Content&#39;: {&#39;Proflow&#39;: {&#39;Monitor&#39;: {&#39;block&#39;: &#39;0&#39;, &#39;threshold&#39;: &#39;50&#39;, &#39;value&#39;: &#39;&#39;}}}, &#39;name&#39;: &#39;ä¸»å®¡&#39;, &#39;ID&#39;: &#39;11&#39;, &#39;type&#39;: &#39;proflow&#39;, &#39;disable&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;publ&#39;: &#39;å®\x89å\x85¨ä¿\x9då¯\x86ç®¡ç\x90\x86å\x91\x98&#39;}, &#39;limit_username&#39;: &#39;&#39;, &#39;account&#39;: {&#39;level&#39;: &#39;100&#39;, &#39;Content&#39;: {&#39;Account&#39;: []}, &#39;name&#39;: &#39;ä¸»å®¡&#39;, &#39;ID&#39;: &#39;4&#39;, &#39;type&#39;: &#39;account&#39;, &#39;disable&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;publ&#39;: &#39;å®\x89å\x85¨ä¿\x9då¯\x86ç®¡ç\x90\x86å\x91\x98&#39;}, &#39;netconfig&#39;: {&#39;level&#39;: &#39;100&#39;, &#39;Content&#39;: {&#39;NetConfig&#39;: {&#39;GateWay&#39;: &#39;0&#39;, &#39;DNS&#39;: &#39;0&#39;, &#39;IP&#39;: &#39;0&#39;, &#39;NetMask&#39;: &#39;0&#39;}}, &#39;name&#39;: &#39;ä¸»å®¡&#39;, &#39;ID&#39;: &#39;8&#39;, &#39;type&#39;: &#39;netconfig&#39;, &#39;disable&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;publ&#39;: &#39;å®\x89å\x85¨ä¿\x9då¯\x86ç®¡ç\x90\x86å\x91\x98&#39;}, &#39;systemsecurity&#39;: {&#39;level&#39;: &#39;100&#39;, &#39;Content&#39;: {&#39;Systemsecurity&#39;: []}, &#39;name&#39;: &#39;ä¸»å®¡&#39;, &#39;ID&#39;: &#39;4&#39;, &#39;type&#39;: &#39;systemsecurity&#39;, &#39;disable&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;publ&#39;: &#39;å®\x89å\x85¨ä¿\x9då¯\x86ç®¡ç\x90\x86å\x91\x98&#39;}, &#39;query&#39;: {&#39;level&#39;: &#39;100&#39;, &#39;Content&#39;: {&#39;QueryProcess&#39;: {&#39;send&#39;: &#39;0&#39;, &#39;invalidtimes&#39;: &#39;0&#39;}, &#39;QuerySystem&#39;: {&#39;send&#39;: &#39;0&#39;, &#39;invalidtimes&#39;: &#39;0&#39;}, &#39;QuerySoftware&#39;: {&#39;send&#39;: &#39;0&#39;, &#39;invalidtimes&#39;: &#39;0&#39;}, &#39;QueryFlow&#39;: {&#39;send&#39;: &#39;0&#39;, &#39;invalidtimes&#39;: &#39;0&#39;}, &#39;QueryHardware&#39;: {&#39;send&#39;: &#39;0&#39;, &#39;invalidtimes&#39;: &#39;0&#39;}, &#39;QueryPort&#39;: {&#39;send&#39;: &#39;0&#39;, &#39;invalidtimes&#39;: &#39;0&#39;}, &#39;QuerySyslog&#39;: {&#39;send&#39;: &#39;0&#39;, &#39;invalidtimes&#39;: &#39;0&#39;}, &#39;QueryAccount&#39;: {&#39;send&#39;: &#39;0&#39;, &#39;invalidtimes&#39;: &#39;0&#39;}, &#39;QueryFirefox&#39;: {&#39;send&#39;: &#39;0&#39;, &#39;invalidtimes&#39;: &#39;0&#39;}}, &#39;name&#39;: &#39;ä¸»å®¡&#39;, &#39;ID&#39;: &#39;3&#39;, &#39;type&#39;: &#39;query&#39;, &#39;disable&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;publ&#39;: &#39;å®\x89å\x85¨ä¿\x9då¯\x86ç®¡ç\x90\x86å\x91\x98&#39;}, &#39;filecheck&#39;: {&#39;disable&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;publ&#39;: &#39;å®\x89å\x85¨ä¿\x9då¯\x86ç®¡ç\x90\x86å\x91\x98&#39;, &#39;Content&#39;: {&#39;FileCheck&#39;: {&#39;Path&#39;: []}}, &#39;global&#39;: &#39;1&#39;, &#39;ID&#39;: &#39;10&#39;, &#39;type&#39;: &#39;filecheck&#39;, &#39;name&#39;: &#39;ä¸»å®¡&#39;, &#39;level&#39;: &#39;100&#39;}, &#39;netflow&#39;: {&#39;level&#39;: &#39;100&#39;, &#39;Content&#39;: {&#39;Netflow&#39;: {&#39;NetLimit&#39;: {&#39;NetPipe&#39;: {&#39;limitrate&#39;: &#39;&#39;, &#39;direction&#39;: &#39;&#39;, &#39;value&#39;: &#39;&#39;, &#39;index&#39;: &#39;&#39;}}, &#39;GlobalClassifierWhiteList&#39;: [], &#39;Black&#39;: &#39;1&#39;, &#39;GlobalClassifier&#39;: {&#39;SourcePort&#39;: {&#39;startport&#39;: &#39;&#39;, &#39;value&#39;: &#39;&#39;, &#39;endport&#39;: &#39;&#39;, &#39;exception&#39;: &#39;false&#39;, &#39;port&#39;: &#39;&#39;}, &#39;SourceIP&#39;: {&#39;ip&#39;: &#39;&#39;, &#39;exception&#39;: &#39;false&#39;, &#39;value&#39;: &#39;&#39;}, &#39;DestinationPort&#39;: {&#39;startport&#39;: &#39;&#39;, &#39;value&#39;: &#39;&#39;, &#39;endport&#39;: &#39;&#39;, &#39;exception&#39;: &#39;false&#39;, &#39;port&#39;: &#39;&#39;}, &#39;DestinationIP&#39;: {&#39;ip&#39;: &#39;&#39;, &#39;value&#39;: &#39;&#39;, &#39;rangeip&#39;: &#39;&#39;, &#39;baseip&#39;: &#39;&#39;, &#39;exception&#39;: &#39;false&#39;}, &#39;Classifier&#39;: {&#39;action&#39;: &#39;block&#39;, &#39;index&#39;: &#39;2147483647&#39;, &#39;log&#39;: &#39;true&#39;, &#39;direction&#39;: &#39;in&#39;, &#39;black&#39;: &#39;1&#39;, &#39;protocol&#39;: &#39;TCP&#39;}}, &#39;BlackDrop&#39;: &#39;1&#39;, &#39;GlobalClassifierBlackList&#39;: []}}, &#39;name&#39;: &#39;ä¸»å®¡&#39;, &#39;ID&#39;: &#39;32&#39;, &#39;type&#39;: &#39;netflow&#39;, &#39;disable&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;publ&#39;: &#39;å®\x89å\x85¨ä¿\x9då¯\x86ç®¡ç\x90\x86å\x91\x98&#39;}, &#39;timemod&#39;: {&#39;disable&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;publ&#39;: &#39;å®\x89å\x85¨ä¿\x9då¯\x86ç®¡ç\x90\x86å\x91\x98&#39;, &#39;Content&#39;: {&#39;Timemod&#39;: []}, &#39;global&#39;: &#39;0&#39;, &#39;ID&#39;: &#39;4&#39;, &#39;type&#39;: &#39;timemod&#39;, &#39;name&#39;: &#39;ä¸»å®¡&#39;, &#39;level&#39;: &#39;100&#39;}, &#39;system_update_info&#39;: {&#39;disable&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;publ&#39;: &#39;å®\x89å\x85¨ä¿\x9då¯\x86ç®¡ç\x90\x86å\x91\x98&#39;, &#39;Content&#39;: {&#39;System_update_info&#39;: []}, &#39;global&#39;: &#39;0&#39;, &#39;ID&#39;: &#39;40&#39;, &#39;type&#39;: &#39;system_update_info&#39;, &#39;name&#39;: &#39;ä¸»å®¡&#39;, &#39;level&#39;: &#39;100&#39;}, &#39;print&#39;: {&#39;level&#39;: &#39;100&#39;, &#39;Content&#39;: {&#39;Print&#39;: []}, &#39;name&#39;: &#39;ä¸»å®¡&#39;, &#39;ID&#39;: &#39;4&#39;, &#39;type&#39;: &#39;print&#39;, &#39;disable&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;publ&#39;: &#39;å®\x89å\x85¨ä¿\x9då¯\x86ç®¡ç\x90\x86å\x91\x98&#39;}, &#39;prosource&#39;: {&#39;disable&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;publ&#39;: &#39;å®\x89å\x85¨ä¿\x9då¯\x86ç®¡ç\x90\x86å\x91\x98&#39;, &#39;Content&#39;: {&#39;Prosource&#39;: {&#39;Monitor&#39;: {&#39;cpu&#39;: &#39;&#39;, &#39;time&#39;: &#39;&#39;, &#39;value&#39;: &#39;&#39;, &#39;mem&#39;: &#39;&#39;}}}, &#39;global&#39;: &#39;1&#39;, &#39;ID&#39;: &#39;11&#39;, &#39;type&#39;: &#39;prosource&#39;, &#39;name&#39;: &#39;ä¸»å®¡&#39;, &#39;level&#39;: &#39;100&#39;}, &#39;tpl_list&#39;: [{&#39;tpl_info&#39;: {&#39;uniq_id&#39;: &#39;16b655909041704ac1dba867e9d41847&#39;, &#39;md5&#39;: &#39;7c9e63079a0cf132d9378101a2cd7789&#39;, &#39;name&#39;: &#39;é»\x98è®¤æ¨¡æ\x9d¿&#39;, &#39;id&#39;: &#39;2&#39;}, &#39;rule&#39;: {&#39;time_range&#39;: None, &#39;online&#39;: &#39;1&#39;, &#39;scene&#39;: None}, &#39;rule_info&#39;: {&#39;name&#39;: &#39;æ\x9cªæ\x8c\x87å®\x9a&#39;}, &#39;time_info&#39;: {&#39;name&#39;: &#39;å\x85¨é\x83¨æ\x97¶é\x97´&#39;}, &#39;priority&#39;: &#39;1&#39;, &#39;conf&#39;: []}], &#39;bootmonitor&#39;: {&#39;level&#39;: &#39;100&#39;, &#39;Content&#39;: {&#39;TerminalWorkTimeOutBootAlarm&#39;: {&#39;startTime&#39;: &#39;8:00&#39;, &#39;endTime&#39;: &#39;18:00&#39;}}, &#39;name&#39;: &#39;ä¸»å®¡&#39;, &#39;ID&#39;: &#39;3&#39;, &#39;type&#39;: &#39;bootmonitor&#39;, &#39;disable&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;publ&#39;: &#39;å®\x89å\x85¨ä¿\x9då¯\x86ç®¡ç\x90\x86å\x91\x98&#39;}, &#39;default_tpl&#39;: {&#39;uniq_id&#39;: &#39;16b655909041704ac1dba867e9d41847&#39;, &#39;md5&#39;: &#39;7c9e63079a0cf132d9378101a2cd7789&#39;, &#39;name&#39;: &#39;é»\x98è®¤æ¨¡æ\x9d¿&#39;, &#39;id&#39;: &#39;2&#39;}, &#39;policy_start_time&#39;: {&#39;disable&#39;: &#39;1&#39;, &#39;use&#39;: &#39;1&#39;, &#39;type&#39;: &#39;policy_start_time&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;Content&#39;: {&#39;Time&#39;: {&#39;value&#39;: [{&#39;startHour&#39;: &#39;00&#39;, &#39;endHour&#39;: &#39;00&#39;, &#39;endMinute&#39;: &#39;00&#39;, &#39;week&#39;: &#39;0&#39;, &#39;startMinute&#39;: &#39;00&#39;}]}}}, &#39;process&#39;: {&#39;level&#39;: &#39;100&#39;, &#39;Content&#39;: {&#39;Process&#39;: {&#39;BlackMonitor&#39;: &#39;&#39;, &#39;RedDrop&#39;: &#39;0&#39;, &#39;BlackDrop&#39;: &#39;0&#39;, &#39;Black&#39;: &#39;1&#39;, &#39;Red&#39;: &#39;0&#39;, &#39;RedMonitor&#39;: &#39;&#39;, &#39;WhiteMonitor&#39;: &#39;&#39;}}, &#39;name&#39;: &#39;ä¸»å®¡&#39;, &#39;ID&#39;: &#39;11&#39;, &#39;type&#39;: &#39;process&#39;, &#39;disable&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;publ&#39;: &#39;å®\x89å\x85¨ä¿\x9då¯\x86ç®¡ç\x90\x86å\x91\x98&#39;}, &#39;portlisten&#39;: {&#39;level&#39;: &#39;100&#39;, &#39;Content&#39;: {&#39;PortListen&#39;: {&#39;BlackDrop&#39;: &#39;1&#39;, &#39;WhiteList&#39;: [], &#39;BlackList&#39;: [], &#39;Black&#39;: &#39;1&#39;}}, &#39;name&#39;: &#39;ä¸»å®¡&#39;, &#39;ID&#39;: &#39;16&#39;, &#39;type&#39;: &#39;portlisten&#39;, &#39;disable&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;publ&#39;: &#39;å®\x89å\x85¨ä¿\x9då¯\x86ç®¡ç\x90\x86å\x91\x98&#39;}, &#39;performance&#39;: {&#39;level&#39;: &#39;100&#39;, &#39;Content&#39;: {&#39;Performance&#39;: {&#39;CPU&#39;: {&#39;time&#39;: &#39;30&#39;, &#39;percent&#39;: &#39;80&#39;, &#39;rate&#39;: &#39;90&#39;}, &#39;Memory&#39;: {&#39;time&#39;: &#39;30&#39;, &#39;percent&#39;: &#39;80&#39;, &#39;rate&#39;: &#39;90&#39;}, &#39;Disk&#39;: {&#39;System&#39;: {&#39;space&#39;: &#39;1024&#39;, &#39;time&#39;: &#39;&#39;}}}}, &#39;name&#39;: &#39;ä¸»å®¡&#39;, &#39;ID&#39;: &#39;9&#39;, &#39;type&#39;: &#39;performance&#39;, &#39;disable&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;publ&#39;: &#39;å®\x89å\x85¨ä¿\x9då¯\x86ç®¡ç\x90\x86å\x91\x98&#39;}, &#39;arpfilterwall&#39;: {&#39;level&#39;: &#39;100&#39;, &#39;Content&#39;: {&#39;Arpfilterwall&#39;: {&#39;Gatewayip&#39;: &#39;&#39;, &#39;Gatewaymac&#39;: &#39;&#39;}}, &#39;name&#39;: &#39;ä¸»å®¡&#39;, &#39;ID&#39;: &#39;9&#39;, &#39;type&#39;: &#39;arpfilterwall&#39;, &#39;disable&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;publ&#39;: &#39;å®\x89å\x85¨ä¿\x9då¯\x86ç®¡ç\x90\x86å\x91\x98&#39;}, &#39;service&#39;: {&#39;level&#39;: &#39;100&#39;, &#39;Content&#39;: {&#39;Service&#39;: {&#39;Monitor&#39;: &#39;&#39;}}, &#39;name&#39;: &#39;ä¸»å®¡&#39;, &#39;ID&#39;: &#39;13&#39;, &#39;type&#39;: &#39;service&#39;, &#39;disable&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;publ&#39;: &#39;å®\x89å\x85¨ä¿\x9då¯\x86ç®¡ç\x90\x86å\x91\x98&#39;}, &#39;filemonitor&#39;: {&#39;level&#39;: &#39;100&#39;, &#39;Content&#39;: {&#39;FileMonitor&#39;: {&#39;Path&#39;: []}}, &#39;name&#39;: &#39;ä¸»å®¡&#39;, &#39;ID&#39;: &#39;10&#39;, &#39;type&#39;: &#39;filemonitor&#39;, &#39;disable&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;publ&#39;: &#39;å®\x89å\x85¨ä¿\x9då¯\x86ç®¡ç\x90\x86å\x91\x98&#39;}, &#39;syslog&#39;: {&#39;level&#39;: &#39;100&#39;, &#39;Content&#39;: {&#39;Syslog&#39;: {&#39;log&#39;: {&#39;enable&#39;: &#39;1&#39;, &#39;destip&#39;: &#39;&#39;, &#39;level&#39;: &#39;&#39;, &#39;protocol&#39;: &#39;&#39;, &#39;destport&#39;: &#39;514&#39;, &#39;facility&#39;: &#39;&#39;}}}, &#39;name&#39;: &#39;ä¸»å®¡&#39;, &#39;ID&#39;: &#39;21&#39;, &#39;type&#39;: &#39;syslog&#39;, &#39;disable&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;publ&#39;: &#39;å®\x89å\x85¨ä¿\x9då¯\x86ç®¡ç\x90\x86å\x91\x98&#39;}, &#39;udiskmonitor&#39;: {&#39;level&#39;: &#39;100&#39;, &#39;Content&#39;: {&#39;UDiskMonitor&#39;: {&#39;inout&#39;: &#39;1&#39;, &#39;operation&#39;: &#39;1&#39;, &#39;UDisk&#39;: &#39;1&#39;, &#39;HDisk&#39;: &#39;1&#39;}}, &#39;name&#39;: &#39;ä¸»å®¡&#39;, &#39;ID&#39;: &#39;5&#39;, &#39;type&#39;: &#39;udiskmonitor&#39;, &#39;disable&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;publ&#39;: &#39;å®\x89å\x85¨ä¿\x9då¯\x86ç®¡ç\x90\x86å\x91\x98&#39;}, &#39;inherit&#39;: &#39;1&#39;}, &#39;dsec_internet&#39;: {&#39;limit_username&#39;: &#39;&#39;, &#39;tpl_list&#39;: [{&#39;tpl_info&#39;: {&#39;uniq_id&#39;: &#39;57b4ce7473756ab832ffbdf819d177b9&#39;, &#39;md5&#39;: &#39;c8a8756c483b0145f97ec2a105901080&#39;, &#39;name&#39;: &#39;é»\x98è®¤æ¨¡æ\x9d¿&#39;, &#39;id&#39;: &#39;11&#39;}, &#39;rule&#39;: {&#39;time_range&#39;: None, &#39;online&#39;: &#39;1&#39;, &#39;scene&#39;: None}, &#39;rule_info&#39;: {&#39;name&#39;: &#39;æ\x9cªæ\x8c\x87å®\x9a&#39;}, &#39;time_info&#39;: {&#39;name&#39;: &#39;å\x85¨é\x83¨æ\x97¶é\x97´&#39;}, &#39;priority&#39;: &#39;1&#39;, &#39;conf&#39;: []}], &#39;default_tpl&#39;: {&#39;uniq_id&#39;: &#39;57b4ce7473756ab832ffbdf819d177b9&#39;, &#39;md5&#39;: &#39;c8a8756c483b0145f97ec2a105901080&#39;, &#39;name&#39;: &#39;é»\x98è®¤æ¨¡æ\x9d¿&#39;, &#39;id&#39;: &#39;11&#39;}, &#39;inherit&#39;: &#39;1&#39;, &#39;rule_match_type&#39;: &#39;match_first&#39;, &#39;limit&#39;: &#39;0&#39;, &#39;conf_ver_s&#39;: &#39;282e42d412061612##&#39;, &#39;conf_ver&#39;: 1129763058, &#39;limit_user&#39;: &#39;&#39;, &#39;param&#39;: {&#39;active&#39;: &#39;0&#39;, &#39;enable_wireless_hotspot&#39;: &#39;0&#39;, &#39;outnet_tips&#39;: &#39;æ\x82¨ç\x9a\x84ç»\x88ç«¯å\xad\x98å\x9c¨è¿\x9dè§\x84å¤\x96è\x81\x94è¡\x8cä¸ºï¼\x8cè¯·è\x81\x94ç³»ç®¡ç\x90\x86å\x91\x98å¤\x84ç\x90\x86ï¼\x81&#39;, &#39;outnet_action&#39;: &#39;pop_message&#39;, &#39;enable_outreach_center&#39;: {&#39;value&#39;: &#39;0&#39;}, &#39;internetip_active&#39;: &#39;0&#39;, &#39;detective_list&#39;: [], &#39;enable_ip&#39;: &#39;0&#39;, &#39;enable_mac&#39;: &#39;0&#39;, &#39;enable_disconnecte_wireless_tips&#39;: &#39;0&#39;, &#39;detective_type&#39;: &#39;1&#39;, &#39;net_shake_control&#39;: &#39;0&#39;, &#39;wifi_card_list&#39;: [], &#39;enable_proxy&#39;: &#39;0&#39;, &#39;inoutnet_action&#39;: &#39;pop_message&#39;, &#39;detective_time&#39;: &#39;14&#39;, &#39;disconnecte_wireless&#39;: &#39;0&#39;, &#39;enable_ipv6&#39;: &#39;0&#39;, &#39;wifi_active&#39;: &#39;1&#39;, &#39;inoutnet_tips&#39;: &#39;æ\x82¨ç\x9a\x84ç»\x88ç«¯å\xad\x98å\x9c¨è¿\x9dè§\x84å¤\x96è\x81\x94è¡\x8cä¸ºï¼\x8cè¯·è\x81\x94ç³»ç®¡ç\x90\x86å\x91\x98å¤\x84ç\x90\x86ï¼\x81&#39;, &#39;detect_outreach_center&#39;: {&#39;value&#39;: []}, &#39;detect_outreach_interval&#39;: {&#39;value&#39;: &#39;10&#39;}, &#39;power_on_net_control&#39;: &#39;0&#39;, &#39;disconnecte_wireless_tips&#39;: &#39;æ\x9c\x89çº¿ç½\x91å\x8d¡ä½¿ç\x94¨æ\x97¶ï¼\x8cç¦\x81æ\xad¢è¿\x9eæ\x8e¥æ\x97\xa0çº¿ç½\x91å\x8d¡&#39;}}, &#39;softmgr&#39;: {&#39;enable&#39;: &#39;1&#39;, &#39;box_port&#39;: &#39;8080&#39;, &#39;show_cloud_catalog&#39;: &#39;1&#39;, &#39;show_cloud_cache&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;conf_ver_s&#39;: &#39;2a8c852a12061605##&#39;, &#39;proxy_mode&#39;: &#39;2&#39;, &#39;show_local_catalog&#39;: &#39;1&#39;, &#39;server_ip&#39;: &#39;&#39;, &#39;server_port&#39;: &#39;&#39;, &#39;show_game_center&#39;: &#39;1&#39;, &#39;checked_update&#39;: &#39;600&#39;, &#39;conf_ver&#39;: 1332893732, &#39;show_mobile_assistant&#39;: &#39;1&#39;}, &#39;client_data_collection&#39;: {&#39;upload_interval&#39;: &#39;600&#39;, &#39;upload_type&#39;: &#39;0&#39;, &#39;upload_size&#39;: &#39;1&#39;, &#39;client_collection&#39;: {&#39;web_access&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;position&#39;: {&#39;type&#39;: &#39;1&#39;, &#39;server&#39;: &#39;127.0.0.1&#39;, &#39;port&#39;: &#39;8080&#39;}, &#39;white_list&#39;: []}, &#39;process_create&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;position&#39;: {&#39;type&#39;: &#39;1&#39;, &#39;server&#39;: &#39;127.0.0.1&#39;, &#39;port&#39;: &#39;8080&#39;}, &#39;white_list&#39;: []}, &#39;process_state&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;white_list&#39;: [], &#39;position&#39;: {&#39;type&#39;: &#39;1&#39;, &#39;server&#39;: &#39;127.0.0.1&#39;, &#39;port&#39;: &#39;8080&#39;}, &#39;client_snapshot_interval&#39;: &#39;300&#39;}, &#39;downloader_file&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;position&#39;: {&#39;type&#39;: &#39;1&#39;, &#39;server&#39;: &#39;127.0.0.1&#39;, &#39;port&#39;: &#39;8080&#39;}, &#39;white_list&#39;: []}, &#39;browser_file&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;position&#39;: {&#39;type&#39;: &#39;1&#39;, &#39;server&#39;: &#39;127.0.0.1&#39;, &#39;port&#39;: &#39;8080&#39;}, &#39;white_list&#39;: []}, &#39;certificate_state&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;white_list&#39;: [], &#39;position&#39;: {&#39;type&#39;: &#39;1&#39;, &#39;server&#39;: &#39;127.0.0.1&#39;, &#39;port&#39;: &#39;8080&#39;}, &#39;client_snapshot_interval&#39;: &#39;300&#39;}, &#39;ip&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;position&#39;: {&#39;type&#39;: &#39;1&#39;, &#39;server&#39;: &#39;127.0.0.1&#39;, &#39;port&#39;: &#39;8080&#39;}, &#39;white_list&#39;: [{&#39;signer&#39;: &#39;Google Inc&#39;, &#39;proc_filename&#39;: &#39;chrome.exe&#39;}, {&#39;signer&#39;: &#39;&#39;, &#39;proc_filename&#39;: &#39;qaxse.exe&#39;}, {&#39;signer&#39;: &#39;&#39;, &#39;proc_filename&#39;: &#39;qaxchrome.exe&#39;}, {&#39;signer&#39;: &#39;Mozilla Corporation&#39;, &#39;proc_filename&#39;: &#39;firefox.exe&#39;}, {&#39;signer&#39;: &#39;Microsoft Corporation&#39;, &#39;proc_filename&#39;: &#39;iexplore.exe&#39;}]}, &#39;internet_domain&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;position&#39;: {&#39;type&#39;: &#39;1&#39;, &#39;server&#39;: &#39;127.0.0.1&#39;, &#39;port&#39;: &#39;8080&#39;}, &#39;white_list&#39;: [{&#39;domain&#39;: &#39;clients1.google.com&#39;}, {&#39;domain&#39;: &#39;clients5.google.com&#39;}, {&#39;domain&#39;: &#39;settings-win.data.microsoft.com&#39;}, {&#39;domain&#39;: &#39;v10.events.data.microsoft.com&#39;}, {&#39;domain&#39;: &#39;ctldl.windowsupdate.com&#39;}, {&#39;domain&#39;: &#39;www.msftconnecttest.com&#39;}, {&#39;domain&#39;: &#39;dns.msftncsi.com&#39;}]}, &#39;hips_log&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;position&#39;: {&#39;type&#39;: &#39;1&#39;, &#39;server&#39;: &#39;127.0.0.1&#39;, &#39;port&#39;: &#39;8080&#39;}, &#39;white_list&#39;: []}, &#39;dns&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;position&#39;: {&#39;type&#39;: &#39;1&#39;, &#39;server&#39;: &#39;127.0.0.1&#39;, &#39;port&#39;: &#39;8080&#39;}, &#39;white_list&#39;: [{&#39;signer&#39;: &#39;Google Inc&#39;, &#39;proc_filename&#39;: &#39;chrome.exe&#39;}, {&#39;signer&#39;: &#39;&#39;, &#39;proc_filename&#39;: &#39;qaxse.exe&#39;}, {&#39;signer&#39;: &#39;&#39;, &#39;proc_filename&#39;: &#39;qaxchrome.exe&#39;}, {&#39;signer&#39;: &#39;Mozilla Corporation&#39;, &#39;proc_filename&#39;: &#39;firefox.exe&#39;}, {&#39;signer&#39;: &#39;Microsoft Corporation&#39;, &#39;proc_filename&#39;: &#39;iexplore.exe&#39;}]}, &#39;file_track&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;position&#39;: {&#39;type&#39;: &#39;1&#39;, &#39;server&#39;: &#39;127.0.0.1&#39;, &#39;port&#39;: &#39;8080&#39;}}, &#39;hips_inject&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;position&#39;: {&#39;type&#39;: &#39;1&#39;, &#39;server&#39;: &#39;127.0.0.1&#39;, &#39;port&#39;: &#39;8080&#39;}}, &#39;driver_state&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;white_list&#39;: [], &#39;position&#39;: {&#39;type&#39;: &#39;1&#39;, &#39;server&#39;: &#39;127.0.0.1&#39;, &#39;port&#39;: &#39;8080&#39;}, &#39;client_snapshot_interval&#39;: &#39;300&#39;}, &#39;software_state&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;white_list&#39;: [], &#39;position&#39;: {&#39;type&#39;: &#39;1&#39;, &#39;server&#39;: &#39;127.0.0.1&#39;, &#39;port&#39;: &#39;8080&#39;}, &#39;client_snapshot_interval&#39;: &#39;300&#39;}, &#39;hips_process&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;position&#39;: {&#39;type&#39;: &#39;1&#39;, &#39;server&#39;: &#39;127.0.0.1&#39;, &#39;port&#39;: &#39;8080&#39;}}, &#39;alarm_hips&#39;: {&#39;enable&#39;: &#39;1&#39;, &#39;position&#39;: {&#39;type&#39;: &#39;1&#39;, &#39;server&#39;: &#39;127.0.0.1&#39;, &#39;port&#39;: &#39;8080&#39;}}, &#39;hips_file&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;position&#39;: {&#39;type&#39;: &#39;1&#39;, &#39;server&#39;: &#39;127.0.0.1&#39;, &#39;port&#39;: &#39;8080&#39;}}, &#39;internet_ip&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;position&#39;: {&#39;type&#39;: &#39;1&#39;, &#39;server&#39;: &#39;127.0.0.1&#39;, &#39;port&#39;: &#39;8080&#39;}, &#39;white_list&#39;: [{&#39;ip&#39;: &#39;127.0.0.1&#39;, &#39;port&#39;: &#39;1080&#39;}, {&#39;ip&#39;: &#39;127.0.0.1&#39;, &#39;port&#39;: &#39;80&#39;}, {&#39;ip&#39;: &#39;127.0.0.1&#39;, &#39;port&#39;: &#39;443&#39;}, {&#39;ip&#39;: &#39;127.0.0.1&#39;, &#39;port&#39;: &#39;8080&#39;}, {&#39;ip&#39;: &#39;127.0.0.1&#39;, &#39;port&#39;: &#39;8443&#39;}, {&#39;ip&#39;: &#39;127.0.0.1&#39;, &#39;port&#39;: &#39;11300&#39;}, {&#39;ip&#39;: &#39;127.0.0.1&#39;, &#39;port&#39;: &#39;9200&#39;}, {&#39;ip&#39;: &#39;127.0.0.1&#39;, &#39;port&#39;: &#39;5037&#39;}, {&#39;ip&#39;: &#39;127.0.0.1&#39;, &#39;port&#39;: &#39;6379&#39;}, {&#39;ip&#39;: &#39;239.255.255.250&#39;, &#39;port&#39;: &#39;1900&#39;}, {&#39;ip&#39;: &#39;239.255.255.250&#39;, &#39;port&#39;: &#39;3792&#39;}, {&#39;ip&#39;: &#39;239.255.255.250&#39;, &#39;port&#39;: &#39;37020&#39;}]}, &#39;mail_send&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;position&#39;: {&#39;type&#39;: &#39;1&#39;, &#39;server&#39;: &#39;127.0.0.1&#39;, &#39;port&#39;: &#39;8080&#39;}, &#39;white_list&#39;: []}, &#39;global_white_list&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;position&#39;: {&#39;type&#39;: &#39;1&#39;, &#39;server&#39;: &#39;127.0.0.1&#39;, &#39;port&#39;: &#39;8080&#39;}, &#39;white_list&#39;: []}, &#39;udisk&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;position&#39;: {&#39;type&#39;: &#39;1&#39;, &#39;server&#39;: &#39;127.0.0.1&#39;, &#39;port&#39;: &#39;8080&#39;}, &#39;white_list&#39;: []}, &#39;im_file&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;position&#39;: {&#39;type&#39;: &#39;1&#39;, &#39;server&#39;: &#39;127.0.0.1&#39;, &#39;port&#39;: &#39;8080&#39;}, &#39;white_list&#39;: []}, &#39;hips_account&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;position&#39;: {&#39;type&#39;: &#39;1&#39;, &#39;server&#39;: &#39;127.0.0.1&#39;, &#39;port&#39;: &#39;8080&#39;}}, &#39;hips_registry&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;position&#39;: {&#39;type&#39;: &#39;1&#39;, &#39;server&#39;: &#39;127.0.0.1&#39;, &#39;port&#39;: &#39;8080&#39;}}, &#39;ip_dns&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;position&#39;: {&#39;type&#39;: &#39;1&#39;, &#39;server&#39;: &#39;127.0.0.1&#39;, &#39;port&#39;: &#39;8080&#39;}, &#39;white_list&#39;: []}}, &#39;limit_time_list&#39;: [], &#39;conf_ver_s&#39;: &#39;6f538b2e12061605##&#39;, &#39;client_snapshot_interval&#39;: &#39;300&#39;, &#39;conf_ver&#39;: 2594336176, &#39;inherit&#39;: &#39;1&#39;}, &#39;ips&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;conf_ver_s&#39;: &#39;742f2fe912061605##&#39;, &#39;rules&#39;: [], &#39;tpl_id&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;conf_ver&#39;: 890805422}, &#39;bandwith_setting&#39;: {&#39;client_upload_log&#39;: {&#39;limit_time_list&#39;: [], &#39;max_concurrent&#39;: &#39;&#39;, &#39;limit_download&#39;: {&#39;white_servers&#39;: []}, &#39;limit_download_max_speed&#39;: &#39;&#39;, &#39;max_speed&#39;: &#39;&#39;, &#39;inherit&#39;: &#39;1&#39;}, &#39;conf_ver&#39;: 1286343880, &#39;conf_ver_s&#39;: &#39;57b919e712061605##&#39;}, &#39;operation_control&#39;: {&#39;limit_username&#39;: &#39;&#39;, &#39;tpl_list&#39;: [{&#39;tpl_info&#39;: {&#39;uniq_id&#39;: &#39;6abee587bafe4fcc4f4bce1b24031e6b&#39;, &#39;md5&#39;: &#39;d5514e30356b5f1585b058aa18956992&#39;, &#39;name&#39;: &#39;é»\x98è®¤æ¨¡æ\x9d¿&#39;, &#39;id&#39;: &#39;16&#39;}, &#39;rule&#39;: {&#39;time_range&#39;: None, &#39;online&#39;: &#39;1&#39;, &#39;scene&#39;: None}, &#39;rule_info&#39;: {&#39;name&#39;: &#39;æ\x9cªæ\x8c\x87å®\x9a&#39;}, &#39;time_info&#39;: {&#39;name&#39;: &#39;å\x85¨é\x83¨æ\x97¶é\x97´&#39;}, &#39;priority&#39;: &#39;1&#39;, &#39;conf&#39;: []}], &#39;default_tpl&#39;: {&#39;uniq_id&#39;: &#39;6abee587bafe4fcc4f4bce1b24031e6b&#39;, &#39;md5&#39;: &#39;d5514e30356b5f1585b058aa18956992&#39;, &#39;name&#39;: &#39;é»\x98è®¤æ¨¡æ\x9d¿&#39;, &#39;id&#39;: &#39;16&#39;}, &#39;inherit&#39;: &#39;1&#39;, &#39;limit&#39;: &#39;0&#39;, &#39;netdefend&#39;: [{&#39;param&#39;: {&#39;acl_type&#39;: &#39;0&#39;, &#39;main_dns_server&#39;: &#39;&#39;, &#39;dns_option&#39;: &#39;0&#39;, &#39;acl&#39;: [], &#39;backup_dns_server&#39;: &#39;&#39;}, &#39;name&#39;: &#39;é»\x98è®¤ç½\x91ç»\x9c&#39;, &#39;default&#39;: &#39;1&#39;}], &#39;value&#39;: 0, &#39;conf_ver_s&#39;: &#39;940e1acb12061623##&#39;, &#39;limit_user&#39;: &#39;&#39;, &#39;conf_ver&#39;: 1891843036}, &#39;client_out_info&#39;: {&#39;client_info&#39;: {&#39;software_info&#39;: {&#39;value&#39;: &#39;0&#39;}, &#39;exam_info&#39;: {&#39;value&#39;: &#39;0&#39;}, &#39;hardware_info&#39;: {&#39;value&#39;: &#39;0&#39;}}, &#39;conf_ver_s&#39;: &#39;a5af845f12061605##&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;conf_ver&#39;: 1681790489}, &#39;md&#39;: {&#39;normal&#39;: {&#39;engine_qax_linux_arm64&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_arm64_leakfix&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_x64_collection&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_mips64_leakfix&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_x64_network&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_x86_adengine&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_arm64_seclogin&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_x64_netdetect&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_arm64_pks&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_arm64_safecheck&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_arm64_watermark&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_arm64_network&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_mips64_netdetect&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_arm64_base&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_sw64_pks&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_sw64_tq_base&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_loongarch64_audit&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_mips64_defense_base&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;engine_qax_core_linux_mips64&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_mips64_safecheck&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;engine_qax_core_linux_loongarch64&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_loongarch64_accelerate&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_mips64_zerotrust&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_x86_identityauth&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_arm64_safeudisk&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_x86_tq_base&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_x86_collection&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_x64_ad&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_arm64_tq_base&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_loongarch64_pks&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_mips64_safeudisk&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_loongarch64_sd&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_loongarch64_collection&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_loongarch64_network&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_loongarch64_tq_base&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_x86_leakfix&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_sw64_watermark&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_x64_watermark&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;engine_qax_linux_loongarch64&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;engine_qax_linux_mips64&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;leaklib_qax_linux_mips64&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_arm64_collection&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;engine_qax_linux_x86&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_x86_watermark&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_arm64_desktopreinforce&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_sw64_sd&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_x86_edr&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_x64_accelerate&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_sw64_firewall&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_sw64_identityauth&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_x86_accelerate&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_loongarch64_leakfix&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_mips64_audit&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_loongarch64_safeudisk&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;leaklib_qax_linux_x64&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_x86_sd&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_sw64_devicemgr&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_loongarch64_qaxcleanui&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_sw64_netdetect&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_sw64_ad&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_sw64_fileshredder&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_loongarch64_ad&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;engine_qax_linux_x64&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_x64_identityauth&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;leaklib_qax_linux_loongarch64&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_sw64_desktopreinforce&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_sw64_adengine&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_mips64_adengine&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_x86_desktopreinforce&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_x86_ad&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_arm64_netdetect&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_x64_adengine&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_mips64_seclogin&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_mips64_ad&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_x64_fileshredder&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;engine_qax_linux_sw64&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_x64_safecheck&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_sw64_edr&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_mips64_qaxcleanui&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_arm64_audit&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_x86_zerotrust&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;engine_qax_core_linux_sw64&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_arm64_fileshredder&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_x64_zerotrust&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_sw64_safecheck&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;engine_qax_core_linux_x64&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_x86_base&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_mips64_sd&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_arm64_zerotrust&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_mips64_watermark&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_sw64_base&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_loongarch64_adengine&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_loongarch64_watermark&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_x86_seclogin&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_mips64_firewall&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_x86_netdetect&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_x64_pks&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_x86_safecheck&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_x86_qaxcleanui&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_x64_tq_base&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_loongarch64_seclogin&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_loongarch64_identityauth&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_arm64_qaxcleanui&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_x86_safeudisk&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_x64_base&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_x64_safeudisk&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_sw64_safeudisk&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_arm64_ad&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_x86_firewall&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_x86_fileshredder&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;engine_qax_core_linux_arm64&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_arm64_devicemgr&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_sw64_zerotrust&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_x86_audit&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_arm64_accelerate&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_loongarch64_fileshredder&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_mips64_collection&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_x64_seclogin&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_loongarch64_firewall&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_arm64_firewall&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_x64_qaxcleanui&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_sw64_qaxcleanui&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_x86_network&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_mips64_base&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_x64_defense_base&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_x64_edr&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_x64_audit&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_sw64_audit&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_mips64_desktopreinforce&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_arm64_sd&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_sw64_defense_base&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_loongarch64_devicemgr&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_loongarch64_edr&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;leaklib_qax_linux_arm64&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_x86_pks&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_arm64_adengine&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_mips64_fileshredder&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_arm64_defense_base&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_loongarch64_zerotrust&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_loongarch64_safecheck&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;leaklib_qax_linux_x86&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_mips64_tq_base&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_mips64_pks&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_x64_desktopreinforce&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_loongarch64_base&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_mips64_edr&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;engine_qax_core_linux_x86&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_x64_devicemgr&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_x86_devicemgr&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_loongarch64_defense_base&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_mips64_accelerate&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_loongarch64_desktopreinforce&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_loongarch64_netdetect&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_arm64_edr&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_mips64_devicemgr&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_arm64_identityauth&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_x86_defense_base&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_sw64_accelerate&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_x64_firewall&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_sw64_seclogin&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_x64_sd&#39;: {&#39;action&#39;: &#39;1&#39;}, &#39;qaxav_linux_sw64_network&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_mips64_identityauth&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_mips64_network&#39;: {&#39;action&#39;: &#39;0&#39;}, &#39;qaxav_linux_x64_leakfix&#39;: {&#39;action&#39;: &#39;0&#39;}}, &#39;conf_ver_s&#39;: &#39;a9edfcba12061623##&#39;, &#39;limit_username&#39;: &#39;&#39;, &#39;tpl_list&#39;: [{&#39;tpl_info&#39;: {&#39;uniq_id&#39;: &#39;d4f7d25ed1207bc66516142b10dd556d&#39;, &#39;md5&#39;: &#39;bafd4cd0e40fef4ed6eac1a657279755&#39;, &#39;name&#39;: &#39;é»\x98è®¤æ¨¡æ\x9d¿&#39;, &#39;id&#39;: &#39;4&#39;}, &#39;rule&#39;: {&#39;time_range&#39;: None, &#39;online&#39;: &#39;1&#39;, &#39;scene&#39;: None}, &#39;rule_info&#39;: {&#39;name&#39;: &#39;æ\x9cªæ\x8c\x87å®\x9a&#39;}, &#39;time_info&#39;: {&#39;name&#39;: &#39;å\x85¨é\x83¨æ\x97¶é\x97´&#39;}, &#39;priority&#39;: &#39;1&#39;, &#39;conf&#39;: []}], &#39;conf_ver&#39;: 4066049536, &#39;default_tpl&#39;: {&#39;uniq_id&#39;: &#39;d4f7d25ed1207bc66516142b10dd556d&#39;, &#39;md5&#39;: &#39;bafd4cd0e40fef4ed6eac1a657279755&#39;, &#39;name&#39;: &#39;é»\x98è®¤æ¨¡æ\x9d¿&#39;, &#39;id&#39;: &#39;4&#39;}, &#39;inherit&#39;: &#39;1&#39;, &#39;limit_user&#39;: &#39;&#39;}, &#39;abc_custom&#39;: {&#39;limit_username&#39;: &#39;&#39;, &#39;tpl_list&#39;: [{&#39;tpl_info&#39;: {&#39;uniq_id&#39;: &#39;5f994abb4282dbd8e678d5571d06cd35&#39;, &#39;md5&#39;: &#39;f97317ad744d899d7821650edf843ce4&#39;, &#39;name&#39;: &#39;é»\x98è®¤æ¨¡æ\x9d¿&#39;, &#39;id&#39;: &#39;1&#39;}, &#39;rule&#39;: {&#39;time_range&#39;: None, &#39;online&#39;: &#39;1&#39;, &#39;scene&#39;: None}, &#39;rule_info&#39;: {&#39;name&#39;: &#39;æ\x9cªæ\x8c\x87å®\x9a&#39;}, &#39;time_info&#39;: {&#39;name&#39;: &#39;å\x85¨é\x83¨æ\x97¶é\x97´&#39;}, &#39;priority&#39;: &#39;1&#39;, &#39;conf&#39;: []}], &#39;inherit_item&#39;: {&#39;auth_mode&#39;: {&#39;value&#39;: &#39;0&#39;}, &#39;reserve_recent_accounts&#39;: {&#39;value&#39;: &#39;1&#39;}, &#39;inherit&#39;: &#39;1&#39;, &#39;enable_auth&#39;: {&#39;value&#39;: &#39;0&#39;}, &#39;prompt_content&#39;: {&#39;value&#39;: &#39;&#39;}, &#39;super_pwd&#39;: {&#39;value&#39;: &#39;&#39;}, &#39;forward_mode&#39;: {&#39;value&#39;: &#39;0&#39;}, &#39;local_cache_valid_day&#39;: {&#39;value&#39;: &#39;7&#39;}, &#39;usap_http_timeout_second&#39;: {&#39;value&#39;: &#39;30&#39;}}, &#39;inherit&#39;: &#39;1&#39;, &#39;usap_addr&#39;: {&#39;inherit&#39;: &#39;0&#39;, &#39;value&#39;: &#39;&#39;}, &#39;rule_match_type&#39;: &#39;match_first&#39;, &#39;limit&#39;: &#39;0&#39;, &#39;conf_ver_s&#39;: &#39;284b7a3b12061612##&#39;, &#39;conf_ver&#39;: 4218519445, &#39;limit_user&#39;: &#39;&#39;, &#39;default_tpl&#39;: {&#39;uniq_id&#39;: &#39;5f994abb4282dbd8e678d5571d06cd35&#39;, &#39;md5&#39;: &#39;f97317ad744d899d7821650edf843ce4&#39;, &#39;name&#39;: &#39;é»\x98è®¤æ¨¡æ\x9d¿&#39;, &#39;id&#39;: &#39;1&#39;}}, &#39;function_entrance&#39;: {&#39;desktop_list&#39;: {&#39;access_assistant&#39;: &#39;0&#39;, &#39;multi_network_switch&#39;: &#39;0&#39;, &#39;antivirus&#39;: &#39;0&#39;, &#39;main_program&#39;: &#39;0&#39;, &#39;loophole_patch_management&#39;: &#39;0&#39;}, &#39;limit_username&#39;: &#39;&#39;, &#39;desktop_icon&#39;: True, &#39;default_tpl&#39;: {&#39;uniq_id&#39;: &#39;d4f7d25ed1207bc66516142b10dd556d&#39;, &#39;md5&#39;: &#39;bafd4cd0e40fef4ed6eac1a657279755&#39;, &#39;name&#39;: &#39;é»\x98è®¤æ¨¡æ\x9d¿&#39;, &#39;id&#39;: &#39;4&#39;}, &#39;inherit&#39;: &#39;1&#39;, &#39;limit&#39;: &#39;0&#39;, &#39;conf_ver_s&#39;: &#39;dd3a1d5f12061623##&#39;, &#39;conf_ver&#39;: 121974573, &#39;display_icon&#39;: True, &#39;tpl_list&#39;: [{&#39;tpl_info&#39;: {&#39;uniq_id&#39;: &#39;d4f7d25ed1207bc66516142b10dd556d&#39;, &#39;md5&#39;: &#39;bafd4cd0e40fef4ed6eac1a657279755&#39;, &#39;name&#39;: &#39;é»\x98è®¤æ¨¡æ\x9d¿&#39;, &#39;id&#39;: &#39;4&#39;}, &#39;rule&#39;: {&#39;time_range&#39;: None, &#39;online&#39;: &#39;1&#39;, &#39;scene&#39;: None}, &#39;rule_info&#39;: {&#39;name&#39;: &#39;æ\x9cªæ\x8c\x87å®\x9a&#39;}, &#39;time_info&#39;: {&#39;name&#39;: &#39;å\x85¨é\x83¨æ\x97¶é\x97´&#39;}, &#39;priority&#39;: &#39;1&#39;, &#39;conf&#39;: []}], &#39;limit_user&#39;: &#39;&#39;, &#39;function_list&#39;: {&#39;flash_drive&#39;: 1, &#39;one_click_cleanup&#39;: 1, &#39;asset_registration&#39;: 1, &#39;security_inspection_compliance&#39;: 1, &#39;environmental_awareness&#39;: 1, &#39;secure_login&#39;: 1, &#39;antivirus&#39;: 1, &#39;exit&#39;: 1, &#39;setting&#39;: 1, &#39;certified_assistant&#39;: 1}}, &#39;firewall&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;limit_username&#39;: &#39;&#39;, &#39;tpl_id&#39;: &#39;0&#39;, &#39;log_config&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;time&#39;: &#39;60&#39;, &#39;unit&#39;: &#39;1&#39;, &#39;log_amount&#39;: &#39;3&#39;}, &#39;log_upload_interval&#39;: &#39;60&#39;, &#39;log_upload_per_max&#39;: &#39;3&#39;, &#39;limit&#39;: &#39;0&#39;, &#39;conf_ver&#39;: 4049736548, &#39;enable_log_upload&#39;: &#39;0&#39;, &#39;rule_ipv6_ids&#39;: &#39;&#39;, &#39;rules&#39;: [], &#39;rule_ids&#39;: &#39;&#39;, &#39;default_tpl&#39;: {&#39;uniq_id&#39;: &#39;41ec544bc54def5f65762b3d47dfbf85&#39;, &#39;md5&#39;: &#39;f737bbc1b4bde99c6b4e8fdfd944a08f&#39;, &#39;name&#39;: &#39;é»\x98è®¤æ¨¡æ\x9d¿&#39;, &#39;id&#39;: &#39;12&#39;}, &#39;rule_match_type&#39;: &#39;match_first&#39;, &#39;log_interval_unit&#39;: &#39;minute&#39;, &#39;conf_ver_s&#39;: &#39;b4f28ddd12061612##&#39;, &#39;take_over_sys_firewall&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;limit_user&#39;: &#39;&#39;, &#39;tpl_list&#39;: [{&#39;tpl_info&#39;: {&#39;uniq_id&#39;: &#39;41ec544bc54def5f65762b3d47dfbf85&#39;, &#39;md5&#39;: &#39;f737bbc1b4bde99c6b4e8fdfd944a08f&#39;, &#39;name&#39;: &#39;é»\x98è®¤æ¨¡æ\x9d¿&#39;, &#39;id&#39;: &#39;12&#39;}, &#39;rule&#39;: {&#39;time_range&#39;: None, &#39;online&#39;: &#39;1&#39;, &#39;scene&#39;: None}, &#39;rule_info&#39;: {&#39;name&#39;: &#39;æ\x9cªæ\x8c\x87å®\x9a&#39;}, &#39;time_info&#39;: {&#39;name&#39;: &#39;å\x85¨é\x83¨æ\x97¶é\x97´&#39;}, &#39;priority&#39;: &#39;1&#39;, &#39;conf&#39;: []}]}, &#39;base_config&#39;: {&#39;ntp_sync&#39;: {&#39;interval&#39;: &#39;15&#39;, &#39;ntp_ip&#39;: &#39;&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;self_protect&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;asset_resubmit&#39;: {&#39;days&#39;: &#39;7&#39;, &#39;inherit&#39;: &#39;0&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;compat_setting&#39;: {&#39;desc&#39;: &#39;&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;&#39;}, &#39;limit&#39;: &#39;0&#39;, &#39;net_env&#39;: {&#39;allow_netout&#39;: {&#39;url_list&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: []}, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;mac_report_interval&#39;: {&#39;global&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;white_list&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;list&#39;: []}, &#39;_query&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;time_sync&#39;: {&#39;value&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;interval&#39;: &#39;1&#39;}, &#39;lib_update&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;rule_match_type&#39;: &#39;match_first&#39;, &#39;configfor8021xlogon&#39;: {&#39;addfastbarlink&#39;: 0, &#39;logo_url&#39;: &#39;&#39;, &#39;enablepostauthtask&#39;: 0, &#39;pwdmodifyurl&#39;: &#39;http://127.0.0.1:8080/nac/useraccess/changepwd&#39;, &#39;auth_server_ip&#39;: &#39;&#39;, &#39;addprogramlink&#39;: 0, &#39;execonauthedonline&#39;: 0, &#39;nac1xauthflag&#39;: 1, &#39;showpwdmodify&#39;: 0, &#39;isconfigon&#39;: 0, &#39;showautologon&#39;: 1, &#39;execonlyonce&#39;: 1, &#39;savepwd_maxtime&#39;: 86400, &#39;webauth_api&#39;: &#39;http://10.95.34.13:8080/nac/portalauth/clienthttplogin&#39;, &#39;force_savepwd_maxtime_limit&#39;: 0, &#39;httpauthflag&#39;: 0, &#39;isconfiglog&#39;: 0, &#39;logonmode&#39;: 0, &#39;execinterval&#39;: 1, &#39;execfilepath&#39;: &#39;&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;trayicon&#39;: 1, &#39;hideonstart&#39;: 0, &#39;usewindowslogon&#39;: 0, &#39;hideonauthsucc&#39;: 1, &#39;jumpwirelesslogon&#39;: 0, &#39;user_fastauth&#39;: 0, &#39;auth_heartbeat_api&#39;: &#39;http://10.95.34.13:80/api/upload_client_log.json&#39;, &#39;waterfinger&#39;: 0, &#39;hideoption&#39;: 0, &#39;adddesktoplink&#39;: 1, &#39;execmaxcount&#39;: 1, &#39;autoauth&#39;: 0, &#39;hoststate_api&#39;: &#39;&#39;, &#39;netautoauth&#39;: 1, &#39;send_method&#39;: 1, &#39;auth_api&#39;: &#39;&#39;, &#39;forgetpwdflag&#39;: 1}, &#39;advtools_download&#39;: {&#39;customproxy&#39;: {&#39;enable&#39;: &#39;1&#39;, &#39;username_v6&#39;: &#39;&#39;, &#39;serverip_v6&#39;: &#39;&#39;, &#39;domain_v6&#39;: &#39;&#39;, &#39;password_v6&#39;: &#39;&#39;, &#39;agent_type_v6&#39;: &#39;0&#39;, &#39;password&#39;: &#39;&#39;, &#39;port_v6&#39;: &#39;&#39;, &#39;port&#39;: &#39;&#39;, &#39;domain&#39;: &#39;&#39;, &#39;agent_type&#39;: &#39;0&#39;, &#39;username&#39;: &#39;&#39;, &#39;enable_v6&#39;: &#39;0&#39;, &#39;serverip&#39;: &#39;&#39;}, &#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;api_frequency&#39;: {&#39;browser_upload&#39;: {&#39;value&#39;: &#39;60&#39;}, &#39;reconnect_upload&#39;: &#39;0&#39;, &#39;QuerySoftware&#39;: {&#39;value&#39;: &#39;10&#39;}, &#39;QueryFlow&#39;: {&#39;value&#39;: &#39;10&#39;}, &#39;delay_connect&#39;: &#39;0&#39;, &#39;QueryAccount&#39;: {&#39;value&#39;: &#39;10&#39;}, &#39;inherit&#39;: &#39;1&#39;, &#39;getconf&#39;: &#39;180&#39;, &#39;QueryHardware&#39;: {&#39;value&#39;: &#39;10&#39;}, &#39;checkupdate&#39;: &#39;180&#39;, &#39;get_client_tasks&#39;: &#39;180&#39;, &#39;QueryProcess&#39;: {&#39;value&#39;: &#39;10&#39;}, &#39;QueryPort&#39;: {&#39;value&#39;: &#39;10&#39;}, &#39;QuerySystem&#39;: {&#39;value&#39;: &#39;10&#39;}, &#39;svr_init_info&#39;: &#39;180&#39;, &#39;update_client_info&#39;: &#39;60&#39;}, &#39;notice_client_exec_cmd&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;limit_user&#39;: &#39;&#39;, &#39;limit_username&#39;: &#39;&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;enforce&#39;: {&#39;edit_disable&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;ping_time&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;10&#39;}, &#39;uninstall_protect&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;value&#39;: &#39;&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;pwd_mode&#39;: &#39;1&#39;}, &#39;exception_log_collection&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;10&#39;}, &#39;close_protect&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;value&#39;: &#39;&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;pwd_mode&#39;: &#39;1&#39;}, &#39;conf_ver_s&#39;: &#39;c867769312061623##&#39;, &#39;leak_update&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}, &#39;tpl_list&#39;: [{&#39;tpl_info&#39;: {&#39;uniq_id&#39;: &#39;d4f7d25ed1207bc66516142b10dd556d&#39;, &#39;md5&#39;: &#39;bafd4cd0e40fef4ed6eac1a657279755&#39;, &#39;name&#39;: &#39;é»\x98è®¤æ¨¡æ\x9d¿&#39;, &#39;id&#39;: &#39;4&#39;}, &#39;rule&#39;: {&#39;time_range&#39;: None, &#39;online&#39;: &#39;1&#39;, &#39;scene&#39;: None}, &#39;rule_info&#39;: {&#39;name&#39;: &#39;æ\x9cªæ\x8c\x87å®\x9a&#39;}, &#39;time_info&#39;: {&#39;name&#39;: &#39;å\x85¨é\x83¨æ\x97¶é\x97´&#39;}, &#39;priority&#39;: &#39;1&#39;, &#39;conf&#39;: []}], &#39;upstream_setting&#39;: {&#39;server_list&#39;: [], &#39;inherit&#39;: &#39;1&#39;, &#39;match_type&#39;: &#39;stable_random&#39;}, &#39;default_tpl&#39;: {&#39;uniq_id&#39;: &#39;d4f7d25ed1207bc66516142b10dd556d&#39;, &#39;md5&#39;: &#39;bafd4cd0e40fef4ed6eac1a657279755&#39;, &#39;name&#39;: &#39;é»\x98è®¤æ¨¡æ\x9d¿&#39;, &#39;id&#39;: &#39;4&#39;}, &#39;need_login&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;ldap_login_enable&#39;: &#39;0&#39;, &#39;enable_get_login_user&#39;: &#39;0&#39;, &#39;ldap_login_priority&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;login_msg&#39;: &#39;è¯·è¾\x93å\x85¥æ\x82¨ç\x9a\x84å\x9f\x9få¸\x90å\x8f·å¯\x86ç\xa0\x81ä»¥å®\x8cæ\x88\x90ç»\x88ç«¯ç\x9a\x84å¸\x90å\x8f·ç»\x91å®\x9a&#39;, &#39;auth_cycle&#39;: &#39;30&#39;, &#39;disable_close_button&#39;: &#39;0&#39;, &#39;disable_domin_pop&#39;: &#39;0&#39;, &#39;custom_ldap&#39;: &#39;0&#39;, &#39;local_login_priority&#39;: &#39;2&#39;, &#39;auth_req_url&#39;: &#39;&#39;, &#39;local_login_enable&#39;: &#39;0&#39;, &#39;auth_type&#39;: &#39;AD&#39;, &#39;auth_req_msg&#39;: &#39;æ\x96°å¸\x90å\x8f·ç\x94³è¯·å\x9c°å\x9d\x80&#39;, &#39;auth_cycle_enable&#39;: &#39;0&#39;, &#39;ad_server_host&#39;: &#39;&#39;, &#39;ad_server_port&#39;: &#39;389&#39;, &#39;auth_req_enable&#39;: &#39;0&#39;, &#39;ad_rdn&#39;: &#39;&#39;}, &#39;conf_ver&#39;: 1408570310, &#39;terminal_usage_monitor&#39;: {&#39;enable&#39;: &#39;1&#39;, &#39;interval&#39;: &#39;4&#39;}, &#39;breakdown&#39;: {&#39;enable&#39;: &#39;1&#39;}, &#39;clock_sync&#39;: {&#39;value&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;interval&#39;: &#39;1&#39;}, &#39;modify&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;install_protect&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;value&#39;: &#39;&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;pwd_mode&#39;: &#39;1&#39;}, &#39;persistent_connetion&#39;: {&#39;enable&#39;: {&#39;lock&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;0&#39;}, &#39;server&#39;: {&#39;enable&#39;: &#39;1&#39;, &#39;port_v6&#39;: &#39;8000&#39;, &#39;ip&#39;: &#39;127.0.0.1&#39;, &#39;lock&#39;: &#39;0&#39;, &#39;ip_v6&#39;: &#39;&#39;, &#39;enable_v6&#39;: &#39;0&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;port&#39;: &#39;80&#39;}}, &#39;net_protocol&#39;: {&#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1.0&#39;}, &#39;keyboard_dump&#39;: {&#39;fulltype_dump&#39;: &#39;1&#39;, &#39;inherit&#39;: &#39;1&#39;, &#39;value&#39;: &#39;1&#39;}}, &#39;black_leaks&#39;: {&#39;enable&#39;: &#39;0&#39;, &#39;os_exclude&#39;: [], &#39;list&#39;: [], &#39;white_enable&#39;: &#39;0&#39;, &#39;white_os_exclude&#39;: [], &#39;inherit&#39;: &#39;1&#39;, &#39;conf_ver_s&#39;: &#39;7463e0f612061605##&#39;, &#39;conf_ver&#39;: 4224271569, &#39;white_list&#39;: [], &#39;supplement_list&#39;: [], &#39;supplement_enable&#39;: &#39;0&#39;}, &#39;watermark&#39;: {&#39;limit_username&#39;: &#39;&#39;, &#39;tpl_list&#39;: [{&#39;tpl_info&#39;: {&#39;uniq_id&#39;: &#39;37c626df6e5544cb7eab860f0d5de718&#39;, &#39;md5&#39;: &#39;0d65dcd905b21cfd4ca924d34b65edc4&#39;, &#39;name&#39;: &#39;é»\x98è®¤æ¨¡æ\x9d¿&#39;, &#39;id&#39;: &#39;25&#39;}, &#39;rule&#39;: {&#39;time_range&#39;: None, &#39;online&#39;: &#39;1&#39;, &#39;scene&#39;: None}, &#39;rule_info&#39;: {&#39;name&#39;: &#39;æ\x9cªæ\x8c\x87å®\x9a&#39;}, &#39;time_info&#39;: {&#39;name&#39;: &#39;å\x85¨é\x83¨æ\x97¶é\x97´&#39;}, &#39;priority&#39;: &#39;1&#39;, &#39;conf&#39;: []}], &#39;default_tpl&#39;: {&#39;uniq_id&#39;: &#39;37c626df6e5544cb7eab860f0d5de718&#39;, &#39;md5&#39;: &#39;0d65dcd905b21cfd4ca924d34b65edc4&#39;, &#39;name&#39;: &#39;é»\x98è®¤æ¨¡æ\x9d¿&#39;, &#39;id&#39;: &#39;25&#39;}, &#39;inherit&#39;: &#39;1&#39;, &#39;rule_match_type&#39;: &#39;match_first&#39;, &#39;limit&#39;: &#39;0&#39;, &#39;conf_ver_s&#39;: &#39;19d13a6e12061612##&#39;, &#39;screen_watermark&#39;: {&#39;setting&#39;: {&#39;font_color&#39;: &#39;#666666&#39;, &#39;mode&#39;: &#39;1&#39;, &#39;align&#39;: &#39;1&#39;, &#39;show_type&#39;: &#39;0&#39;, &#39;font_size&#39;: &#39;32&#39;, &#39;font_type&#39;: &#39;0&#39;, &#39;angle&#39;: &#39;55&#39;, &#39;transparency&#39;: &#39;50&#39;, &#39;density&#39;: &#39;50&#39;}, &#39;content&#39;: {&#39;auth_name&#39;: {&#39;value&#39;: &#39;&#39;, &#39;enabled&#39;: &#39;0&#39;}, &#39;ip&#39;: {&#39;value&#39;: &#39;&#39;, &#39;enabled&#39;: &#39;0&#39;}, &#39;mac&#39;: {&#39;value&#39;: &#39;&#39;, &#39;enabled&#39;: &#39;0&#39;}, &#39;auth_account&#39;: {&#39;value&#39;: &#39;&#39;, &#39;enabled&#39;: &#39;0&#39;}, &#39;date&#39;: {&#39;value&#39;: &#39;&#39;, &#39;enabled&#39;: &#39;0&#39;}, &#39;computer_name&#39;: {&#39;value&#39;: &#39;&#39;, &#39;enabled&#39;: &#39;0&#39;}, &#39;sys_account&#39;: {&#39;value&#39;: &#39;&#39;, &#39;enabled&#39;: &#39;0&#39;}, &#39;custom_text&#39;: {&#39;value&#39;: &#39;&#39;, &#39;enabled&#39;: &#39;0&#39;}}, &#39;enabled&#39;: &#39;0&#39;}, &#39;limit_user&#39;: &#39;&#39;, &#39;conf_ver&#39;: 973282409}}, &#39;id&#39;: 1}]}</pre>
+                          
+                        </td>
+                      </tr>
+                    
+                  </table>
+              </div>
+              
+
+              <h3>Validators:</h3>
+              <div style="overflow: auto">
+                  <table>
+                    <tr>
+                      <th>check</th>
+                      <th>comparator</th>
+                      <th>expect value</th>
+                      <th>actual value</th>
+                    </tr>
+                    
+                    <tr>
+                      
+                      <td class="passed">
+                      
+                        status_code
+                      </td>
+                      <td>eq</td>
+                      <td>200</td>
+                      <td>200</td>
+                    </tr>
+                    
+                  </table>
+              </div>
+
+              <h3>Statistics:</h3>
+              <div style="overflow: auto">
+                <table>
+                  <tr>
+                      <th>content_size(bytes)</th>
+                      <td>76174</td>
+                    </tr>
+                  <tr>
+                    <th>response_time(ms)</th>
+                    <td>98.18</td>
+                  </tr>
+                  <tr>
+                    <th>elapsed(ms)</th>
+                    <td>87.823</td>
+                  </tr>
+                </table>
+              </div>
+
+            </div>
+          </div>
+        </div>
+        
+
+        
+
+      </td>
+    </tr>
+  
+  </table>
+  
+</body>
